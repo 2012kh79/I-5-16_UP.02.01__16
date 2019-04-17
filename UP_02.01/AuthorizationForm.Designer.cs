@@ -87,27 +87,28 @@
             // 
             // btVhod
             // 
-            this.btVhod.Location = new System.Drawing.Point(169, 269);
+            this.btVhod.Location = new System.Drawing.Point(169, 263);
             this.btVhod.Name = "btVhod";
             this.btVhod.Size = new System.Drawing.Size(75, 23);
             this.btVhod.TabIndex = 5;
             this.btVhod.Text = "Вход";
             this.btVhod.UseVisualStyleBackColor = true;
+            this.btVhod.Click += new System.EventHandler(this.btVhod_Click);
             // 
             // btReg
             // 
-            this.btReg.Location = new System.Drawing.Point(250, 269);
+            this.btReg.Location = new System.Drawing.Point(250, 263);
             this.btReg.Name = "btReg";
             this.btReg.Size = new System.Drawing.Size(85, 23);
             this.btReg.TabIndex = 6;
             this.btReg.Text = "Регистрация";
             this.btReg.UseVisualStyleBackColor = true;
+            this.btReg.Click += new System.EventHandler(this.btReg_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::UP_02._01.Properties.Resources.Form;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(368, 346);
             this.Controls.Add(this.btReg);

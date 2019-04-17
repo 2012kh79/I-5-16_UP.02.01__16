@@ -1,6 +1,6 @@
 ﻿namespace UP_02._01
 {
-    partial class RegisterForm
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "RegisterForm";
+            this.Text = "MainForm";
         }
 
         #endregion
