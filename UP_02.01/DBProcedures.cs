@@ -9,7 +9,7 @@ namespace UP_02._01
 {
     class DBProcedures
     {
-        private SqlCommand cmd = new SqlCommand("Empty",Form1.sql);
+        private SqlCommand cmd = new SqlCommand("Empty",AuthorizationForm.sql);
 
         private void spConfiguration(string spName)
         {
@@ -24,7 +24,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@login_acc", loginAcc);
                 cmd.Parameters.AddWithValue("@password_acc", passwordAcc);
                 cmd.Parameters.AddWithValue("@role_id", role_id);
-                Form1.sql.Open();
+                AuthorizationForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -34,7 +34,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizationForm.sql.Close();
             }
         }
     }

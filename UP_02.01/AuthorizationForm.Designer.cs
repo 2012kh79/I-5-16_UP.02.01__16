@@ -1,6 +1,6 @@
 ﻿namespace UP_02._01
 {
-    partial class Form1
+    partial class AuthorizationForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -105,10 +105,11 @@
             this.btReg.UseVisualStyleBackColor = true;
             this.btReg.Click += new System.EventHandler(this.btReg_Click);
             // 
-            // Form1
+            // AuthorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::UP_02._01.Properties.Resources.Form1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(368, 346);
             this.Controls.Add(this.btReg);
@@ -118,7 +119,7 @@
             this.Controls.Add(this.lbPass);
             this.Controls.Add(this.lbLogin);
             this.Controls.Add(this.lbAuth);
-            this.Name = "Form1";
+            this.Name = "AuthorizationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
             this.ResumeLayout(false);
