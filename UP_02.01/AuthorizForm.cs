@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace UP_02._01
 {
-    public partial class AuthorizationForm : Form
+    public partial class AuthorizForm : Form
     {
 
         public static byte ID_User;
@@ -20,7 +20,7 @@ namespace UP_02._01
                                                             "Persist Security Info=True; User ID = u0695785_TatarBase; Password=\"TatarBase123IIL\"");
 
         public static SqlCommand command = new SqlCommand("", sql);
-        public AuthorizationForm()
+        public AuthorizForm()
         {
             InitializeComponent();
         }

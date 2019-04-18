@@ -9,7 +9,7 @@ namespace UP_02._01
 {
     class DBProcedures
     {
-        private SqlCommand cmd = new SqlCommand("Empty",AuthorizationForm.sql);
+        private SqlCommand cmd = new SqlCommand("Empty",AuthorizForm.sql);
 
         private void spConfiguration(string spName)
         {
@@ -27,7 +27,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@login_acc", loginAcc);
                 cmd.Parameters.AddWithValue("@password_acc", passwordAcc);
                 cmd.Parameters.AddWithValue("@role_id", role_id);
-                AuthorizationForm.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -37,7 +37,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -50,7 +50,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@loginAcc", loginAcc);
                 cmd.Parameters.AddWithValue("@passwordAcc", passwordAcc);
                 cmd.Parameters.AddWithValue("@role_id", role_id);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -59,7 +59,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -69,7 +69,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_account", id_account);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -78,7 +78,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -88,7 +88,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@nazv_firmi", nazv_firmi);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -98,7 +98,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -109,7 +109,7 @@ namespace UP_02._01
             {
                 cmd.Parameters.AddWithValue("@id_firma", id_firma);
                 cmd.Parameters.AddWithValue("@loginAcc", nazv_firm);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -118,7 +118,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -128,7 +128,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_firma", id_firma);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -138,7 +138,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -149,7 +149,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@vid_document", vid_document);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -159,7 +159,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -170,7 +170,7 @@ namespace UP_02._01
             {
                 cmd.Parameters.AddWithValue("@id_document", id_document);
                 cmd.Parameters.AddWithValue("@vid_document", vid_document);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -179,7 +179,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -189,7 +189,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_account", id_document);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -198,7 +198,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -208,7 +208,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@zanim_doljnost", zanim_doljnost);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -218,7 +218,7 @@ namespace UP_02._01
             }
             finally
             {
-                AuthorizationForm.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -229,7 +229,7 @@ namespace UP_02._01
             {
                 cmd.Parameters.AddWithValue("@id_doljnost", id_doljnost);
                 cmd.Parameters.AddWithValue("@zanim_doljnost", zanim_doljnost);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -238,7 +238,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -248,7 +248,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_dojnost", id_doljnost);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -257,7 +257,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -268,7 +268,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@role_insert", naim_role);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -278,7 +278,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -289,7 +289,7 @@ namespace UP_02._01
             {
                 cmd.Parameters.AddWithValue("@id_role", id_role);
                 cmd.Parameters.AddWithValue("@naim_role", naim_role);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -299,7 +299,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -309,7 +309,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_role", id_role);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -318,7 +318,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }          
         }
 
@@ -329,7 +329,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@instr", instr);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -339,7 +339,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -350,7 +350,7 @@ namespace UP_02._01
             {
                 cmd.Parameters.AddWithValue("@id_instr_raboty_kassira", id_instr_raboty_kassira);
                 cmd.Parameters.AddWithValue("@instr", instr);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -359,7 +359,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -369,7 +369,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_instr_raboty_kassira", id_instr_raboty_kassira);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -378,7 +378,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -391,7 +391,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@kol_tov_na_sklade", kol_tov_na_sklade);
                 cmd.Parameters.AddWithValue("@nom_shkafa", nom_shkafa);
                 cmd.Parameters.AddWithValue("@nom_polki", nom_polki);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -401,7 +401,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -416,7 +416,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@nom_shkafa", nom_shkafa);
                 cmd.Parameters.AddWithValue("@nom_polki", nom_polki);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -425,7 +425,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -435,7 +435,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_tovar_na_sklade", id_tovar_na_sklade);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -444,7 +444,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
         public void spPost_tovar_Insert(string naim_post_tovara, int kol_post_tovara, float cena_post_tovara)
@@ -455,7 +455,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@naim_post_tovara", naim_post_tovara);
                 cmd.Parameters.AddWithValue("@kol_post_tovara", kol_post_tovara);
                 cmd.Parameters.AddWithValue("@cena_post_tovara", cena_post_tovara);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -465,7 +465,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -478,7 +478,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@naim_post_tovara", naim_post_tovara);
                 cmd.Parameters.AddWithValue("@kol_post_tovara", kol_post_tovara);
                 cmd.Parameters.AddWithValue("@role_id", cena_post_tovara);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -487,7 +487,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -497,7 +497,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_post_tovar", id_post_tovar);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -506,7 +506,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
         public void spTabel_rab_vremeni_Insert(int kol_otr_dney, int kol_vih_dney, int komandirovki, int otpuska)
@@ -518,7 +518,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@kol_vih_dney", kol_vih_dney);
                 cmd.Parameters.AddWithValue("@komandirovki", komandirovki);
                 cmd.Parameters.AddWithValue("@otpuska", otpuska);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -528,7 +528,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -543,7 +543,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@komandirovki", komandirovki);
                 cmd.Parameters.AddWithValue("@otpuska", otpuska);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -552,7 +552,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -562,7 +562,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_tabel_rab_vremeni", id_tabel_rab_vremeni);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -571,7 +571,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -583,7 +583,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@nom_prikaza", nom_prikaza);
                 cmd.Parameters.AddWithValue("@date_sost_prikaza", date_sost_prikaza);
                 cmd.Parameters.AddWithValue("@firma_id", firma_id);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -593,7 +593,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -607,7 +607,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@date_sost_prikaza", date_sost_prikaza);
                 cmd.Parameters.AddWithValue("@firma_id", firma_id);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -616,7 +616,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -626,7 +626,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_dogovor", id_dogovor);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -635,7 +635,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -651,7 +651,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@dogovor_id", dogovor_id);
                 cmd.Parameters.AddWithValue("@account_id", account_id);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -661,7 +661,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -678,7 +678,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@dogovor_id", dogovor_id);
                 cmd.Parameters.AddWithValue("@account_id", account_id);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -687,7 +687,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -697,7 +697,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_sotrudnik", id_sotrudnik);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -706,7 +706,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -721,7 +721,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@ulitsa", ulitsa);
                 cmd.Parameters.AddWithValue("@dom", dom);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -731,7 +731,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -747,7 +747,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@ulitsa", ulitsa);
                 cmd.Parameters.AddWithValue("@dom", dom);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -756,7 +756,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -766,7 +766,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_firma_postavki", id_firma_postavki);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -775,7 +775,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -789,7 +789,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@otch_postavshika", otch_postavshika);
                 cmd.Parameters.AddWithValue("@firma_postavki_id", firma_postavki_id);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -799,7 +799,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -814,7 +814,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@otch_postavshika", otch_postavshika);
                 cmd.Parameters.AddWithValue("@firma_postavki_id", firma_postavki_id);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -823,7 +823,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -833,7 +833,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_postavshik", id_postavshik);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -842,7 +842,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -856,7 +856,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@nach_otcheta", nach_otcheta);
                 cmd.Parameters.AddWithValue("@kon_otcheta", kon_otcheta);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -866,7 +866,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -881,7 +881,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@nach_otcheta", nach_otcheta);
                 cmd.Parameters.AddWithValue("@kon_otcheta", kon_otcheta);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -890,7 +890,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -900,7 +900,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_pribil_i_rashodi", id_pribil_i_rashodi);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -909,7 +909,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -925,7 +925,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@dogovor_id", dogovor_id);
 
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -935,7 +935,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -951,7 +951,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@tabel_rab_vremeni_id", tabel_rab_vremeni_id);
                 cmd.Parameters.AddWithValue("@dogovor_id", dogovor_id);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -960,7 +960,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -970,7 +970,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_soiskatel", id_soiskatel);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -979,7 +979,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -992,7 +992,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@tovar_na_sklade_id", tovar_na_sklade_id);
                 cmd.Parameters.AddWithValue("@post_tovar_id", post_tovar_id);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1002,7 +1002,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1017,7 +1017,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@post_tovar_id", post_tovar_id);
 
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1026,7 +1026,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1036,7 +1036,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_postavka", id_postavka);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1045,7 +1045,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1059,7 +1059,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@doljnost_id", doljnost_id);
                 cmd.Parameters.AddWithValue("@sotrudnik_id", sotrudnik_id);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1069,7 +1069,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1085,7 +1085,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@sotrudnik_id", sotrudnik_id);
 
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1094,7 +1094,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1104,7 +1104,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_check_vid_med", id_check_vid_med);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1113,7 +1113,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1127,7 +1127,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@tov_status", tov_status);
                 cmd.Parameters.AddWithValue("@postavka_id", postavka_id);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1137,7 +1137,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1151,7 +1151,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@tov_status", tov_status);
                 cmd.Parameters.AddWithValue("@postavka_id", postavka_id);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1160,7 +1160,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1170,7 +1170,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_ident_tov_party", id_ident_tov_party);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1179,7 +1179,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1192,7 +1192,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@kol_vid_med", kol_vid_med);
                 cmd.Parameters.AddWithValue("@check_vid_med_id", check_vid_med_id);
                 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1202,7 +1202,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1216,7 +1216,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@check_vid_med_id", check_vid_med_id);
 
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1225,7 +1225,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1235,7 +1235,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_medicamenti", id_medicamenti);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1244,7 +1244,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1258,7 +1258,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@document_id", document_id);
                 cmd.Parameters.AddWithValue("@soiskatel_id", soiskatel_id);
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1268,7 +1268,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1284,7 +1284,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@soiskatel_id", soiskatel_id);
 
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1293,7 +1293,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1303,7 +1303,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("id_kadr_perestanovki", id_kadr_perestanovki);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1312,7 +1312,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1325,7 +1325,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@kadr_perestanovki_id", kadr_perestanovki_id);
                 
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1335,7 +1335,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1349,7 +1349,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@kadr_perestanovki_id", kadr_perestanovki_id);
 
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1358,7 +1358,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1368,7 +1368,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_tabel_zarplata", id_tabel_zarplata);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1377,7 +1377,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1392,7 +1392,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@pribil_i_rashodi_id", pribil_i_rashodi_id);
 
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1402,7 +1402,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1417,7 +1417,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@pribil_i_rashodi_id", pribil_i_rashodi_id);
 
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1426,7 +1426,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1436,7 +1436,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_kadr_uchet", id_kadr_uchet);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1445,7 +1445,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1460,7 +1460,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@instr_raboty_kassira_id", instr_raboty_kassira_id);
                 
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1470,7 +1470,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1484,7 +1484,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@instr_raboty_kassira_id", instr_raboty_kassira_id);
 
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1493,7 +1493,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1503,7 +1503,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_prodaja_tovara", id_prodaja_tovara);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1512,7 +1512,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1528,7 +1528,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@ident_tov_party_id", ident_tov_party_id);
 
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1538,7 +1538,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1553,7 +1553,7 @@ namespace UP_02._01
                 cmd.Parameters.AddWithValue("@ident_tov_party_id", ident_tov_party_id);
 
 
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1562,7 +1562,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
@@ -1572,7 +1572,7 @@ namespace UP_02._01
             try
             {
                 cmd.Parameters.AddWithValue("@id_vih_doc", id_vih_doc);
-                Form1.sql.Open();
+                AuthorizForm.sql.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
@@ -1581,7 +1581,7 @@ namespace UP_02._01
             }
             finally
             {
-                Form1.sql.Close();
+                AuthorizForm.sql.Close();
             }
         }
 
