@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuthorizationForm.cs">
+    <Compile Include="AuthorizForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuthorizationForm.Designer.cs">
-      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    <Compile Include="AuthorizForm.Designer.cs">
+      <DependentUpon>AuthorizForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBaseTables.cs" />
     <Compile Include="DBProcedures.cs" />
@@ -77,7 +77,7 @@
     </Compile>
     <Compile Include="Registry_Class.cs" />
     <EmbeddedResource Include="AuthorizationForm.resx">
-      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+      <DependentUpon>AuthorizForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KassaForm.resx">
       <DependentUpon>KassaForm.cs</DependentUpon>

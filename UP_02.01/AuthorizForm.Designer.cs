@@ -1,6 +1,6 @@
 ﻿namespace UP_02._01
 {
-    partial class AuthorizationForm
+    partial class AuthorizForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.

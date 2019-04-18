@@ -56,7 +56,7 @@ namespace UP_02._01
         
         private void btBackAuthoriz_Click(object sender, EventArgs e)
         {
-            AuthorizationForm authForm = new AuthorizationForm();
+            AuthorizForm authForm = new AuthorizForm();
             authForm.Show();
             this.Hide();
         }
