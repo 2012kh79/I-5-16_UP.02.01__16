@@ -52,7 +52,15 @@
     <Compile Include="AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataBaseTables.cs" />
     <Compile Include="DBProcedures.cs" />
+    <Compile Include="DynamicObjects.cs" />
+    <Compile Include="KassaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KassaForm.Designer.cs">
+      <DependentUpon>KassaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +75,12 @@
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registry_Class.cs" />
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KassaForm.resx">
+      <DependentUpon>KassaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
