@@ -9,7 +9,7 @@ namespace UP_02._01
         public static string DSIP = "Empty", DSSN = "Empty", IC = "Empty", UI = "Empty", PW = "Empty";
         public static
         string error_message = "App:start: " + DateTime.Now.ToLongDateString();
-        public static SqlConnection sqlConnection = new SqlConnection();
+        public static SqlConnection sql = new SqlConnection();
         public void Registry_Get()
         {
             RegistryKey registry = Registry.CurrentUser;
@@ -32,7 +32,7 @@ namespace UP_02._01
             }
             finally
             {
-                sqlConnection.ConnectionString = "Data Source = " + DSIP + "\\" + DSSN +
+                sql.ConnectionString = "Data Source = " + DSIP + "\\" + DSSN +
                     "; Initial Catalog = " + IC + "; Persist Security Info = true; " +
                     "User ID = " + UI + "; Password = \"" + PW + "\"";
             }
