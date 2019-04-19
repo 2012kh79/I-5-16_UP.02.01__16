@@ -15,11 +15,11 @@ namespace UP_02._01
     {
 
         public static byte ID_User;
-        public static SqlConnection sql = new SqlConnection("Data Source = 31.31.198.31;" +
-                                                            "Initial Catalog = u0695785_TatarBase;" +
-                                                            "Persist Security Info=True; User ID = u0695785_TatarBase; Password=\"TatarBase123IIL\"");
+        //public static SqlConnection sql = new SqlConnection("Data Source = 31.31.198.31;" +
+        //                                                    "Initial Catalog = u0695785_TatarBase;" +
+        //                                                    "Persist Security Info=True; User ID = u0695785_TatarBase; Password=\"TatarBase123IIL\"");
 
-        public static SqlCommand command = new SqlCommand("", sql);
+        public static SqlCommand command = new SqlCommand("", Registry_Class.sql);
         public AuthorizForm()
         {
             InitializeComponent();
@@ -51,7 +51,7 @@ namespace UP_02._01
                                   "from [dbo].[account] " +
                                   "where ([dbo].[account].[login_acc] = '" + User + "')" +
                                   "and ([dbo].[account].[password_acc] = '" + RegistrationForm.Hash(Pass)+ "')";
-            sql.Open();
+            Registry_Class.sql.Open();
             try
             {
                 ID_User = Convert.ToByte(command.ExecuteScalar().ToString());
@@ -62,7 +62,7 @@ namespace UP_02._01
             }
             finally
             {
-                sql.Close();
+                Registry_Class.sql.Close();
             }
         }
     }
