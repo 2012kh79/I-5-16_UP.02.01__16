@@ -38,7 +38,7 @@ namespace UP_02._01
             Authoriz(tbLogin.Text, tbPass.Text);
             if (ID_User != 0)
             {
-                MainForm mainFrm = new MainForm();
+                ApplicationForm mainFrm = new ApplicationForm();
                 mainFrm.Show();
                 this.Hide();
             }

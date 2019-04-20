@@ -24,7 +24,7 @@ namespace UP_02._01
             TextBox tbDateOrder = new TextBox();
             TextBox tbSalary = new TextBox();
             TextBox tbDateSignOrder = new TextBox();
-            public Form wqqeq = new Form();
+            public Form aggregateDocumentChangeForm = new Form();
 
         public void DocumentChangeFormFill()
         {
@@ -34,17 +34,17 @@ namespace UP_02._01
             lblHead.Text = "Изменение Документов";
             lblHead.Location = new Point(280, 10);
             lblHead.Font = new Font("Times New Roman", 25);
-            wqqeq.Controls.Add(lblHead);
+            aggregateDocumentChangeForm.Controls.Add(lblHead);
 
             btnReturn.Size = new Size(100, 30);
             btnReturn.Text = "Вернуться";
             btnReturn.Location = new Point(35, 35);
             btnReturn.Font = new Font("Times New Roman", 10);
-            wqqeq.Controls.Add(btnReturn);
+            aggregateDocumentChangeForm.Controls.Add(btnReturn);
 
             pnlTextBox.Size = new Size(725, 200);
             pnlTextBox.Location = new Point(10, 425);
-            wqqeq.Controls.Add(pnlTextBox);
+            aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
 
 
             lblVidDocument.Size = new Size(150, 20);
@@ -118,6 +118,88 @@ namespace UP_02._01
             btnDelete.Location = new Point(620, 120);
             btnDelete.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(btnDelete);
+        }
+
+
+     
+        Label lblFamSoiskatel = new Label();
+        Label lblNameSoiskatel = new Label();
+        Label lblOtchSoiskatel = new Label();
+        TextBox tbFamSoiskatel = new TextBox();
+        TextBox tbNameSoiskatel = new TextBox();
+        TextBox tbOtchSoiskatelr = new TextBox();
+
+        public Form aggregateApplicationForm = new Form();
+
+        public void ApplicationFormFill()
+        {
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Анкета соискателя";
+            lblHead.Location = new Point(280, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateApplicationForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateApplicationForm.Controls.Add(btnReturn);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(620, 20);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            pnlTextBox.Size = new Size(725, 325);
+            pnlTextBox.Location = new Point(10, 425);
+            aggregateApplicationForm.Controls.Add(pnlTextBox);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(620, 70);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(620, 120);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+
+            lblFamSoiskatel.Size = new Size(150, 20);
+            lblFamSoiskatel.Text = "Фамилия соискателя";
+            lblFamSoiskatel.Location = new Point(5, 5);
+            lblFamSoiskatel.Font = new Font("Times New Roman", 10);
+
+            tbFamSoiskatel.Size = new Size(150, 20);
+            tbFamSoiskatel.Location = new Point(5, 25);
+            pnlTextBox.Controls.Add(lblFamSoiskatel);
+            pnlTextBox.Controls.Add(tbFamSoiskatel);
+
+
+            lblNameSoiskatel.Size = new Size(150, 20);
+            lblNameSoiskatel.Text = "Имя соискателя";
+            lblNameSoiskatel.Location = new Point(5, 50);
+            lblNameSoiskatel.Font = new Font("Times New Roman", 10);
+
+            tbNameSoiskatel.Size = new Size(150, 20);
+            tbNameSoiskatel.Location = new Point(5, 75);
+            pnlTextBox.Controls.Add(tbNameSoiskatel);
+            pnlTextBox.Controls.Add(lblNameSoiskatel);
+
+
+            lblOtchSoiskatel.Size = new Size(150, 20);
+            lblOtchSoiskatel.Text = "Отчество соискателя";
+            lblOtchSoiskatel.Location = new Point(5, 100);
+            lblOtchSoiskatel.Font = new Font("Times New Roman", 10);
+
+            tbOtchSoiskatelr.Size = new Size(150, 20);
+            tbOtchSoiskatelr.Location = new Point(5, 125);
+            pnlTextBox.Controls.Add(lblOtchSoiskatel);
+            pnlTextBox.Controls.Add(tbOtchSoiskatelr);
+
+
         }
     }
 }

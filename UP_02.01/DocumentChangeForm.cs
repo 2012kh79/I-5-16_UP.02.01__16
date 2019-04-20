@@ -18,7 +18,7 @@ namespace UP_02._01
         public void DocumentChangeForm_Load(object sender, EventArgs e)
         {
            DynamicObjects classDynamicObjects = new DynamicObjects();
-            classDynamicObjects.wqqeq = this;
+            classDynamicObjects.aggregateDocumentChangeForm = this;
             classDynamicObjects.DocumentChangeFormFill();
         }
 

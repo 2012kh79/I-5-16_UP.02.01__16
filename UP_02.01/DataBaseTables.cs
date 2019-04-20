@@ -176,7 +176,7 @@ namespace UP_02._01
             dtFill(dtSoiskatel, qrSoiskatel);
         }
         public void dtSotrudnikFill()
-        {
+        {   
             dtFill(dtSotrudnik, qrSotrudnik);
         }
 
