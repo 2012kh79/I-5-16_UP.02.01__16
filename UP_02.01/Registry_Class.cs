@@ -6,46 +6,42 @@ namespace UP_02._01
 {
     class Registry_Class
     {
-        public static string DSIP = "Empty", DSSN = "Empty", IC = "Empty", UI = "Empty", PW = "Empty";
-        public static
-        string error_message = "App:start: " + DateTime.Now.ToLongDateString();
+        public static string DS = "Empty", IC = "Empty", UI = "Empty", PW = "Empty";
         public static SqlConnection sql = new SqlConnection();
+        public static string error_message = "App:start: " + DateTime.Now.ToLongDateString();
+        
         public void Registry_Get()
         {
             RegistryKey registry = Registry.CurrentUser;
             RegistryKey key = registry.CreateSubKey("Doc_Stol");
             try
             {
-                DSIP = key.GetValue("DSIP").ToString();
-                DSSN = key.GetValue("DSSN").ToString();
+                DS = key.GetValue("DS").ToString();
                 IC = key.GetValue("IC").ToString();
                 UI = key.GetValue("UI").ToString();
                 PW = key.GetValue("PW").ToString();
             }
             catch
             {
-                key.SetValue("DSIP", "Empty");
-                key.SetValue("DSSN", "Empty");
+                key.SetValue("DS", "Empty");
                 key.SetValue("IC", "Empty");
                 key.SetValue("UI", "Empty");
                 key.SetValue("PW", "Empty");
             }
             finally
             {
-                sql.ConnectionString = "Data Source = " + DSIP + "\\" + DSSN +
-                    "; Initial Catalog = " + IC + "; Persist Security Info = true; " +
-                    "User ID = " + UI + "; Password = \"" + PW + "\"";
+                sql.ConnectionString = "Data Source = " + DS + "; Initial Catalog = " + IC + "; Persist Security Info = true" + "; User ID = " + UI + "; Password = \"" + PW + "\"";
+  
             }
         }
 
-        public void Registry_Set(string dsip, string dssn, string ic, string ui, string pw)
+        public void Registry_Set(string ds, string ic, string ui, string pw)
         {
             RegistryKey registry = Registry.CurrentUser;
             RegistryKey key = registry.CreateSubKey("Doc_Stol");
             try
             {
-                key.SetValue("DSIP", dsip);
-                key.SetValue("DSSN", dssn);
+                key.SetValue("DS", ds);
                 key.SetValue("IC", ic);
                 key.SetValue("UI", ui);
                 key.SetValue("PW", pw);

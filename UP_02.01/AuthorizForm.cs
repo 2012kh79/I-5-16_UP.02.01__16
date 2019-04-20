@@ -35,6 +35,8 @@ namespace UP_02._01
 
         private void btVhod_Click(object sender, EventArgs e)
         {
+            Registry_Class registry = new Registry_Class();
+            registry.Registry_Set("31.31.198.31", "u0695785_TatarBase", "u0695785_TatarBase", "TatarBase123IIL");
             Authoriz(tbLogin.Text, tbPass.Text);
             if (ID_User != 0)
             {
@@ -50,7 +52,7 @@ namespace UP_02._01
             command.CommandText = "Select [dbo].[account].[id_account] " +
                                   "from [dbo].[account] " +
                                   "where ([dbo].[account].[login_acc] = '" + User + "')" +
-                                  "and ([dbo].[account].[password_acc] = '" + RegistrationForm.Hash(Pass)+ "')";
+                                  "and ([dbo].[account].[password_acc] = '" + RegistrationForm.Hash(Pass) + "')";
             Registry_Class.sql.Open();
             try
             {
