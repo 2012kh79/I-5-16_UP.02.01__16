@@ -16,7 +16,7 @@ namespace UP_02._01
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DocumentChangeForm());
+            Application.Run(new AuthorizForm());
         }
     }
 }
