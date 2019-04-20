@@ -33,31 +33,31 @@
             this.dgvVidDocument = new System.Windows.Forms.DataGridView();
             this.tbpOrder = new System.Windows.Forms.TabPage();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
+            this.tbpSalary = new System.Windows.Forms.TabPage();
+            this.dgvTabelSalary = new System.Windows.Forms.DataGridView();
+            this.tbpKadrPerestanovki = new System.Windows.Forms.TabPage();
+            this.dgvKadrPerestanovki = new System.Windows.Forms.DataGridView();
+            this.tabKadrUchet = new System.Windows.Forms.TabPage();
+            this.dgvKadrUchet = new System.Windows.Forms.DataGridView();
             this.tcnDocument = new System.Windows.Forms.TabControl();
             this.tbpWord = new System.Windows.Forms.TabPage();
-            this.tbpExcel = new System.Windows.Forms.TabPage();
-            this.tbpSalary = new System.Windows.Forms.TabPage();
-            this.tbpKadrPerestanovki = new System.Windows.Forms.TabPage();
-            this.tabKadrUchet = new System.Windows.Forms.TabPage();
-            this.dgvTabelSalary = new System.Windows.Forms.DataGridView();
-            this.dgvKadrPerestanovki = new System.Windows.Forms.DataGridView();
-            this.dgvKadrUchet = new System.Windows.Forms.DataGridView();
             this.btnWord = new System.Windows.Forms.Button();
+            this.tbpExcel = new System.Windows.Forms.TabPage();
             this.btnExcel = new System.Windows.Forms.Button();
             this.tcnTable.SuspendLayout();
             this.tbpDocument.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVidDocument)).BeginInit();
             this.tbpOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
+            this.tbpSalary.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTabelSalary)).BeginInit();
+            this.tbpKadrPerestanovki.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKadrPerestanovki)).BeginInit();
+            this.tabKadrUchet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKadrUchet)).BeginInit();
             this.tcnDocument.SuspendLayout();
             this.tbpWord.SuspendLayout();
             this.tbpExcel.SuspendLayout();
-            this.tbpSalary.SuspendLayout();
-            this.tbpKadrPerestanovki.SuspendLayout();
-            this.tabKadrUchet.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTabelSalary)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKadrPerestanovki)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKadrUchet)).BeginInit();
             this.SuspendLayout();
             // 
             // tcnTable
@@ -111,6 +111,63 @@
             this.dgvOrder.Size = new System.Drawing.Size(840, 287);
             this.dgvOrder.TabIndex = 1;
             // 
+            // tbpSalary
+            // 
+            this.tbpSalary.Controls.Add(this.dgvTabelSalary);
+            this.tbpSalary.Location = new System.Drawing.Point(4, 22);
+            this.tbpSalary.Name = "tbpSalary";
+            this.tbpSalary.Size = new System.Drawing.Size(852, 299);
+            this.tbpSalary.TabIndex = 2;
+            this.tbpSalary.Text = "Заработная плата";
+            this.tbpSalary.UseVisualStyleBackColor = true;
+            this.tbpSalary.Visible = false;
+            // 
+            // dgvTabelSalary
+            // 
+            this.dgvTabelSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTabelSalary.Location = new System.Drawing.Point(6, 6);
+            this.dgvTabelSalary.Name = "dgvTabelSalary";
+            this.dgvTabelSalary.Size = new System.Drawing.Size(840, 287);
+            this.dgvTabelSalary.TabIndex = 1;
+            // 
+            // tbpKadrPerestanovki
+            // 
+            this.tbpKadrPerestanovki.Controls.Add(this.dgvKadrPerestanovki);
+            this.tbpKadrPerestanovki.Location = new System.Drawing.Point(4, 22);
+            this.tbpKadrPerestanovki.Name = "tbpKadrPerestanovki";
+            this.tbpKadrPerestanovki.Size = new System.Drawing.Size(852, 299);
+            this.tbpKadrPerestanovki.TabIndex = 3;
+            this.tbpKadrPerestanovki.Text = "Кадровые перестановки";
+            this.tbpKadrPerestanovki.UseVisualStyleBackColor = true;
+            this.tbpKadrPerestanovki.Visible = false;
+            // 
+            // dgvKadrPerestanovki
+            // 
+            this.dgvKadrPerestanovki.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKadrPerestanovki.Location = new System.Drawing.Point(6, 6);
+            this.dgvKadrPerestanovki.Name = "dgvKadrPerestanovki";
+            this.dgvKadrPerestanovki.Size = new System.Drawing.Size(840, 287);
+            this.dgvKadrPerestanovki.TabIndex = 1;
+            // 
+            // tabKadrUchet
+            // 
+            this.tabKadrUchet.Controls.Add(this.dgvKadrUchet);
+            this.tabKadrUchet.Location = new System.Drawing.Point(4, 22);
+            this.tabKadrUchet.Name = "tabKadrUchet";
+            this.tabKadrUchet.Size = new System.Drawing.Size(852, 299);
+            this.tabKadrUchet.TabIndex = 4;
+            this.tabKadrUchet.Text = "Кадровый учёт";
+            this.tabKadrUchet.UseVisualStyleBackColor = true;
+            this.tabKadrUchet.Visible = false;
+            // 
+            // dgvKadrUchet
+            // 
+            this.dgvKadrUchet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKadrUchet.Location = new System.Drawing.Point(6, 6);
+            this.dgvKadrUchet.Name = "dgvKadrUchet";
+            this.dgvKadrUchet.Size = new System.Drawing.Size(840, 287);
+            this.dgvKadrUchet.TabIndex = 1;
+            // 
             // tcnDocument
             // 
             this.tcnDocument.Controls.Add(this.tbpWord);
@@ -132,6 +189,16 @@
             this.tbpWord.Text = "Word";
             this.tbpWord.UseVisualStyleBackColor = true;
             // 
+            // btnWord
+            // 
+            this.btnWord.Location = new System.Drawing.Point(22, 41);
+            this.btnWord.Name = "btnWord";
+            this.btnWord.Size = new System.Drawing.Size(75, 23);
+            this.btnWord.TabIndex = 0;
+            this.btnWord.Text = "Создать";
+            this.btnWord.UseVisualStyleBackColor = true;
+            this.btnWord.Click += new System.EventHandler(this.btnWord_Click);
+            // 
             // tbpExcel
             // 
             this.tbpExcel.Controls.Add(this.btnExcel);
@@ -142,72 +209,6 @@
             this.tbpExcel.TabIndex = 1;
             this.tbpExcel.Text = "Excel";
             this.tbpExcel.UseVisualStyleBackColor = true;
-            // 
-            // tbpSalary
-            // 
-            this.tbpSalary.Controls.Add(this.dgvTabelSalary);
-            this.tbpSalary.Location = new System.Drawing.Point(4, 22);
-            this.tbpSalary.Name = "tbpSalary";
-            this.tbpSalary.Size = new System.Drawing.Size(852, 299);
-            this.tbpSalary.TabIndex = 2;
-            this.tbpSalary.Text = "Заработная плата";
-            this.tbpSalary.UseVisualStyleBackColor = true;
-            this.tbpSalary.Visible = false;
-            // 
-            // tbpKadrPerestanovki
-            // 
-            this.tbpKadrPerestanovki.Controls.Add(this.dgvKadrPerestanovki);
-            this.tbpKadrPerestanovki.Location = new System.Drawing.Point(4, 22);
-            this.tbpKadrPerestanovki.Name = "tbpKadrPerestanovki";
-            this.tbpKadrPerestanovki.Size = new System.Drawing.Size(852, 299);
-            this.tbpKadrPerestanovki.TabIndex = 3;
-            this.tbpKadrPerestanovki.Text = "Кадровые перестановки";
-            this.tbpKadrPerestanovki.UseVisualStyleBackColor = true;
-            this.tbpKadrPerestanovki.Visible = false;
-            // 
-            // tabKadrUchet
-            // 
-            this.tabKadrUchet.Controls.Add(this.dgvKadrUchet);
-            this.tabKadrUchet.Location = new System.Drawing.Point(4, 22);
-            this.tabKadrUchet.Name = "tabKadrUchet";
-            this.tabKadrUchet.Size = new System.Drawing.Size(852, 299);
-            this.tabKadrUchet.TabIndex = 4;
-            this.tabKadrUchet.Text = "Кадровый учёт";
-            this.tabKadrUchet.UseVisualStyleBackColor = true;
-            this.tabKadrUchet.Visible = false;
-            // 
-            // dgvTabelSalary
-            // 
-            this.dgvTabelSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTabelSalary.Location = new System.Drawing.Point(6, 6);
-            this.dgvTabelSalary.Name = "dgvTabelSalary";
-            this.dgvTabelSalary.Size = new System.Drawing.Size(840, 287);
-            this.dgvTabelSalary.TabIndex = 1;
-            // 
-            // dgvKadrPerestanovki
-            // 
-            this.dgvKadrPerestanovki.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKadrPerestanovki.Location = new System.Drawing.Point(6, 6);
-            this.dgvKadrPerestanovki.Name = "dgvKadrPerestanovki";
-            this.dgvKadrPerestanovki.Size = new System.Drawing.Size(840, 287);
-            this.dgvKadrPerestanovki.TabIndex = 1;
-            // 
-            // dgvKadrUchet
-            // 
-            this.dgvKadrUchet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKadrUchet.Location = new System.Drawing.Point(6, 6);
-            this.dgvKadrUchet.Name = "dgvKadrUchet";
-            this.dgvKadrUchet.Size = new System.Drawing.Size(840, 287);
-            this.dgvKadrUchet.TabIndex = 1;
-            // 
-            // btnWord
-            // 
-            this.btnWord.Location = new System.Drawing.Point(22, 41);
-            this.btnWord.Name = "btnWord";
-            this.btnWord.Size = new System.Drawing.Size(75, 23);
-            this.btnWord.TabIndex = 0;
-            this.btnWord.Text = "Создать";
-            this.btnWord.UseVisualStyleBackColor = true;
             // 
             // btnExcel
             // 
@@ -234,15 +235,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVidDocument)).EndInit();
             this.tbpOrder.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
+            this.tbpSalary.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTabelSalary)).EndInit();
+            this.tbpKadrPerestanovki.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKadrPerestanovki)).EndInit();
+            this.tabKadrUchet.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKadrUchet)).EndInit();
             this.tcnDocument.ResumeLayout(false);
             this.tbpWord.ResumeLayout(false);
             this.tbpExcel.ResumeLayout(false);
-            this.tbpSalary.ResumeLayout(false);
-            this.tbpKadrPerestanovki.ResumeLayout(false);
-            this.tabKadrUchet.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTabelSalary)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKadrPerestanovki)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKadrUchet)).EndInit();
             this.ResumeLayout(false);
 
         }
