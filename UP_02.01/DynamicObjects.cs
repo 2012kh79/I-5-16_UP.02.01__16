@@ -7,23 +7,23 @@ namespace UP_02._01
 {
     class DynamicObjects
     {
-       
-            Label lblHead = new Label();
-            Label lblVidDocument = new Label();
-            Label lblNomberOrder = new Label();
-            Label lblDateOrder = new Label();
-            Label lblSalary = new Label();
-            Label lblDateSignOrder = new Label();
-            Button btnReturn = new Button();
-            Button btnInsert = new Button();
-            Button btnUpdate = new Button();
-            Button btnDelete = new Button();
-            Panel pnlTextBox = new Panel();
-            TextBox tbVidDocument = new TextBox();
-            TextBox tbNomberOrder = new TextBox();
-            TextBox tbDateOrder = new TextBox();
-            TextBox tbSalary = new TextBox();
-            TextBox tbDateSignOrder = new TextBox();
+
+        public Label lblHead = new Label();
+        public Label lblVidDocument = new Label();
+        public Label lblNomberOrder = new Label();
+        public Label lblDateOrder = new Label();
+        public Label lblSalary = new Label();
+        public Label lblDateSignOrder = new Label();
+        public Button btnReturn = new Button();
+        public Button btnInsert = new Button();
+        public Button btnUpdate = new Button();
+        public Button btnDelete = new Button();
+        public Panel pnlTextBox = new Panel();
+        public TextBox tbVidDocument = new TextBox();
+        public TextBox tbNomberOrder = new TextBox();
+        public TextBox tbDateOrder = new TextBox();
+        public TextBox tbSalary = new TextBox();
+        public TextBox tbDateSignOrder = new TextBox();
             public Form aggregateDocumentChangeForm = new Form();
 
         public void DocumentChangeFormFill()
@@ -122,12 +122,12 @@ namespace UP_02._01
 
 
      
-        Label lblFamSoiskatel = new Label();
-        Label lblNameSoiskatel = new Label();
-        Label lblOtchSoiskatel = new Label();
-        TextBox tbFamSoiskatel = new TextBox();
-        TextBox tbNameSoiskatel = new TextBox();
-        TextBox tbOtchSoiskatelr = new TextBox();
+        public Label lblFamSoiskatel = new Label();
+        public Label lblNameSoiskatel = new Label();
+        public Label lblOtchSoiskatel = new Label();
+        public TextBox tbFamSoiskatel = new TextBox();
+        public TextBox tbNameSoiskatel = new TextBox();
+        public TextBox tbOtchSoiskatel = new TextBox();
 
         public Form aggregateApplicationForm = new Form();
 
@@ -194,10 +194,10 @@ namespace UP_02._01
             lblOtchSoiskatel.Location = new Point(5, 100);
             lblOtchSoiskatel.Font = new Font("Times New Roman", 10);
 
-            tbOtchSoiskatelr.Size = new Size(150, 20);
-            tbOtchSoiskatelr.Location = new Point(5, 125);
+            tbOtchSoiskatel.Size = new Size(150, 20);
+            tbOtchSoiskatel.Location = new Point(5, 125);
             pnlTextBox.Controls.Add(lblOtchSoiskatel);
-            pnlTextBox.Controls.Add(tbOtchSoiskatelr);
+            pnlTextBox.Controls.Add(tbOtchSoiskatel);
 
 
         }
