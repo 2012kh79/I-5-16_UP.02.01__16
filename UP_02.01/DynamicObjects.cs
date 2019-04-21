@@ -1107,7 +1107,7 @@ namespace UP_02._01
             btnApplication.Text = "Анкета";
             btnApplication.Location = new Point(100, 400);
             btnApplication.Font = new Font("Times New Roman", 10);
-            btnDocument.Click += new EventHandler(bbtnApplication_Click);
+            btnApplication.Click += new EventHandler(bbtnApplication_Click);
             pnlTextBox.Controls.Add(btnApplication);
 
 
@@ -1116,48 +1116,48 @@ namespace UP_02._01
             protected void btnDocument_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            DocumentChangeForm regForm = new DocumentChangeForm();
-            regForm.Show();
+            DocumentChangeForm DCF = new DocumentChangeForm();
+            DCF.Show();
             aggregateMainForm.Hide();
         }
 
         protected void btnStaff_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            StaffForm regForm = new StaffForm();
-            regForm.Show();
+            StaffForm SF = new StaffForm();
+            SF.Show();
             aggregateMainForm.Hide();
         }
 
         protected void btnSupply_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            SupplyForm regForm = new SupplyForm();
-            regForm.Show();
+            SupplyForm SUF = new SupplyForm();
+            SUF.Show();
             aggregateMainForm.Hide();
         }
 
         protected void btnIncome_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            IncomeForm regForm = new IncomeForm();
-            regForm.Show();
+            IncomeForm INCF = new IncomeForm();
+            INCF.Show();
             aggregateMainForm.Hide();
         }
 
         protected void btnKassa_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            KassaForm regForm = new KassaForm();
-            regForm.Show();
+            KassaForm KF = new KassaForm();
+            KF.Show();
             aggregateMainForm.Hide();
         }
 
         protected void bbtnApplication_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            ApplicationForm regForm = new ApplicationForm();
-            regForm.Show();
+            ApplicationForm AF = new ApplicationForm();
+            AF.Show();
             aggregateMainForm.Hide();
         }
     }
