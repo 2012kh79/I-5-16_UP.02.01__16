@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace UP_02._01
 {
-    public partial class MainForm : Form
+    public partial class IncomeForm : Form
     {
-        public MainForm()
+        public IncomeForm()
         {
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void IncomeForm_Load(object sender, EventArgs e)
         {
             DynamicObjects classDynamicObjects = new DynamicObjects();
-            classDynamicObjects.aggregateMainForm = this;
-            classDynamicObjects.MainFormFill();
+            classDynamicObjects.aggregateIncomeForm = this;
+            classDynamicObjects.IncomeFormFill();
         }
     }
 }

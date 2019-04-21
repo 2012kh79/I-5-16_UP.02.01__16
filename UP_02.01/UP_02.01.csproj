@@ -67,6 +67,12 @@
       <DependentUpon>DocumentChangeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DynamicObjects.cs" />
+    <Compile Include="IncomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncomeForm.Designer.cs">
+      <DependentUpon>IncomeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="KassaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,18 @@
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Registry_Class.cs" />
+    <Compile Include="StaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffForm.Designer.cs">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplyForm.Designer.cs">
+      <DependentUpon>SupplyForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ApplicationForm.resx">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,8 +115,14 @@
     <EmbeddedResource Include="DocumentChangeForm.resx">
       <DependentUpon>DocumentChangeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IncomeForm.resx">
+      <DependentUpon>IncomeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KassaForm.resx">
       <DependentUpon>KassaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -112,6 +136,12 @@
     </Compile>
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffForm.resx">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplyForm.resx">
+      <DependentUpon>SupplyForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
