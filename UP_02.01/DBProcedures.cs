@@ -9,9 +9,9 @@ namespace UP_02._01
 {
     class DBProcedures
     {
-        private SqlCommand cmd = new SqlCommand("Empty",Registry_Class.sql);
+        public SqlCommand cmd = new SqlCommand("",Registry_Class.sql);
 
-        private void spConfiguration(string spName)
+        public void spConfiguration(string spName)
         {
             cmd.CommandText = spName;
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -944,7 +944,7 @@ namespace UP_02._01
             spConfiguration("soiskatel_update");
             try
             {
-                cmd.Parameters.AddWithValue("@pribil_i_rashodi", id_soiskatel);
+                cmd.Parameters.AddWithValue("@id_soiskatel", id_soiskatel);
                 cmd.Parameters.AddWithValue("@fam_soiskatel", fam_soiskatel);
                 cmd.Parameters.AddWithValue("@imya_soiskatel", imya_soiskatel);
                 cmd.Parameters.AddWithValue("@otch_soiskatel", otch_soiskatel);

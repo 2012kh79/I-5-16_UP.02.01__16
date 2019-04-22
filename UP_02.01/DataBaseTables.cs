@@ -59,13 +59,13 @@ namespace UP_02._01
             qrVih_doc = "select [id_vih_doc],[prodaja_tovara_id],[kadr_uchet_id],[ident_tov_party_id],[id_prodaja_tovara],[id_kadr_uchet],[id_ident_tov_party],[vid_doc],[tov_status] from [dbo].[vih_doc] inner join [dbo].[prodaja_tovara] on [dbo].[prodaja_tovara].[id_prodaja_tovara] = [dbo].[vih_doc].[prodaja_tovara_id] inner join [dbo].[kadr_uchet] on [dbo].[kadr_uchet].[id_kadr_uchet] = [dbo].[vih_doc].[kadr_uchet_id] inner join [dbo].[ident_tov_party] on [dbo].[ident_tov_party].[id_ident_tov_party] = [dbo].[vih_doc].[ident_tov_party_id]",
             qrTr_pribil_i_rashodi = "select [id_pribil_i_rashodi_old],[id_pribil_i_rashodi_new],[pribil_old],[pribil_new],[rashodi_old],[rashodi_new],[nach_otcheta_new],[nach_otcheta_old],[kon_otcheta_old],[kon_otcheta_new],[data] from [u0695785_TatarBase].[tr_pribil_i_rashodi]";
 
-        private void dtFill(DataTable table, string query)
+        public void dtFill(DataTable table, string query)
         {
             try
             {
                 command.Notification = null;
                 command.CommandText = query;
-                dependency.AddCommandDependency(command);
+                //dependency.AddCommandDependency(command);
                 SqlDependency.Start(Registry_Class.sql.ConnectionString);
                 Registry_Class.sql.Open();
                 table.Load(command.ExecuteReader());

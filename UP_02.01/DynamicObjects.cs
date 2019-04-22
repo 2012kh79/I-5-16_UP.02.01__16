@@ -7,8 +7,9 @@ namespace UP_02._01
 {
     class DynamicObjects
     {
-         
-            Button btnReturn = new Button();
+        DBProcedures procedure = new DBProcedures();
+        DataBaseTables tables = new DataBaseTables();
+        Button btnReturn = new Button();
             Button btnInsert = new Button();
             Button btnUpdate = new Button();
             Button btnDelete = new Button();
@@ -317,13 +318,17 @@ namespace UP_02._01
         }
 
 
-     
+
         Label lblFamSoiskatel = new Label();
         Label lblNameSoiskatel = new Label();
         Label lblOtchSoiskatel = new Label();
-        TextBox tbFamSoiskatel = new TextBox();
-        TextBox tbNameSoiskatel = new TextBox();
-        TextBox tbOtchSoiskatelr = new TextBox();
+        Label lblTabel_rab_vremeni_ID = new Label();
+        Label lblDogovor_ID = new Label();
+        public TextBox tbFamSoiskatel = new TextBox();
+        public TextBox tbNameSoiskatel = new TextBox();
+        public TextBox tbOtchSoiskatel = new TextBox();
+        public ComboBox cmbTabel_rab_vremeni_ID = new ComboBox();
+        public ComboBox cmbDogovor_ID = new ComboBox();
 
         public Form aggregateApplicationForm = new Form();
 
@@ -345,6 +350,7 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(620, 20);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnSoiskatelInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             pnlTextBox.Size = new Size(725, 325);
@@ -355,12 +361,14 @@ namespace UP_02._01
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(620, 70);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnSoiskatelUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(620, 120);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnSoiskatelDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
 
             lblFamSoiskatel.Size = new Size(150, 20);
@@ -390,17 +398,37 @@ namespace UP_02._01
             lblOtchSoiskatel.Location = new Point(5, 100);
             lblOtchSoiskatel.Font = new Font("Times New Roman", 10);
 
-            tbOtchSoiskatelr.Size = new Size(150, 20);
-            tbOtchSoiskatelr.Location = new Point(5, 125);
+            lblTabel_rab_vremeni_ID.Size = new Size(150, 20);
+            lblTabel_rab_vremeni_ID.Text = "Табель рабочего времени";
+            lblTabel_rab_vremeni_ID.Location = new Point(345, 05);
+            lblTabel_rab_vremeni_ID.Font = new Font("Times New Roman", 10);
+
+            lblDogovor_ID.Size = new Size(150, 20);
+            lblDogovor_ID.Text = "Договор";
+            lblDogovor_ID.Location = new Point(345, 70);
+            lblDogovor_ID.Font = new Font("Times New Roman", 10);
+
+            cmbTabel_rab_vremeni_ID.Size = new Size(150, 20);
+            cmbTabel_rab_vremeni_ID.Location = new Point(345, 25);
+            pnlTextBox.Controls.Add(lblTabel_rab_vremeni_ID);
+            pnlTextBox.Controls.Add(cmbTabel_rab_vremeni_ID);
+
+            cmbDogovor_ID.Size = new Size(150, 20);
+            cmbDogovor_ID.Location = new Point(345, 90);
+            pnlTextBox.Controls.Add(lblDogovor_ID);
+            pnlTextBox.Controls.Add(cmbDogovor_ID);
+
+            tbOtchSoiskatel.Size = new Size(150, 20);
+            tbOtchSoiskatel.Location = new Point(5, 125);
+            pnlTextBox.Controls.Add(tbOtchSoiskatel);
             pnlTextBox.Controls.Add(lblOtchSoiskatel);
-            pnlTextBox.Controls.Add(tbOtchSoiskatelr);
         }
 
         Label lblNomberCheck = new Label();
         Label lblNameMedicament = new Label();
         Label lblInstruction = new Label();
         Label lblQuantityMedicaments = new Label();
-        
+
         TextBox tbNomberCheck = new TextBox();
         ComboBox cmbNameMedicament = new ComboBox();
         ComboBox cmbInstruction = new ComboBox();
@@ -1126,7 +1154,7 @@ namespace UP_02._01
             pnlTextBox.Controls.Add(lblIDMedicamentov);
 
             lblIDInstrRabKass.Size = new Size(150, 20);
-            lblIDInstrRabKass.Text = "ID инстркции кассира";
+            lblIDInstrRabKass.Text = "ID инструкции кассира";
             lblIDInstrRabKass.Location = new Point(325, 105);
             lblIDInstrRabKass.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblIDInstrRabKass);
@@ -1305,6 +1333,42 @@ namespace UP_02._01
             ApplicationForm AF = new ApplicationForm();
             AF.Show();
             aggregateMainForm.Hide();
+        }
+
+        protected void btnSoiskatelInsert_Click(object sender, EventArgs e)
+        {
+            ApplicationForm frm1 = new ApplicationForm();
+            procedure.spSoiskatel_Insert(tbNameSoiskatel.Text,
+                tbFamSoiskatel.Text, tbOtchSoiskatel.Text, Convert.ToInt32(cmbTabel_rab_vremeni_ID.SelectedValue.ToString()), Convert.ToInt32(cmbDogovor_ID.SelectedValue.ToString()));
+            frm1.dgvApplicationForm.DataSource = tables.dtSoiskatel;
+            tbNameSoiskatel.Clear();
+            tbFamSoiskatel.Clear();
+            tbOtchSoiskatel.Clear();
+
+        }
+
+        protected void btnSoiskatelUpdate_Click(object sender, EventArgs e)
+        {
+            ApplicationForm frm1 = new ApplicationForm();
+            procedure.spSoiskatel_Update(Convert.ToInt32(
+                frm1.dgvApplicationForm.CurrentRow.Cells[0].Value),
+                tbFamSoiskatel.Text, tbNameSoiskatel.Text, tbOtchSoiskatel.Text, Convert.ToInt32(cmbTabel_rab_vremeni_ID.SelectedValue.ToString()), Convert.ToInt32(cmbDogovor_ID.SelectedValue.ToString()));
+        }
+
+        protected void btnSoiskatelDelete_Click(object sender, EventArgs e)
+        {
+            ApplicationForm frm1 = new ApplicationForm();
+            switch (MessageBox.Show("Удаление соискателя " +
+               tbNameSoiskatel.Text + " " + tbFamSoiskatel.Text + " " + tbOtchSoiskatel.Text + "?", "Удалить соискателя ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spSoiskatel_Delete(Convert.ToInt32(
+                        frm1.dgvApplicationForm.CurrentRow.Cells[0].Value));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
         }
     }
 }

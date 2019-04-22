@@ -44,9 +44,11 @@
             // 
             // dgvApplicationForm
             // 
+            this.dgvApplicationForm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvApplicationForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvApplicationForm.Location = new System.Drawing.Point(3, 3);
             this.dgvApplicationForm.Name = "dgvApplicationForm";
+            this.dgvApplicationForm.ReadOnly = true;
             this.dgvApplicationForm.Size = new System.Drawing.Size(854, 319);
             this.dgvApplicationForm.TabIndex = 0;
             this.dgvApplicationForm.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApplicationForm_CellClick);
@@ -69,6 +71,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnTabel;
-        private System.Windows.Forms.DataGridView dgvApplicationForm;
+        public System.Windows.Forms.DataGridView dgvApplicationForm;
     }
 }
