@@ -24,17 +24,29 @@ namespace UP_02._01
 
         private void btReg_Click(object sender, EventArgs e)
         {
-            if (tbPass.Text == tbRepeatPass.Text)
+            if (tbLogin.Text.Length >= 4 & tbPass.Text.Length >= 4)
             {
-                DBProcedures procedure = new DBProcedures();
-                procedure.spAccount_Insert(tbLogin.Text, Hash(tbPass.Text), 1);
-                MainForm mainFrm = new MainForm();
-                mainFrm.Show();
-                this.Hide();
+                
+                    if (tbPass.Text == tbRepeatPass.Text)
+                    {
+                        Registry_Class registry = new Registry_Class();
+                        registry.Registry_Set("31.31.198.31", "u0695785_TatarBase", "u0695785_TatarBase",
+                            "TatarBase123IIL");
+                        DBProcedures procedure = new DBProcedures();
+                        procedure.spAccount_Insert(tbLogin.Text, Hash(tbPass.Text), 6);
+                        MainForm mainFrm = new MainForm();
+                        mainFrm.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Пароли не совпадают!");
+                    }
+                
             }
             else
             {
-                MessageBox.Show("Пароли не совпадают!");
+                MessageBox.Show("Длина логина и пароля должна быть больше трех символов");
             }
         }
 
@@ -60,5 +72,6 @@ namespace UP_02._01
             authForm.Show();
             this.Hide();
         }
+
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -186,29 +188,30 @@ namespace UP_02._01
                 Name_Doc.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphCenter;
                 Name_Doc.Range.Font.Name = "Times New Roman";
                 Name_Doc.Range.Font.Size = 16;
-                Name_Doc.Range.Text = "чек " + check_name;
+                Name_Doc.Range.Text = "ЧЕК " + check_name;
                 document.Paragraphs.Add();
                 document.Paragraphs.Add();
                 document.Paragraphs.Add();
                 word.Paragraph pTable = document.Paragraphs.Add();
-                word.Table tbCheck = document.Tables.Add(pTable.Range, table.Rows.Count + 1,
-                    table.Columns.Count);
+                word.Table tbCheck = document.Tables.Add(pTable.Range, table.Rows.Count + 5,
+                    table.Columns.Count + 5);
                 tbCheck.Borders.InsideLineStyle = word.WdLineStyle.wdLineStyleSingle;
                 tbCheck.Borders.OutsideLineStyle = word.WdLineStyle.wdLineStyleSingle;
                 tbCheck.Cell(1, 1).Range.Text = "Код чека выданных медикаментов";
-                tbCheck.Cell(2, 1).Range.Text = "Номер чека выданных медикаментов";
-                tbCheck.Cell(3, 1).Range.Text = "Название выданных медикаметнов";
-                tbCheck.Cell(4, 1).Range.Text = "Код должности";
-                tbCheck.Cell(5, 1).Range.Text = "Код сотрудника";
+                tbCheck.Cell(1, 2).Range.Text = "Номер чека выданных медикаментов";
+                tbCheck.Cell(1, 3).Range.Text = "Название выданных медикаментов";
+                tbCheck.Cell(1, 4).Range.Text = "Код должности";
+                tbCheck.Cell(1, 5).Range.Text = "Код сотрудника";
                 tbCheck.Range.Font.Size = 11;
                 tbCheck.Range.Font.Name = "Times New Roman";
                 tbCheck.Columns[1].AutoFit();
-                for (int i = 2; i <= tbCheck.Rows.Count; i++)
-                    for (int j = 1; j <= tbCheck.Columns.Count; j++)
+                for (int i = 1; i <= 6; i++)
+                    for (int j = 0; j <= 6; j++)
                     {
                         tbCheck.Cell(i, j).Range.Text
-                            = table.Rows[i - 2][j - 1].ToString();
+                            = table.Rows[i][j].ToString();
                     }
+
             }
 
             catch (Exception ex)
@@ -225,9 +228,5 @@ namespace UP_02._01
 
             }
         }
-
-
-
-
     }
 }
