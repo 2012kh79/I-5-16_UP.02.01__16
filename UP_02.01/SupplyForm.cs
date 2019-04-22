@@ -22,6 +22,11 @@ namespace UP_02._01
             DynamicObjects classDynamicObjects = new DynamicObjects();
             classDynamicObjects.aggregateSupplyForm = this;
             classDynamicObjects.SupplyFormFill();
+
+            //DataBaseTables tables = new DataBaseTables();
+            //tables.dtTovar_na_skladeFill();
+            //tables.dependency.OnChange +=
+            //dgvVidDocument.DataSource = tables.dtTovar_na_skladeFill();
         }
     }
 }
