@@ -35,11 +35,21 @@
             this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.tabRole = new System.Windows.Forms.TabPage();
             this.tabSotr = new System.Windows.Forms.TabPage();
+            this.tbpAccount = new System.Windows.Forms.TabPage();
+            this.dgvAccount = new System.Windows.Forms.DataGridView();
+            this.dgvRole = new System.Windows.Forms.DataGridView();
+            this.dgvSotr = new System.Windows.Forms.DataGridView();
             this.tcnTable.SuspendLayout();
             this.tbpTabRabVremeny.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVidDocument)).BeginInit();
             this.tbpDoljnost.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
+            this.tabRole.SuspendLayout();
+            this.tabSotr.SuspendLayout();
+            this.tbpAccount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSotr)).BeginInit();
             this.SuspendLayout();
             // 
             // tcnTable
@@ -48,6 +58,7 @@
             this.tcnTable.Controls.Add(this.tbpDoljnost);
             this.tcnTable.Controls.Add(this.tabRole);
             this.tcnTable.Controls.Add(this.tabSotr);
+            this.tcnTable.Controls.Add(this.tbpAccount);
             this.tcnTable.Location = new System.Drawing.Point(12, 78);
             this.tcnTable.Name = "tcnTable";
             this.tcnTable.SelectedIndex = 0;
@@ -89,11 +100,12 @@
             this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrder.Location = new System.Drawing.Point(6, 6);
             this.dgvOrder.Name = "dgvOrder";
-            this.dgvOrder.Size = new System.Drawing.Size(840, 287);
+            this.dgvOrder.Size = new System.Drawing.Size(840, 262);
             this.dgvOrder.TabIndex = 1;
             // 
             // tabRole
             // 
+            this.tabRole.Controls.Add(this.dgvRole);
             this.tabRole.Location = new System.Drawing.Point(4, 22);
             this.tabRole.Name = "tabRole";
             this.tabRole.Size = new System.Drawing.Size(852, 274);
@@ -103,12 +115,48 @@
             // 
             // tabSotr
             // 
+            this.tabSotr.Controls.Add(this.dgvSotr);
             this.tabSotr.Location = new System.Drawing.Point(4, 22);
             this.tabSotr.Name = "tabSotr";
             this.tabSotr.Size = new System.Drawing.Size(852, 274);
             this.tabSotr.TabIndex = 3;
             this.tabSotr.Text = "Сотрудники";
             this.tabSotr.UseVisualStyleBackColor = true;
+            // 
+            // tbpAccount
+            // 
+            this.tbpAccount.Controls.Add(this.dgvAccount);
+            this.tbpAccount.Location = new System.Drawing.Point(4, 22);
+            this.tbpAccount.Name = "tbpAccount";
+            this.tbpAccount.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpAccount.Size = new System.Drawing.Size(852, 274);
+            this.tbpAccount.TabIndex = 4;
+            this.tbpAccount.Text = "Аккаунты";
+            this.tbpAccount.UseVisualStyleBackColor = true;
+            // 
+            // dgvAccount
+            // 
+            this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccount.Location = new System.Drawing.Point(6, -6);
+            this.dgvAccount.Name = "dgvAccount";
+            this.dgvAccount.Size = new System.Drawing.Size(840, 287);
+            this.dgvAccount.TabIndex = 1;
+            // 
+            // dgvRole
+            // 
+            this.dgvRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRole.Location = new System.Drawing.Point(6, -6);
+            this.dgvRole.Name = "dgvRole";
+            this.dgvRole.Size = new System.Drawing.Size(840, 287);
+            this.dgvRole.TabIndex = 2;
+            // 
+            // dgvSotr
+            // 
+            this.dgvSotr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSotr.Location = new System.Drawing.Point(6, -6);
+            this.dgvSotr.Name = "dgvSotr";
+            this.dgvSotr.Size = new System.Drawing.Size(840, 287);
+            this.dgvSotr.TabIndex = 2;
             // 
             // StaffForm
             // 
@@ -124,6 +172,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVidDocument)).EndInit();
             this.tbpDoljnost.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
+            this.tabRole.ResumeLayout(false);
+            this.tabSotr.ResumeLayout(false);
+            this.tbpAccount.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSotr)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -137,5 +191,9 @@
         private System.Windows.Forms.DataGridView dgvOrder;
         private System.Windows.Forms.TabPage tabRole;
         private System.Windows.Forms.TabPage tabSotr;
+        private System.Windows.Forms.TabPage tbpAccount;
+        private System.Windows.Forms.DataGridView dgvAccount;
+        private System.Windows.Forms.DataGridView dgvRole;
+        private System.Windows.Forms.DataGridView dgvSotr;
     }
 }
