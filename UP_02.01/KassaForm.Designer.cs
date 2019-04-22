@@ -33,7 +33,7 @@
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.pnCart = new System.Windows.Forms.Panel();
             this.dgvCart = new System.Windows.Forms.DataGridView();
-            this.btWordCheck = new System.Windows.Forms.Button();
+            this.btCheckWord = new System.Windows.Forms.Button();
             this.pnSelection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelection)).BeginInit();
             this.pnCart.SuspendLayout();
@@ -83,22 +83,22 @@
             this.dgvCart.Size = new System.Drawing.Size(854, 144);
             this.dgvCart.TabIndex = 0;
             // 
-            // btWordCheck
+            // btCheckWord
             // 
-            this.btWordCheck.Location = new System.Drawing.Point(652, 579);
-            this.btWordCheck.Name = "btWordCheck";
-            this.btWordCheck.Size = new System.Drawing.Size(75, 23);
-            this.btWordCheck.TabIndex = 2;
-            this.btWordCheck.Text = "Чек";
-            this.btWordCheck.UseVisualStyleBackColor = true;
-            this.btWordCheck.Click += new System.EventHandler(this.btWordCheck_Click);
+            this.btCheckWord.Location = new System.Drawing.Point(635, 579);
+            this.btCheckWord.Name = "btCheckWord";
+            this.btCheckWord.Size = new System.Drawing.Size(75, 23);
+            this.btCheckWord.TabIndex = 2;
+            this.btCheckWord.Text = "Чек";
+            this.btCheckWord.UseVisualStyleBackColor = true;
+            this.btCheckWord.Click += new System.EventHandler(this.btWordCheck_Click);
             // 
             // KassaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 661);
-            this.Controls.Add(this.btWordCheck);
+            this.Controls.Add(this.btCheckWord);
             this.Controls.Add(this.pnCart);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.pnSelection);
@@ -120,6 +120,6 @@
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Panel pnCart;
         private System.Windows.Forms.DataGridView dgvCart;
-        private System.Windows.Forms.Button btWordCheck;
+        private System.Windows.Forms.Button btCheckWord;
     }
 }

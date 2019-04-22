@@ -65,7 +65,7 @@ namespace UP_02._01
             {
                 command.Notification = null;
                 command.CommandText = query;
-                dependency.AddCommandDependency(command);
+                //dependency.AddCommandDependency(command);
                 SqlDependency.Start(Registry_Class.sql.ConnectionString);
                 Registry_Class.sql.Open();
                 table.Load(command.ExecuteReader());
