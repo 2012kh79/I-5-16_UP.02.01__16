@@ -16,5 +16,17 @@ namespace UP_02._01
         {
             InitializeComponent();
         }
+
+        private void KassaForm_Load(object sender, EventArgs e)
+        {
+            DynamicObjects classDynamicObjects = new DynamicObjects();
+            classDynamicObjects.aggregateKassaForm = this;
+            classDynamicObjects.KassaFormFill();
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

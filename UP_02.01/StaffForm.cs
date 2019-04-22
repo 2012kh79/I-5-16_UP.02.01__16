@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace UP_02._01
 {
-    public partial class MainForm : Form
+    public partial class StaffForm : Form
     {
-        public MainForm()
+        public StaffForm()
         {
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void StaffForm_Load(object sender, EventArgs e)
         {
             DynamicObjects classDynamicObjects = new DynamicObjects();
-            classDynamicObjects.aggregateMainForm = this;
-            classDynamicObjects.MainFormFill();
+            classDynamicObjects.aggregateStaffForm = this;
+            classDynamicObjects.StaffFormFill();
         }
     }
 }
