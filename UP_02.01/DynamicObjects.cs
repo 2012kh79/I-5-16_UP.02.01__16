@@ -764,6 +764,10 @@ namespace UP_02._01
         Label lblOtchSotr = new Label();
         Label lblIDTabVremya = new Label();
         Label lblIDDogovor = new Label();
+        Label lblLogin = new Label();
+        Label lblParol = new Label();
+        Label lblTypeAccount = new Label();
+        Label lblIDRole = new Label();
 
         TextBox tbOtrDays = new TextBox();
         TextBox tbVixDays = new TextBox();
@@ -775,6 +779,10 @@ namespace UP_02._01
         TextBox tbFamSotr = new TextBox();
         TextBox tbNamehSotr = new TextBox();
         TextBox tbOtchSotr = new TextBox();
+        TextBox tbLogin = new TextBox();
+        TextBox tbParol = new TextBox();
+        TextBox tbTypeAccount = new TextBox();
+        ComboBox cmbIDRole = new ComboBox();
         ComboBox cmbIDTabVremya = new ComboBox();
         ComboBox cmbIDDogovor = new ComboBox();
        
@@ -887,6 +895,29 @@ namespace UP_02._01
             lblIDDogovor.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblIDDogovor);
 
+            lblLogin.Size = new Size(150, 20);
+            lblLogin.Text = "Логин";
+            lblLogin.Location = new Point(325, 105);
+            lblLogin.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblLogin);
+
+            lblParol.Size = new Size(150, 20);
+            lblParol.Text = "Пароль";
+            lblParol.Location = new Point(325, 155);
+            lblParol.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblParol);
+
+            lblTypeAccount.Size = new Size(150, 20);
+            lblTypeAccount.Text = "Тип аккаунта";
+            lblTypeAccount.Location = new Point(325, 205);
+            lblTypeAccount.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblTypeAccount);
+
+            lblIDRole.Size = new Size(150, 20);
+            lblIDRole.Text = "ID Role";
+            lblIDRole.Location = new Point(485, 5);
+            lblIDRole.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDRole);
 
             tbOtrDays.Size = new Size(150, 20);
             tbOtrDays.Location = new Point(5, 25);
@@ -935,16 +966,49 @@ namespace UP_02._01
             cmbIDDogovor.Size = new Size(150, 20);
             cmbIDDogovor.Location = new Point(325, 75);
             pnlTextBox.Controls.Add(cmbIDDogovor);
+
+            tbLogin.Size = new Size(150, 20);
+            tbLogin.Location = new Point(325, 125);
+            pnlTextBox.Controls.Add(tbLogin);
+
+            tbParol.Size = new Size(150, 20);
+            tbParol.Location = new Point(325, 175);
+            pnlTextBox.Controls.Add(tbParol);
+
+            tbTypeAccount.Size = new Size(150, 20);
+            tbTypeAccount.Location = new Point(325, 225);
+            pnlTextBox.Controls.Add(tbTypeAccount);
+
+            cmbIDRole.Size = new Size(150, 20);
+            cmbIDRole.Location = new Point(485, 25);
+            pnlTextBox.Controls.Add(cmbIDRole);
         }
 
         public Form aggregateIncomeForm = new Form();
-
 
         Label lblInstrRabKassir = new Label();
         Label lblPribil = new Label();
         Label lblRashody = new Label();
         Label lblNachOtcheta = new Label();
         Label lblKonOtch = new Label();
+
+        Label lblNomberCheckVM = new Label();
+        Label lblNazvVidMed = new Label();
+        Label lblIDDoljnost = new Label();
+        Label lblIDSotrydnikC = new Label();
+        Label lblKolVidMed = new Label();
+        Label lblIDVidCheck = new Label();
+        Label lblIDMedicamentov = new Label();
+        Label lblIDInstrRabKass = new Label();
+
+        TextBox tbNomberCheckVM = new TextBox();
+        TextBox tbNazvVidMed = new TextBox();
+        ComboBox cmbIDDoljnost = new ComboBox();
+        ComboBox cmbIDSotrydnikC = new ComboBox();
+        TextBox tbKolVidMed = new TextBox();
+        ComboBox cmbIDVidCheck = new ComboBox();
+        ComboBox cmbIDMedicamentov = new ComboBox();
+        ComboBox cmbIDInstrRabKass = new ComboBox();
 
         TextBox tbInstrRabKassir = new TextBox();
         TextBox tbPribil = new TextBox();
@@ -967,25 +1031,25 @@ namespace UP_02._01
             btnReturn.Font = new Font("Times New Roman", 10);
             aggregateIncomeForm.Controls.Add(btnReturn);
 
-            pnlTextBox.Size = new Size(400, 250);
+            pnlTextBox.Size = new Size(780, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateIncomeForm.Controls.Add(pnlTextBox);
 
             btnInsert.Size = new Size(100, 30);
             btnInsert.Text = "Добавить";
-            btnInsert.Location = new Point(250, 25);
+            btnInsert.Location = new Point(485, 25);
             btnInsert.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
-            btnUpdate.Location = new Point(250, 75);
+            btnUpdate.Location = new Point(485, 75);
             btnUpdate.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
-            btnDelete.Location = new Point(250, 125);
+            btnDelete.Location = new Point(485, 125);
             btnDelete.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(btnDelete);
 
@@ -1019,6 +1083,54 @@ namespace UP_02._01
             lblKonOtch.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblKonOtch);
 
+            lblNomberCheckVM.Size = new Size(150, 20);
+            lblNomberCheckVM.Text = "Номер чека";
+            lblNomberCheckVM.Location = new Point(165, 5);
+            lblNomberCheckVM.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblNomberCheckVM);
+
+            lblNazvVidMed.Size = new Size(150, 20);
+            lblNazvVidMed.Text = "Выданный медикамент";
+            lblNazvVidMed.Location = new Point(165, 55);
+            lblNazvVidMed.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblNazvVidMed);
+
+            lblIDDoljnost.Size = new Size(150, 20);
+            lblIDDoljnost.Text = "ID Должность";
+            lblIDDoljnost.Location = new Point(165, 105);
+            lblIDDoljnost.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDDoljnost);
+
+            lblIDSotrydnikC.Size = new Size(150, 20);
+            lblIDSotrydnikC.Text = "ID Сотрудник";
+            lblIDSotrydnikC.Location = new Point(165, 155);
+            lblIDSotrydnikC.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDSotrydnikC);
+
+            lblKolVidMed.Size = new Size(150, 20);
+            lblKolVidMed.Text = "Колличество медикаментов";
+            lblKolVidMed.Location = new Point(165, 205);
+            lblKolVidMed.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblKolVidMed);
+
+            lblIDVidCheck.Size = new Size(150, 20);
+            lblIDVidCheck.Text = "ID чека";
+            lblIDVidCheck.Location = new Point(325, 5);
+            lblIDVidCheck.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDVidCheck);
+
+            lblIDMedicamentov.Size = new Size(150, 20);
+            lblIDMedicamentov.Text = "ID медикаментов";
+            lblIDMedicamentov.Location = new Point(325, 55);
+            lblIDMedicamentov.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDMedicamentov);
+
+            lblIDInstrRabKass.Size = new Size(150, 20);
+            lblIDInstrRabKass.Text = "ID инстркции кассира";
+            lblIDInstrRabKass.Location = new Point(325, 105);
+            lblIDInstrRabKass.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDInstrRabKass);
+
             tbInstrRabKassir.Size = new Size(150, 20);
             tbInstrRabKassir.Location = new Point(5, 25);
             pnlTextBox.Controls.Add(tbInstrRabKassir);
@@ -1038,6 +1150,40 @@ namespace UP_02._01
             tbKonOtch.Size = new Size(150, 20);
             tbKonOtch.Location = new Point(5, 225);
             pnlTextBox.Controls.Add(tbKonOtch);
+
+            tbNomberCheckVM.Size = new Size(150, 20);
+            tbNomberCheckVM.Location = new Point(165, 25);
+            pnlTextBox.Controls.Add(tbNomberCheckVM);
+
+            tbNazvVidMed.Size = new Size(150, 20);
+            tbNazvVidMed.Location = new Point(165, 75);
+            pnlTextBox.Controls.Add(tbNazvVidMed);
+
+            cmbIDDoljnost.Size = new Size(150, 20);
+            cmbIDDoljnost.Location = new Point(165, 125);
+            pnlTextBox.Controls.Add(cmbIDDoljnost);
+
+            cmbIDSotrydnikC.Size = new Size(150, 20);
+            cmbIDSotrydnikC.Location = new Point(165, 175);
+            pnlTextBox.Controls.Add(cmbIDSotrydnikC);
+
+            tbKolVidMed.Size = new Size(150, 20);
+            tbKolVidMed.Location = new Point(165, 225);
+            pnlTextBox.Controls.Add(tbKolVidMed);
+
+            cmbIDVidCheck.Size = new Size(150, 20);
+            cmbIDVidCheck.Location = new Point(325, 25);
+            pnlTextBox.Controls.Add(cmbIDVidCheck);
+
+            cmbIDMedicamentov.Size = new Size(150, 20);
+            cmbIDMedicamentov.Location = new Point(325, 75);
+            pnlTextBox.Controls.Add(cmbIDMedicamentov);
+
+            cmbIDInstrRabKass.Size = new Size(150, 20);
+            cmbIDInstrRabKass.Location = new Point(325, 125);
+            pnlTextBox.Controls.Add(cmbIDInstrRabKass);
+
+
         }
 
         public Form aggregateMainForm = new Form();

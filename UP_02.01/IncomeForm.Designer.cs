@@ -33,17 +33,32 @@
             this.dgvVidDocument = new System.Windows.Forms.DataGridView();
             this.tbpIncome = new System.Windows.Forms.TabPage();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
+            this.tbpCheckVidMed = new System.Windows.Forms.TabPage();
+            this.tbpMedicament = new System.Windows.Forms.TabPage();
+            this.tbpProdajaTovara = new System.Windows.Forms.TabPage();
+            this.dgvCheckVidMed = new System.Windows.Forms.DataGridView();
+            this.dgvMed = new System.Windows.Forms.DataGridView();
+            this.dgvProdajaTov = new System.Windows.Forms.DataGridView();
             this.tcnTable.SuspendLayout();
             this.tbpinstruction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVidDocument)).BeginInit();
             this.tbpIncome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
+            this.tbpCheckVidMed.SuspendLayout();
+            this.tbpMedicament.SuspendLayout();
+            this.tbpProdajaTovara.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCheckVidMed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdajaTov)).BeginInit();
             this.SuspendLayout();
             // 
             // tcnTable
             // 
             this.tcnTable.Controls.Add(this.tbpinstruction);
             this.tcnTable.Controls.Add(this.tbpIncome);
+            this.tcnTable.Controls.Add(this.tbpCheckVidMed);
+            this.tcnTable.Controls.Add(this.tbpMedicament);
+            this.tcnTable.Controls.Add(this.tbpProdajaTovara);
             this.tcnTable.Location = new System.Drawing.Point(12, 78);
             this.tcnTable.Name = "tcnTable";
             this.tcnTable.SelectedIndex = 0;
@@ -88,6 +103,60 @@
             this.dgvOrder.Size = new System.Drawing.Size(840, 287);
             this.dgvOrder.TabIndex = 1;
             // 
+            // tbpCheckVidMed
+            // 
+            this.tbpCheckVidMed.Controls.Add(this.dgvCheckVidMed);
+            this.tbpCheckVidMed.Location = new System.Drawing.Point(4, 22);
+            this.tbpCheckVidMed.Name = "tbpCheckVidMed";
+            this.tbpCheckVidMed.Size = new System.Drawing.Size(852, 274);
+            this.tbpCheckVidMed.TabIndex = 2;
+            this.tbpCheckVidMed.Text = "Чек выданных медикаментов";
+            this.tbpCheckVidMed.UseVisualStyleBackColor = true;
+            // 
+            // tbpMedicament
+            // 
+            this.tbpMedicament.Controls.Add(this.dgvMed);
+            this.tbpMedicament.Location = new System.Drawing.Point(4, 22);
+            this.tbpMedicament.Name = "tbpMedicament";
+            this.tbpMedicament.Size = new System.Drawing.Size(852, 274);
+            this.tbpMedicament.TabIndex = 3;
+            this.tbpMedicament.Text = "Медикаменты";
+            this.tbpMedicament.UseVisualStyleBackColor = true;
+            // 
+            // tbpProdajaTovara
+            // 
+            this.tbpProdajaTovara.Controls.Add(this.dgvProdajaTov);
+            this.tbpProdajaTovara.Location = new System.Drawing.Point(4, 22);
+            this.tbpProdajaTovara.Name = "tbpProdajaTovara";
+            this.tbpProdajaTovara.Size = new System.Drawing.Size(852, 274);
+            this.tbpProdajaTovara.TabIndex = 4;
+            this.tbpProdajaTovara.Text = "Продажа товара";
+            this.tbpProdajaTovara.UseVisualStyleBackColor = true;
+            // 
+            // dgvCheckVidMed
+            // 
+            this.dgvCheckVidMed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCheckVidMed.Location = new System.Drawing.Point(6, -6);
+            this.dgvCheckVidMed.Name = "dgvCheckVidMed";
+            this.dgvCheckVidMed.Size = new System.Drawing.Size(840, 287);
+            this.dgvCheckVidMed.TabIndex = 2;
+            // 
+            // dgvMed
+            // 
+            this.dgvMed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMed.Location = new System.Drawing.Point(6, -6);
+            this.dgvMed.Name = "dgvMed";
+            this.dgvMed.Size = new System.Drawing.Size(840, 287);
+            this.dgvMed.TabIndex = 3;
+            // 
+            // dgvProdajaTov
+            // 
+            this.dgvProdajaTov.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProdajaTov.Location = new System.Drawing.Point(6, -6);
+            this.dgvProdajaTov.Name = "dgvProdajaTov";
+            this.dgvProdajaTov.Size = new System.Drawing.Size(840, 287);
+            this.dgvProdajaTov.TabIndex = 3;
+            // 
             // IncomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,6 +171,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVidDocument)).EndInit();
             this.tbpIncome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
+            this.tbpCheckVidMed.ResumeLayout(false);
+            this.tbpMedicament.ResumeLayout(false);
+            this.tbpProdajaTovara.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCheckVidMed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdajaTov)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -113,5 +188,11 @@
         private System.Windows.Forms.DataGridView dgvVidDocument;
         private System.Windows.Forms.TabPage tbpIncome;
         private System.Windows.Forms.DataGridView dgvOrder;
+        private System.Windows.Forms.TabPage tbpCheckVidMed;
+        private System.Windows.Forms.DataGridView dgvCheckVidMed;
+        private System.Windows.Forms.TabPage tbpMedicament;
+        private System.Windows.Forms.DataGridView dgvMed;
+        private System.Windows.Forms.TabPage tbpProdajaTovara;
+        private System.Windows.Forms.DataGridView dgvProdajaTov;
     }
 }
