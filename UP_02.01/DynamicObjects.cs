@@ -1216,8 +1216,8 @@ namespace UP_02._01
 
         public Form aggregateMainForm = new Form();
 
-        Button btnDocument = new Button();
-        Button btnStaff = new Button();
+        public Button btnDocument = new Button();
+        public Button btnStaff = new Button();
         Button btnSupply = new Button();
         Button btnIncome = new Button();
         Button btnKassa = new Button();

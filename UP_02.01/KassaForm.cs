@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,9 +25,30 @@ namespace UP_02._01
             classDynamicObjects.KassaFormFill();
         }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void btWordCheck_Click(object sender, EventArgs e)
         {
-
+            Registry_Class.DirPath = @"C:\Users\1\Desktop\МПТ\Практика\Щаников";
+            switch (Registry_Class.DirPath == "Empty") //|| Registry_Class.OrganizationName == "Empty"
+                                                      //|| Registry_Class.DocBM == 0.0 || Registry_Class.DocTM == 0.0 ||
+                                                      //Registry_Class.DocRM == 0.0 || Registry_Class.DocLM == 0.0)
+            {
+                case (true):
+                    //ApplicationConfigurationForm configurationForm = new ApplicationConfigurationForm();
+                    //configurationForm.ShowDialog();
+                    break;
+                case (false):
+                    btCheckWord.Enabled = false;
+                    DataBaseTables data = new DataBaseTables();
+                    data.qrCheck_vid_med =
+                        "select [nom_check] as \"Номер чека\",[nazv_vid_med] as \"Название медикаментов\", [doljnost_id] as \"Код должности\",[sotrudnik_id] as \"Код сотрудников\" from [dbo].[check_vid_med]";
+                    data.dtCheck_vid_medFill();
+                    WordDocument document = new WordDocument();
+                    document.table = data.dtCheck_vid_med;
+                   
+                    document.CheckWord();
+                    btCheckWord.Enabled = true;
+                    break;
+            }
         }
     }
 }

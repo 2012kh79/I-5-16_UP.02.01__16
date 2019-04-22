@@ -14,10 +14,8 @@ namespace UP_02._01
     public partial class AuthorizForm : Form
     {
 
-        public static byte ID_User;
-        //public static SqlConnection sql = new SqlConnection("Data Source = 31.31.198.31;" +
-        //                                                    "Initial Catalog = u0695785_TatarBase;" +
-        //                                                    "Persist Security Info=True; User ID = u0695785_TatarBase; Password=\"TatarBase123IIL\"");
+        public static byte Role_ID;
+        
 
         public static SqlCommand command = new SqlCommand("", Registry_Class.sql);
         public AuthorizForm()
@@ -38,8 +36,14 @@ namespace UP_02._01
             Registry_Class registry = new Registry_Class();
             registry.Registry_Set("31.31.198.31", "u0695785_TatarBase", "u0695785_TatarBase", "TatarBase123IIL");
             Authoriz(tbLogin.Text, tbPass.Text);
-            if (ID_User != 0)
+            if (Role_ID != 0)
             {
+                switch (Role_ID)
+                {
+                    case 6:
+                            
+                        break;
+                }
                 MainForm mainFrm = new MainForm();
                 mainFrm.Show();
                 this.Hide();
@@ -49,14 +53,14 @@ namespace UP_02._01
         public static void Authoriz(string User, string Pass)
         {
 
-            command.CommandText = "Select [dbo].[account].[id_account] " +
+            command.CommandText = "Select [dbo].[account].[role_id] " +
                                   "from [dbo].[account] " +
                                   "where ([dbo].[account].[login_acc] = '" + User + "')" +
                                   "and ([dbo].[account].[password_acc] = '" + RegistrationForm.Hash(Pass) + "')";
             Registry_Class.sql.Open();
             try
             {
-                ID_User = Convert.ToByte(command.ExecuteScalar().ToString());
+                Role_ID = Convert.ToByte(command.ExecuteScalar().ToString());
             }
             catch
             {

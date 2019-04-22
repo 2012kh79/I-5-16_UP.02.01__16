@@ -47,9 +47,10 @@
             this.dgvVihCocument = new System.Windows.Forms.DataGridView();
             this.tcnDocument = new System.Windows.Forms.TabControl();
             this.tbpWord = new System.Windows.Forms.TabPage();
-            this.btnWord = new System.Windows.Forms.Button();
+            this.btKadr_UchetWord = new System.Windows.Forms.Button();
             this.tbpExcel = new System.Windows.Forms.TabPage();
-            this.btnExcel = new System.Windows.Forms.Button();
+            this.btKadr_UchetExcel = new System.Windows.Forms.Button();
+            this.btVih_DocWord = new System.Windows.Forms.Button();
             this.tcnTable.SuspendLayout();
             this.tbpDocument.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVidDocument)).BeginInit();
@@ -113,7 +114,7 @@
             this.tbpOrder.Location = new System.Drawing.Point(4, 22);
             this.tbpOrder.Name = "tbpOrder";
             this.tbpOrder.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpOrder.Size = new System.Drawing.Size(852, 299);
+            this.tbpOrder.Size = new System.Drawing.Size(852, 274);
             this.tbpOrder.TabIndex = 1;
             this.tbpOrder.Text = "Договора";
             this.tbpOrder.UseVisualStyleBackColor = true;
@@ -131,7 +132,7 @@
             this.tbpSalary.Controls.Add(this.dgvTabelSalary);
             this.tbpSalary.Location = new System.Drawing.Point(4, 22);
             this.tbpSalary.Name = "tbpSalary";
-            this.tbpSalary.Size = new System.Drawing.Size(852, 299);
+            this.tbpSalary.Size = new System.Drawing.Size(852, 274);
             this.tbpSalary.TabIndex = 2;
             this.tbpSalary.Text = "Заработная плата";
             this.tbpSalary.UseVisualStyleBackColor = true;
@@ -150,7 +151,7 @@
             this.tbpKadrPerestanovki.Controls.Add(this.dgvKadrPerestanovki);
             this.tbpKadrPerestanovki.Location = new System.Drawing.Point(4, 22);
             this.tbpKadrPerestanovki.Name = "tbpKadrPerestanovki";
-            this.tbpKadrPerestanovki.Size = new System.Drawing.Size(852, 299);
+            this.tbpKadrPerestanovki.Size = new System.Drawing.Size(852, 274);
             this.tbpKadrPerestanovki.TabIndex = 3;
             this.tbpKadrPerestanovki.Text = "Кадровые перестановки";
             this.tbpKadrPerestanovki.UseVisualStyleBackColor = true;
@@ -169,7 +170,7 @@
             this.tabKadrUchet.Controls.Add(this.dgvKadrUchet);
             this.tabKadrUchet.Location = new System.Drawing.Point(4, 22);
             this.tabKadrUchet.Name = "tabKadrUchet";
-            this.tabKadrUchet.Size = new System.Drawing.Size(852, 299);
+            this.tabKadrUchet.Size = new System.Drawing.Size(852, 274);
             this.tabKadrUchet.TabIndex = 4;
             this.tabKadrUchet.Text = "Кадровый учёт";
             this.tabKadrUchet.UseVisualStyleBackColor = true;
@@ -189,7 +190,7 @@
             this.tbpFirma.Location = new System.Drawing.Point(4, 22);
             this.tbpFirma.Name = "tbpFirma";
             this.tbpFirma.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpFirma.Size = new System.Drawing.Size(852, 299);
+            this.tbpFirma.Size = new System.Drawing.Size(852, 274);
             this.tbpFirma.TabIndex = 6;
             this.tbpFirma.Text = "Фирма";
             this.tbpFirma.UseVisualStyleBackColor = true;
@@ -207,7 +208,7 @@
             this.tbpIdentTovParty.Controls.Add(this.dgvIdentTovParty);
             this.tbpIdentTovParty.Location = new System.Drawing.Point(4, 22);
             this.tbpIdentTovParty.Name = "tbpIdentTovParty";
-            this.tbpIdentTovParty.Size = new System.Drawing.Size(852, 299);
+            this.tbpIdentTovParty.Size = new System.Drawing.Size(852, 274);
             this.tbpIdentTovParty.TabIndex = 7;
             this.tbpIdentTovParty.Text = "Идентификация товарной партии";
             this.tbpIdentTovParty.UseVisualStyleBackColor = true;
@@ -242,7 +243,7 @@
             // 
             this.tcnDocument.Controls.Add(this.tbpWord);
             this.tcnDocument.Controls.Add(this.tbpExcel);
-            this.tcnDocument.Location = new System.Drawing.Point(708, 572);
+            this.tcnDocument.Location = new System.Drawing.Point(714, 440);
             this.tcnDocument.Name = "tcnDocument";
             this.tcnDocument.SelectedIndex = 0;
             this.tcnDocument.Size = new System.Drawing.Size(97, 62);
@@ -250,7 +251,7 @@
             // 
             // tbpWord
             // 
-            this.tbpWord.Controls.Add(this.btnWord);
+            this.tbpWord.Controls.Add(this.btKadr_UchetWord);
             this.tbpWord.Location = new System.Drawing.Point(4, 22);
             this.tbpWord.Name = "tbpWord";
             this.tbpWord.Padding = new System.Windows.Forms.Padding(3);
@@ -259,19 +260,19 @@
             this.tbpWord.Text = "Word";
             this.tbpWord.UseVisualStyleBackColor = true;
             // 
-            // btnWord
+            // btKadr_UchetWord
             // 
-            this.btnWord.Location = new System.Drawing.Point(8, 7);
-            this.btnWord.Name = "btnWord";
-            this.btnWord.Size = new System.Drawing.Size(75, 23);
-            this.btnWord.TabIndex = 0;
-            this.btnWord.Text = "Создать";
-            this.btnWord.UseVisualStyleBackColor = true;
-            this.btnWord.Click += new System.EventHandler(this.btnWord_Click);
+            this.btKadr_UchetWord.Location = new System.Drawing.Point(8, 7);
+            this.btKadr_UchetWord.Name = "btKadr_UchetWord";
+            this.btKadr_UchetWord.Size = new System.Drawing.Size(75, 23);
+            this.btKadr_UchetWord.TabIndex = 0;
+            this.btKadr_UchetWord.Text = "Создать";
+            this.btKadr_UchetWord.UseVisualStyleBackColor = true;
+            this.btKadr_UchetWord.Click += new System.EventHandler(this.btKadr_UchetWord_Click);
             // 
             // tbpExcel
             // 
-            this.tbpExcel.Controls.Add(this.btnExcel);
+            this.tbpExcel.Controls.Add(this.btKadr_UchetExcel);
             this.tbpExcel.Location = new System.Drawing.Point(4, 22);
             this.tbpExcel.Name = "tbpExcel";
             this.tbpExcel.Padding = new System.Windows.Forms.Padding(3);
@@ -280,20 +281,31 @@
             this.tbpExcel.Text = "Excel";
             this.tbpExcel.UseVisualStyleBackColor = true;
             // 
-            // btnExcel
+            // btKadr_UchetExcel
             // 
-            this.btnExcel.Location = new System.Drawing.Point(6, 6);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(75, 23);
-            this.btnExcel.TabIndex = 1;
-            this.btnExcel.Text = "Создать";
-            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btKadr_UchetExcel.Location = new System.Drawing.Point(6, 6);
+            this.btKadr_UchetExcel.Name = "btKadr_UchetExcel";
+            this.btKadr_UchetExcel.Size = new System.Drawing.Size(75, 23);
+            this.btKadr_UchetExcel.TabIndex = 1;
+            this.btKadr_UchetExcel.Text = "Создать";
+            this.btKadr_UchetExcel.UseVisualStyleBackColor = true;
+            // 
+            // btVih_DocWord
+            // 
+            this.btVih_DocWord.Location = new System.Drawing.Point(437, 462);
+            this.btVih_DocWord.Name = "btVih_DocWord";
+            this.btVih_DocWord.Size = new System.Drawing.Size(139, 23);
+            this.btVih_DocWord.TabIndex = 2;
+            this.btVih_DocWord.Text = "Выходные документы";
+            this.btVih_DocWord.UseVisualStyleBackColor = true;
+            this.btVih_DocWord.Click += new System.EventHandler(this.btVih_DocWord_Click);
             // 
             // DocumentChangeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 661);
+            this.Controls.Add(this.btVih_DocWord);
             this.Controls.Add(this.tcnDocument);
             this.Controls.Add(this.tcnTable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -340,13 +352,14 @@
         private System.Windows.Forms.DataGridView dgvKadrPerestanovki;
         private System.Windows.Forms.TabPage tabKadrUchet;
         private System.Windows.Forms.DataGridView dgvKadrUchet;
-        private System.Windows.Forms.Button btnWord;
-        private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.Button btKadr_UchetWord;
+        private System.Windows.Forms.Button btKadr_UchetExcel;
         private System.Windows.Forms.TabPage tbpVihDocument;
         private System.Windows.Forms.TabPage tbpFirma;
         private System.Windows.Forms.DataGridView dgvFirma;
         private System.Windows.Forms.TabPage tbpIdentTovParty;
         private System.Windows.Forms.DataGridView dgvIdentTovParty;
         private System.Windows.Forms.DataGridView dgvVihCocument;
+        private System.Windows.Forms.Button btVih_DocWord;
     }
 }

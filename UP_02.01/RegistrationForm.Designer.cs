@@ -62,6 +62,7 @@
             // tbPass
             // 
             this.tbPass.Location = new System.Drawing.Point(179, 190);
+            this.tbPass.MaxLength = 16;
             this.tbPass.Name = "tbPass";
             this.tbPass.PasswordChar = '*';
             this.tbPass.Size = new System.Drawing.Size(280, 20);
@@ -70,6 +71,7 @@
             // tbLogin
             // 
             this.tbLogin.Location = new System.Drawing.Point(179, 150);
+            this.tbLogin.MaxLength = 16;
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(280, 20);
             this.tbLogin.TabIndex = 10;
@@ -110,6 +112,7 @@
             // tbRepeatPass
             // 
             this.tbRepeatPass.Location = new System.Drawing.Point(179, 228);
+            this.tbRepeatPass.MaxLength = 16;
             this.tbRepeatPass.Name = "tbRepeatPass";
             this.tbRepeatPass.PasswordChar = '*';
             this.tbRepeatPass.Size = new System.Drawing.Size(280, 20);

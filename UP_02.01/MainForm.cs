@@ -23,5 +23,6 @@ namespace UP_02._01
             classDynamicObjects.aggregateMainForm = this;
             classDynamicObjects.MainFormFill();
         }
+        
     }
 }
