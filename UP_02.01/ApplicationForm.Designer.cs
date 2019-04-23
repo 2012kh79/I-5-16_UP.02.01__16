@@ -52,6 +52,7 @@
             this.dgvApplicationForm.Size = new System.Drawing.Size(854, 319);
             this.dgvApplicationForm.TabIndex = 0;
             this.dgvApplicationForm.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApplicationForm_CellClick);
+            this.dgvApplicationForm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApplicationForm_CellContentClick);
             // 
             // ApplicationForm
             // 

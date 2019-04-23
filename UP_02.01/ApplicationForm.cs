@@ -7,8 +7,10 @@ using System.Collections.Generic;
 
 namespace UP_02._01
 {
+   
     public partial class ApplicationForm : Form
     {
+        
         DataBaseTables tables = new DataBaseTables();
         DynamicObjects classApplicationForm = new DynamicObjects();
         DBProcedures procedure = new DBProcedures();
@@ -90,10 +92,17 @@ namespace UP_02._01
 
         private void dgvApplicationForm_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+           
             dgvApplicationForm.CurrentRow.Cells[0].Selected = true;
+            classApplicationForm.lbNewIdSoiskatel.Text = (dgvApplicationForm.CurrentRow.Index + 1).ToString();
             classApplicationForm.tbFamSoiskatel.Text = dgvApplicationForm.CurrentRow.Cells[1].Value.ToString();
             classApplicationForm.tbNameSoiskatel.Text = dgvApplicationForm.CurrentRow.Cells[2].Value.ToString();
             classApplicationForm.tbOtchSoiskatel.Text = dgvApplicationForm.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void dgvApplicationForm_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

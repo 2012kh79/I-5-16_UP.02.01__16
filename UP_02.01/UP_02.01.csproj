@@ -76,6 +76,7 @@
       <DependentUpon>DocumentChangeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DynamicObjects.cs" />
+    <Compile Include="ExcelDocument.cs" />
     <Compile Include="IncomeForm.cs">
       <SubType>Form</SubType>
     </Compile>

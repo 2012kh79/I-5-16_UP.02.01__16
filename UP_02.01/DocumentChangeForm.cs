@@ -71,5 +71,28 @@ namespace UP_02._01
                     break;
             }
         }
+
+        private void btKadr_UchetExcel_Click(object sender, EventArgs e)
+        {
+            Registry_Class.DirPath = @"C:\Users\1\Desktop\МПТ\Практика\Щаников";
+            switch (Registry_Class.DirPath == "Empty") //|| Registry_Class.OrganizationName == "Empty"
+                //|| Registry_Class.DocBM == 0.0 || Registry_Class.DocTM == 0.0 ||
+                //Registry_Class.DocRM == 0.0 || Registry_Class.DocLM == 0.0)
+            {
+                case (true):
+                    //ApplicationConfigurationForm configurationForm = new ApplicationConfigurationForm();
+                    //configurationForm.ShowDialog();
+                    break;
+                case (false):
+                    btVih_DocWord.Enabled = false;
+                    DataBaseTables data = new DataBaseTables();
+
+                    data.qrKadr_uchet = "select [sotrudnik_id] as \"Код сотрудника\" ,[tabel_zarplata_id] as \"Код табеля ЗП\", [pribil_i_rashodi_id] as \"Код прибыли и расходов\" from [dbo].[kadr_uchet]";
+                    ExcelDocument document = new ExcelDocument();
+                    document.GroupDisciplineCreate();
+                    btVih_DocWord.Enabled = true;
+                    break;
+            }
+        }
     }
 }

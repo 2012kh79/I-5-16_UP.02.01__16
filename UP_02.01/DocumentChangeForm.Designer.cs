@@ -289,6 +289,7 @@
             this.btKadr_UchetExcel.TabIndex = 1;
             this.btKadr_UchetExcel.Text = "Создать";
             this.btKadr_UchetExcel.UseVisualStyleBackColor = true;
+            this.btKadr_UchetExcel.Click += new System.EventHandler(this.btKadr_UchetExcel_Click);
             // 
             // btVih_DocWord
             // 

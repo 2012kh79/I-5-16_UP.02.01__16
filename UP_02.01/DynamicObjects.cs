@@ -318,7 +318,7 @@ namespace UP_02._01
         }
 
 
-
+        public Label lbNewIdSoiskatel = new Label();
         Label lblFamSoiskatel = new Label();
         Label lblNameSoiskatel = new Label();
         Label lblOtchSoiskatel = new Label();
@@ -334,6 +334,11 @@ namespace UP_02._01
 
         public void ApplicationFormFill()
         {
+            lbNewIdSoiskatel.Text = "ID";
+            lbNewIdSoiskatel.Location = new Point(20, 20);
+            lbNewIdSoiskatel.Font = new Font("Times New Roman", 25);
+            aggregateApplicationForm.Controls.Add(lbNewIdSoiskatel);
+
             lblHead.Size = new Size(400, 50);
             lblHead.Text = "Анкета соискателя";
             lblHead.Location = new Point(280, 10);
@@ -1344,15 +1349,19 @@ namespace UP_02._01
             tbNameSoiskatel.Clear();
             tbFamSoiskatel.Clear();
             tbOtchSoiskatel.Clear();
+            
+
+
+            tables.dtSoiskatelFill();
             frm1.dgvApplicationForm.Update();
+
 
         }
 
         protected void btnSoiskatelUpdate_Click(object sender, EventArgs e)
         {
             ApplicationForm frm1 = new ApplicationForm();
-            procedure.spSoiskatel_Update(Convert.ToInt32(
-                frm1.dgvApplicationForm.CurrentRow.Cells[0].Value),
+           procedure.spSoiskatel_Update(Convert.ToInt32(lbNewIdSoiskatel.Text),
                 tbFamSoiskatel.Text, tbNameSoiskatel.Text, tbOtchSoiskatel.Text, Convert.ToInt32(cmbTabel_rab_vremeni_ID.SelectedValue.ToString()), Convert.ToInt32(cmbDogovor_ID.SelectedValue.ToString()));
         }
 
@@ -1360,12 +1369,12 @@ namespace UP_02._01
         {
             ApplicationForm frm1 = new ApplicationForm();
             switch (MessageBox.Show("Удаление соискателя " +
-               tbNameSoiskatel.Text + " " + tbFamSoiskatel.Text + " " + tbOtchSoiskatel.Text + "?", "Удалить соискателя ", MessageBoxButtons.YesNo,
+                tbFamSoiskatel.Text + " " + tbNameSoiskatel.Text + " " + tbOtchSoiskatel.Text + "?", "Удалить соискателя ", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
                      procedure.spSoiskatel_Delete(Convert.ToInt32(
-                     frm1.dgvApplicationForm.CurrentRow.Cells[0].Value));
+                         lbNewIdSoiskatel.Text));
                     break;
                 case DialogResult.No:
                     break;
