@@ -9,6 +9,7 @@ namespace UP_02._01
 {
     public partial class ApplicationForm : Form
     {
+        DataBaseTables tables = new DataBaseTables();
         DynamicObjects classApplicationForm = new DynamicObjects();
         DBProcedures procedure = new DBProcedures();
         public ApplicationForm()
@@ -22,6 +23,8 @@ namespace UP_02._01
             classApplicationForm.ApplicationFormFill();
             Thread thread = new Thread(dgvApplicationFormFill);
             thread.Start();
+            Thread thread1 = new Thread(cmbComboBoxFill);
+            thread1.Start();
         }
 
         public void dgvApplicationFormFill()
@@ -30,12 +33,11 @@ namespace UP_02._01
             {
                 try
                 {
-                    DataBaseTables tables = new DataBaseTables();
                     //filterDepartment = data.qrDepartment;
                     tables.dtSoiskatelFill();
                     tables.dependency.OnChange += onchangeApplication;
                     dgvApplicationForm.DataSource = tables.dtSoiskatel;
-                    dgvApplicationForm.Columns[0].Visible = false;
+                    dgvApplicationForm.Columns[0].Visible = true;
                     dgvApplicationForm.Columns[1].HeaderText = "Фамилия соискателя";
                     dgvApplicationForm.Columns[2].HeaderText = "Имя соискателя";
                     dgvApplicationForm.Columns[3].HeaderText = "Отчество соискателя";
@@ -50,6 +52,21 @@ namespace UP_02._01
                     dgvApplicationForm.Columns[12].Visible = false;
                     dgvApplicationForm.Columns[13].Visible = false;
                     dgvApplicationForm.Columns[14].Visible = false;
+                }
+                catch
+                {
+
+                }
+            };
+            Invoke(action);
+        }
+
+        public void cmbComboBoxFill()
+        {
+            Action action = () =>
+            {
+                try
+                {
                     classApplicationForm.cmbTabel_rab_vremeni_ID.DataSource = tables.dtSoiskatel;
                     classApplicationForm.cmbTabel_rab_vremeni_ID.ValueMember = "Tabel_rab_vremeni_ID";
                     classApplicationForm.cmbTabel_rab_vremeni_ID.DisplayMember = "Tabel_rab_vremeni";
@@ -64,6 +81,7 @@ namespace UP_02._01
             };
             Invoke(action);
         }
+
         private void onchangeApplication(object sender, SqlNotificationEventArgs e)
         {
             if (e.Info != SqlNotificationInfo.Invalid)
@@ -72,12 +90,10 @@ namespace UP_02._01
 
         private void dgvApplicationForm_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgvApplicationForm.CurrentRow.Cells[0].Value.ToString();
+            dgvApplicationForm.CurrentRow.Cells[0].Selected = true;
             classApplicationForm.tbFamSoiskatel.Text = dgvApplicationForm.CurrentRow.Cells[1].Value.ToString();
             classApplicationForm.tbNameSoiskatel.Text = dgvApplicationForm.CurrentRow.Cells[2].Value.ToString();
             classApplicationForm.tbOtchSoiskatel.Text = dgvApplicationForm.CurrentRow.Cells[3].Value.ToString();
-            classApplicationForm.cmbTabel_rab_vremeni_ID.SelectedValue = dgvApplicationForm.CurrentRow.Cells[4].Value.ToString();
-            classApplicationForm.cmbDogovor_ID.SelectedValue = dgvApplicationForm.CurrentRow.Cells[5].Value.ToString();
         }
     }
 }

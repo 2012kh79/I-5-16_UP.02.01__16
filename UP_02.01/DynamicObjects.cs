@@ -1344,6 +1344,7 @@ namespace UP_02._01
             tbNameSoiskatel.Clear();
             tbFamSoiskatel.Clear();
             tbOtchSoiskatel.Clear();
+            frm1.dgvApplicationForm.Update();
 
         }
 
@@ -1363,8 +1364,8 @@ namespace UP_02._01
                 MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
-                    procedure.spSoiskatel_Delete(Convert.ToInt32(
-                        frm1.dgvApplicationForm.CurrentRow.Cells[0].Value));
+                     procedure.spSoiskatel_Delete(Convert.ToInt32(
+                     frm1.dgvApplicationForm.CurrentRow.Cells[0].Value));
                     break;
                 case DialogResult.No:
                     break;

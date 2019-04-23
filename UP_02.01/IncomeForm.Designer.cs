@@ -34,10 +34,10 @@
             this.tbpIncome = new System.Windows.Forms.TabPage();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.tbpCheckVidMed = new System.Windows.Forms.TabPage();
-            this.tbpMedicament = new System.Windows.Forms.TabPage();
-            this.tbpProdajaTovara = new System.Windows.Forms.TabPage();
             this.dgvCheckVidMed = new System.Windows.Forms.DataGridView();
+            this.tbpMedicament = new System.Windows.Forms.TabPage();
             this.dgvMed = new System.Windows.Forms.DataGridView();
+            this.tbpProdajaTovara = new System.Windows.Forms.TabPage();
             this.dgvProdajaTov = new System.Windows.Forms.DataGridView();
             this.tcnTable.SuspendLayout();
             this.tbpinstruction.SuspendLayout();
@@ -45,10 +45,10 @@
             this.tbpIncome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.tbpCheckVidMed.SuspendLayout();
-            this.tbpMedicament.SuspendLayout();
-            this.tbpProdajaTovara.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckVidMed)).BeginInit();
+            this.tbpMedicament.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMed)).BeginInit();
+            this.tbpProdajaTovara.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdajaTov)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +78,7 @@
             // 
             // dgvVidDocument
             // 
+            this.dgvVidDocument.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvVidDocument.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVidDocument.Location = new System.Drawing.Point(6, 6);
             this.dgvVidDocument.Name = "dgvVidDocument";
@@ -97,6 +98,7 @@
             // 
             // dgvOrder
             // 
+            this.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrder.Location = new System.Drawing.Point(6, 6);
             this.dgvOrder.Name = "dgvOrder";
@@ -113,6 +115,15 @@
             this.tbpCheckVidMed.Text = "Чек выданных медикаментов";
             this.tbpCheckVidMed.UseVisualStyleBackColor = true;
             // 
+            // dgvCheckVidMed
+            // 
+            this.dgvCheckVidMed.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvCheckVidMed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCheckVidMed.Location = new System.Drawing.Point(6, -6);
+            this.dgvCheckVidMed.Name = "dgvCheckVidMed";
+            this.dgvCheckVidMed.Size = new System.Drawing.Size(840, 287);
+            this.dgvCheckVidMed.TabIndex = 2;
+            // 
             // tbpMedicament
             // 
             this.tbpMedicament.Controls.Add(this.dgvMed);
@@ -122,6 +133,15 @@
             this.tbpMedicament.TabIndex = 3;
             this.tbpMedicament.Text = "Медикаменты";
             this.tbpMedicament.UseVisualStyleBackColor = true;
+            // 
+            // dgvMed
+            // 
+            this.dgvMed.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvMed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMed.Location = new System.Drawing.Point(6, -6);
+            this.dgvMed.Name = "dgvMed";
+            this.dgvMed.Size = new System.Drawing.Size(840, 287);
+            this.dgvMed.TabIndex = 3;
             // 
             // tbpProdajaTovara
             // 
@@ -133,24 +153,9 @@
             this.tbpProdajaTovara.Text = "Продажа товара";
             this.tbpProdajaTovara.UseVisualStyleBackColor = true;
             // 
-            // dgvCheckVidMed
-            // 
-            this.dgvCheckVidMed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCheckVidMed.Location = new System.Drawing.Point(6, -6);
-            this.dgvCheckVidMed.Name = "dgvCheckVidMed";
-            this.dgvCheckVidMed.Size = new System.Drawing.Size(840, 287);
-            this.dgvCheckVidMed.TabIndex = 2;
-            // 
-            // dgvMed
-            // 
-            this.dgvMed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMed.Location = new System.Drawing.Point(6, -6);
-            this.dgvMed.Name = "dgvMed";
-            this.dgvMed.Size = new System.Drawing.Size(840, 287);
-            this.dgvMed.TabIndex = 3;
-            // 
             // dgvProdajaTov
             // 
+            this.dgvProdajaTov.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvProdajaTov.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProdajaTov.Location = new System.Drawing.Point(6, -6);
             this.dgvProdajaTov.Name = "dgvProdajaTov";
@@ -172,10 +177,10 @@
             this.tbpIncome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             this.tbpCheckVidMed.ResumeLayout(false);
-            this.tbpMedicament.ResumeLayout(false);
-            this.tbpProdajaTovara.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckVidMed)).EndInit();
+            this.tbpMedicament.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMed)).EndInit();
+            this.tbpProdajaTovara.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdajaTov)).EndInit();
             this.ResumeLayout(false);
 

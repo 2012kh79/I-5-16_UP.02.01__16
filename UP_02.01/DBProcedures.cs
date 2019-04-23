@@ -9,7 +9,7 @@ namespace UP_02._01
 {
     class DBProcedures
     {
-        public SqlCommand cmd = new SqlCommand("",Registry_Class.sql);
+        public SqlCommand cmd = new SqlCommand("Empty",Registry_Class.sql);
 
         public void spConfiguration(string spName)
         {
