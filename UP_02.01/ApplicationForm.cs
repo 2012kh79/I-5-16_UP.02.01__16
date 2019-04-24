@@ -35,6 +35,8 @@ namespace UP_02._01
             {
                 try
                 {
+                    DataBaseTables data = new DataBaseTables();
+                    data.dependency.OnChange += onchangeApplication;
                     //filterDepartment = data.qrDepartment;
                     tables.dtSoiskatelFill();
                     tables.dependency.OnChange += onchangeApplication;

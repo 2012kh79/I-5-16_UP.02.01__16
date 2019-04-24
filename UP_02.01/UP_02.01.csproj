@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppConfigForm.Designer.cs">
+      <DependentUpon>AppConfigForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
       <DependentUpon>SupplyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="WordDocument.cs" />
+    <EmbeddedResource Include="AppConfigForm.resx">
+      <DependentUpon>AppConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplicationForm.resx">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
     </EmbeddedResource>
