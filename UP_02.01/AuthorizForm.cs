@@ -73,6 +73,13 @@ namespace UP_02._01
                 Registry_Class.sql.Close();
             }
         }
+
+        private void tbLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((char)e.KeyChar == (Char)Keys.Back) return;
+            if (char.IsDigit(e.KeyChar) || char.IsLetter(e.KeyChar)) return;
+            e.Handled = true;
+        }
     }
 }
 

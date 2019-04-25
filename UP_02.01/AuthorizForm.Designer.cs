@@ -73,17 +73,21 @@
             // tbLogin
             // 
             this.tbLogin.Location = new System.Drawing.Point(121, 168);
+            this.tbLogin.MaxLength = 16;
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(214, 20);
             this.tbLogin.TabIndex = 3;
+            this.tbLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLogin_KeyPress);
             // 
             // tbPass
             // 
             this.tbPass.Location = new System.Drawing.Point(121, 208);
+            this.tbPass.MaxLength = 16;
             this.tbPass.Name = "tbPass";
             this.tbPass.PasswordChar = '*';
             this.tbPass.Size = new System.Drawing.Size(214, 20);
             this.tbPass.TabIndex = 4;
+            this.tbPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLogin_KeyPress);
             // 
             // btVhod
             // 
@@ -105,7 +109,7 @@
             this.btReg.UseVisualStyleBackColor = true;
             this.btReg.Click += new System.EventHandler(this.btReg_Click);
             // 
-            // AuthorizationForm
+            // AuthorizForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,7 +123,7 @@
             this.Controls.Add(this.lbPass);
             this.Controls.Add(this.lbLogin);
             this.Controls.Add(this.lbAuth);
-            this.Name = "AuthorizationForm";
+            this.Name = "AuthorizForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
             this.ResumeLayout(false);
