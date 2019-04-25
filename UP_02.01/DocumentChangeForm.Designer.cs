@@ -32,9 +32,9 @@
             this.tbpDocument = new System.Windows.Forms.TabPage();
             this.dgvVidDocument = new System.Windows.Forms.DataGridView();
             this.tbpOrder = new System.Windows.Forms.TabPage();
-            this.dgvOrder = new System.Windows.Forms.DataGridView();
+            this.dgvDogovor = new System.Windows.Forms.DataGridView();
             this.tbpSalary = new System.Windows.Forms.TabPage();
-            this.dgvTabelSalary = new System.Windows.Forms.DataGridView();
+            this.dgvTabelSarplaty = new System.Windows.Forms.DataGridView();
             this.tbpKadrPerestanovki = new System.Windows.Forms.TabPage();
             this.dgvKadrPerestanovki = new System.Windows.Forms.DataGridView();
             this.tabKadrUchet = new System.Windows.Forms.TabPage();
@@ -55,9 +55,9 @@
             this.tbpDocument.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVidDocument)).BeginInit();
             this.tbpOrder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDogovor)).BeginInit();
             this.tbpSalary.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTabelSalary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTabelSarplaty)).BeginInit();
             this.tbpKadrPerestanovki.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKadrPerestanovki)).BeginInit();
             this.tabKadrUchet.SuspendLayout();
@@ -88,6 +88,7 @@
             this.tcnTable.SelectedIndex = 0;
             this.tcnTable.Size = new System.Drawing.Size(860, 300);
             this.tcnTable.TabIndex = 0;
+            this.tcnTable.SelectedIndexChanged += new System.EventHandler(this.tcnTable_SelectedIndexChanged);
             // 
             // tbpDocument
             // 
@@ -102,6 +103,7 @@
             // 
             // dgvVidDocument
             // 
+            this.dgvVidDocument.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvVidDocument.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVidDocument.Location = new System.Drawing.Point(6, 6);
             this.dgvVidDocument.Name = "dgvVidDocument";
@@ -110,7 +112,7 @@
             // 
             // tbpOrder
             // 
-            this.tbpOrder.Controls.Add(this.dgvOrder);
+            this.tbpOrder.Controls.Add(this.dgvDogovor);
             this.tbpOrder.Location = new System.Drawing.Point(4, 22);
             this.tbpOrder.Name = "tbpOrder";
             this.tbpOrder.Padding = new System.Windows.Forms.Padding(3);
@@ -119,17 +121,18 @@
             this.tbpOrder.Text = "Договора";
             this.tbpOrder.UseVisualStyleBackColor = true;
             // 
-            // dgvOrder
+            // dgvDogovor
             // 
-            this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrder.Location = new System.Drawing.Point(6, 6);
-            this.dgvOrder.Name = "dgvOrder";
-            this.dgvOrder.Size = new System.Drawing.Size(840, 287);
-            this.dgvOrder.TabIndex = 1;
+            this.dgvDogovor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvDogovor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDogovor.Location = new System.Drawing.Point(6, 6);
+            this.dgvDogovor.Name = "dgvDogovor";
+            this.dgvDogovor.Size = new System.Drawing.Size(840, 287);
+            this.dgvDogovor.TabIndex = 1;
             // 
             // tbpSalary
             // 
-            this.tbpSalary.Controls.Add(this.dgvTabelSalary);
+            this.tbpSalary.Controls.Add(this.dgvTabelSarplaty);
             this.tbpSalary.Location = new System.Drawing.Point(4, 22);
             this.tbpSalary.Name = "tbpSalary";
             this.tbpSalary.Size = new System.Drawing.Size(852, 274);
@@ -138,13 +141,14 @@
             this.tbpSalary.UseVisualStyleBackColor = true;
             this.tbpSalary.Visible = false;
             // 
-            // dgvTabelSalary
+            // dgvTabelSarplaty
             // 
-            this.dgvTabelSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTabelSalary.Location = new System.Drawing.Point(6, 6);
-            this.dgvTabelSalary.Name = "dgvTabelSalary";
-            this.dgvTabelSalary.Size = new System.Drawing.Size(840, 287);
-            this.dgvTabelSalary.TabIndex = 1;
+            this.dgvTabelSarplaty.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvTabelSarplaty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTabelSarplaty.Location = new System.Drawing.Point(6, 6);
+            this.dgvTabelSarplaty.Name = "dgvTabelSarplaty";
+            this.dgvTabelSarplaty.Size = new System.Drawing.Size(840, 287);
+            this.dgvTabelSarplaty.TabIndex = 1;
             // 
             // tbpKadrPerestanovki
             // 
@@ -159,6 +163,7 @@
             // 
             // dgvKadrPerestanovki
             // 
+            this.dgvKadrPerestanovki.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvKadrPerestanovki.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKadrPerestanovki.Location = new System.Drawing.Point(6, 6);
             this.dgvKadrPerestanovki.Name = "dgvKadrPerestanovki";
@@ -178,6 +183,7 @@
             // 
             // dgvKadrUchet
             // 
+            this.dgvKadrUchet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvKadrUchet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKadrUchet.Location = new System.Drawing.Point(6, 6);
             this.dgvKadrUchet.Name = "dgvKadrUchet";
@@ -197,6 +203,7 @@
             // 
             // dgvFirma
             // 
+            this.dgvFirma.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvFirma.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFirma.Location = new System.Drawing.Point(6, 6);
             this.dgvFirma.Name = "dgvFirma";
@@ -215,6 +222,7 @@
             // 
             // dgvIdentTovParty
             // 
+            this.dgvIdentTovParty.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvIdentTovParty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIdentTovParty.Location = new System.Drawing.Point(6, 6);
             this.dgvIdentTovParty.Name = "dgvIdentTovParty";
@@ -233,6 +241,7 @@
             // 
             // dgvVihCocument
             // 
+            this.dgvVihCocument.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvVihCocument.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVihCocument.Location = new System.Drawing.Point(6, 6);
             this.dgvVihCocument.Name = "dgvVihCocument";
@@ -317,9 +326,9 @@
             this.tbpDocument.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVidDocument)).EndInit();
             this.tbpOrder.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDogovor)).EndInit();
             this.tbpSalary.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTabelSalary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTabelSarplaty)).EndInit();
             this.tbpKadrPerestanovki.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKadrPerestanovki)).EndInit();
             this.tabKadrUchet.ResumeLayout(false);
@@ -343,12 +352,12 @@
         private System.Windows.Forms.TabPage tbpDocument;
         private System.Windows.Forms.TabPage tbpOrder;
         private System.Windows.Forms.DataGridView dgvVidDocument;
-        private System.Windows.Forms.DataGridView dgvOrder;
+        private System.Windows.Forms.DataGridView dgvDogovor;
         private System.Windows.Forms.TabControl tcnDocument;
         private System.Windows.Forms.TabPage tbpWord;
         private System.Windows.Forms.TabPage tbpExcel;
         private System.Windows.Forms.TabPage tbpSalary;
-        private System.Windows.Forms.DataGridView dgvTabelSalary;
+        private System.Windows.Forms.DataGridView dgvTabelSarplaty;
         private System.Windows.Forms.TabPage tbpKadrPerestanovki;
         private System.Windows.Forms.DataGridView dgvKadrPerestanovki;
         private System.Windows.Forms.TabPage tabKadrUchet;

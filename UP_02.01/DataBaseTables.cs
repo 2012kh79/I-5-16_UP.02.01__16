@@ -6,6 +6,7 @@ namespace UP_02._01
 {
     class DataBaseTables
     {
+        public SqlDependency dependency = new SqlDependency();
         public SqlCommand command = new SqlCommand("", Registry_Class.sql);
         public DataTable dtAccount = new DataTable("account");
         public DataTable dtCheck_vid_med = new DataTable("check_vid_med");
@@ -32,7 +33,6 @@ namespace UP_02._01
         public DataTable dtTovar_na_sklade = new DataTable("tovar_na_sklade");
         public DataTable dtVih_doc = new DataTable("vih_doc");
         public DataTable dtTr_pribil_i_rashodi = new DataTable("tr_pribil_i_rashodi");
-        public SqlDependency dependency = new SqlDependency();
         public string qrAccount = "select [id_account],[login_acc],[password_acc],[role_id] from [dbo].[account]",
             qrCheck_vid_med = "select [id_check_vid_med],[nom_check],[nazv_vid_med],[doljnost_id],[sotrudnik_id],[id_doljnost],[zanim_doljnost],[id_sotrudnik],[tab_nom_sotr],[fam_sotr]+' '+[imya_sotr]+' '+[otch_sotr] as \"Full_Name_Sotrudnik\" from [dbo].[check_vid_med] inner join [dbo].[sotrudnik] on [dbo].[sotrudnik].[id_sotrudnik] = [dbo].[check_vid_med].[sotrudnik_id] inner join [dbo].[doljnost] on [dbo].[doljnost].[id_doljnost]=[dbo].[check_vid_med].[doljnost_id]",
             qrDocument = "select [id_document],[vid_document] from [dbo].[document]",
@@ -52,10 +52,10 @@ namespace UP_02._01
             qrProdaja_tovara = "select [id_prodaja_tovara],[medicamenti_id],[instr_raboty_kassira_id],[id_medicamenti],[kol_vid_med],[id_instr_raboty_kassira],[instr] from [dbo].[prodaja_tovara] inner join [dbo].[medicamenti] on [dbo].[medicamenti].[id_medicamenti] = [dbo].[prodaja_tovara].[medicamenti_id] inner join [dbo].[instr_raboty_kassira] on [dbo].[instr_raboty_kassira].[id_instr_raboty_kassira] = [dbo].[prodaja_tovara].[instr_raboty_kassira_id]",
             qrRole = "select [id_role],[naim_role] from [dbo].[role]",
             qrSoiskatel = "select [id_soiskatel],[fam_soiskatel],[imya_soiskatel],[otch_soiskatel],[tabel_rab_vremeni_id],[dogovor_id],[fam_soiskatel]+' '+[imya_soiskatel]+' '+[otch_soiskatel] as \"Full_Name_Soiskatel\",[id_tabel_rab_vremeni],[kol_otr_dney],[kol_vih_dney],[komandirovki],[otpuska],[id_dogovor],[nom_prikaza],[date_sost_prikaza] from [dbo].[soiskatel] inner join [dbo].[tabel_rab_vremeni] on [dbo].[tabel_rab_vremeni].[id_tabel_rab_vremeni] = [dbo].[soiskatel].[tabel_rab_vremeni_id] inner join [dbo].[dogovor] on [dbo].[dogovor].[id_dogovor] = [dbo].[soiskatel].[dogovor_id]",
-            qrSotrudnik = "select [id_sotrudnik],[fam_sotr],[imya_sotr],[otch_sotr],[tabel_rab_vremeni_id],[dogovor_id],[account_id],[fam_sotr]+' '+[imya_sotr]+' '+[otch_sotr] as \"Full_Name_Sotrudnik\",[id_tabel_rab_vremeni],[kol_otr_dney],[kol_vih_dney],[komandirovki],[otpuska],[id_dogovor],[nom_prikaza],[date_sost_prikaza],[id_account],[login_acc],[password_acc] from [dbo].[sotrudnik] inner join [dbo].[tabel_rab_vremeni] on [dbo].[tabel_rab_vremeni].[id_tabel_rab_vremeni] = [dbo].[sotrudnik].[tabel_rab_vremeni_id] inner join [dbo].[dogovor] on [dbo].[dogovor].[id_dogovor] = [dbo].[sotrudnik].[dogovor_id] inner join [dbo].[account] on [dbo].[account].[id_account] = [dbo].[sotrudnik].[account_id]",
-            qrTabel_rab_vremeni = "select [id_tabel_tab_vremeni],[kol_otr_dney],[kol_vih_dney],[komandirovki],[otpuska] from [dbo].[tabel_rab_vremeni]",
+            qrSotrudnik = "select [id_sotrudnik],[tab_nom_sotr],[fam_sotr],[imya_sotr],[otch_sotr],[tabel_rab_vremeni_id],[dogovor_id],[account_id],[fam_sotr]+' '+[imya_sotr]+' '+[otch_sotr] as \"Full_Name_Sotrudnik\",[id_tabel_rab_vremeni],[kol_otr_dney],[kol_vih_dney],[komandirovki],[otpuska],[id_dogovor],[nom_prikaza],[date_sost_prikaza],[id_account],[login_acc],[password_acc] from [dbo].[sotrudnik] inner join [dbo].[tabel_rab_vremeni] on [dbo].[tabel_rab_vremeni].[id_tabel_rab_vremeni] = [dbo].[sotrudnik].[tabel_rab_vremeni_id] inner join [dbo].[dogovor] on [dbo].[dogovor].[id_dogovor] = [dbo].[sotrudnik].[dogovor_id] inner join [dbo].[account] on [dbo].[account].[id_account] = [dbo].[sotrudnik].[account_id]",
+            qrTabel_rab_vremeni = "select [id_tabel_rab_vremeni],[kol_otr_dney],[kol_vih_dney],[komandirovki],[otpuska] from [dbo].[tabel_rab_vremeni]",
             qrTabel_zarplata = "select [id_tabel_zarplata],[zarplata],[kadr_perestanovki_id],[id_kadr_perestanovki],[date_podpisi_document] from [dbo].[tabel_zarplata] inner join [dbo].[kadr_perestanovki] on [dbo].[kadr_perestanovki].[id_kadr_perestanovki] = [tabel_zarplata].[kadr_perestanovki_id]",
-            qrTovar_na_sklade = "select [id_tovar_na_sklade],[srok_hran],[kol_tov_na_sklade],[nom_shkafa],[nom_polki] from [dbo].[tovar_na_skalde]",
+            qrTovar_na_sklade = "select [id_tovar_na_sklade],[srok_hran],[kol_tov_na_sklade],[nom_shkafa],[nom_polki] from [dbo].[tovar_na_sklade]",
             qrVih_doc = "select [id_vih_doc],[prodaja_tovara_id],[kadr_uchet_id],[ident_tov_party_id],[id_prodaja_tovara],[id_kadr_uchet],[id_ident_tov_party],[vid_doc],[tov_status] from [dbo].[vih_doc] inner join [dbo].[prodaja_tovara] on [dbo].[prodaja_tovara].[id_prodaja_tovara] = [dbo].[vih_doc].[prodaja_tovara_id] inner join [dbo].[kadr_uchet] on [dbo].[kadr_uchet].[id_kadr_uchet] = [dbo].[vih_doc].[kadr_uchet_id] inner join [dbo].[ident_tov_party] on [dbo].[ident_tov_party].[id_ident_tov_party] = [dbo].[vih_doc].[ident_tov_party_id]",
             qrTr_pribil_i_rashodi = "select [id_pribil_i_rashodi_old],[id_pribil_i_rashodi_new],[pribil_old],[pribil_new],[rashodi_old],[rashodi_new],[nach_otcheta_new],[nach_otcheta_old],[kon_otcheta_old],[kon_otcheta_new],[data] from [u0695785_TatarBase].[tr_pribil_i_rashodi]";
 
@@ -63,6 +63,7 @@ namespace UP_02._01
         {
             try
             {
+                command.Connection = Registry_Class.sql;
                 command.Notification = null;
                 command.CommandText = query;
                 //dependency.AddCommandDependency(command);

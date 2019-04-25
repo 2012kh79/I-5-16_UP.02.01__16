@@ -4,6 +4,8 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 
 namespace UP_02._01
 {
@@ -11,15 +13,15 @@ namespace UP_02._01
     public partial class ApplicationForm : Form
     {
         
-        DataBaseTables tables = new DataBaseTables();
         DynamicObjects classApplicationForm = new DynamicObjects();
+        DataBaseTables tables = new DataBaseTables();
         DBProcedures procedure = new DBProcedures();
         public ApplicationForm()
         {
             InitializeComponent();
         }
 
-        private void ApplicationForm_Load(object sender, EventArgs e)
+        public void ApplicationForm_Load(object sender, EventArgs e)
         {
             classApplicationForm.aggregateApplicationForm = this;
             classApplicationForm.ApplicationFormFill();
@@ -27,6 +29,8 @@ namespace UP_02._01
             thread.Start();
             Thread thread1 = new Thread(cmbComboBoxFill);
             thread1.Start();
+            //Thread thread2 = new Thread(tables.dependency.OnChange onchangeApplication);
+            //thread1.Start();
         }
 
         public void dgvApplicationFormFill()
@@ -35,6 +39,7 @@ namespace UP_02._01
             {
                 try
                 {
+
                     //filterDepartment = data.qrDepartment;
                     tables.dtSoiskatelFill();
                     tables.dependency.OnChange += onchangeApplication;
@@ -69,12 +74,14 @@ namespace UP_02._01
             {
                 try
                 {
-                    classApplicationForm.cmbTabel_rab_vremeni_ID.DataSource = tables.dtSoiskatel;
-                    classApplicationForm.cmbTabel_rab_vremeni_ID.ValueMember = "Tabel_rab_vremeni_ID";
+                    tables.dtTabel_rab_vremeniFill();
+                    tables.dtDogovorFill();
+                    classApplicationForm.cmbTabel_rab_vremeni_ID.DataSource = tables.dtTabel_rab_vremeni;
+                    classApplicationForm.cmbDogovor_ID.DataSource = tables.dtDogovor;
                     classApplicationForm.cmbTabel_rab_vremeni_ID.DisplayMember = "Tabel_rab_vremeni";
-                    classApplicationForm.cmbDogovor_ID.DataSource = tables.dtSoiskatel;
-                    classApplicationForm.cmbDogovor_ID.ValueMember = "Dogovor_ID";
+                    classApplicationForm.cmbTabel_rab_vremeni_ID.ValueMember = "ID_Tabel_rab_vremeni";
                     classApplicationForm.cmbDogovor_ID.DisplayMember = "Dogovor";
+                    classApplicationForm.cmbDogovor_ID.ValueMember = "ID_Dogovor";
                 }
                 catch
                 {
@@ -84,7 +91,7 @@ namespace UP_02._01
             Invoke(action);
         }
 
-        private void onchangeApplication(object sender, SqlNotificationEventArgs e)
+        public void onchangeApplication(object sender, SqlNotificationEventArgs e)
         {
             if (e.Info != SqlNotificationInfo.Invalid)
                 dgvApplicationFormFill();
@@ -92,12 +99,15 @@ namespace UP_02._01
 
         private void dgvApplicationForm_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
-            dgvApplicationForm.CurrentRow.Cells[0].Selected = true;
-            classApplicationForm.lbNewIdSoiskatel.Text = (dgvApplicationForm.CurrentRow.Index + 1).ToString();
+            
+            classApplicationForm.NewIdSoiskatel = (dgvApplicationForm.CurrentRow.Index + 1).ToString();
             classApplicationForm.tbFamSoiskatel.Text = dgvApplicationForm.CurrentRow.Cells[1].Value.ToString();
             classApplicationForm.tbNameSoiskatel.Text = dgvApplicationForm.CurrentRow.Cells[2].Value.ToString();
             classApplicationForm.tbOtchSoiskatel.Text = dgvApplicationForm.CurrentRow.Cells[3].Value.ToString();
+            classApplicationForm.cmbTabel_rab_vremeni_ID.SelectedValue = Convert.ToInt32(dgvApplicationForm.CurrentRow.Cells[4].Value);
+            classApplicationForm.cmbDogovor_ID.SelectedValue = Convert.ToInt32(dgvApplicationForm.CurrentRow.Cells[5].Value);
+
+            //  classApplicationForm.cmbDogovor_ID.SelectedValue = 
         }
 
         private void dgvApplicationForm_CellContentClick(object sender, DataGridViewCellEventArgs e)

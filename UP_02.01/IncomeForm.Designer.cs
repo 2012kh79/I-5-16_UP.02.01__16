@@ -32,7 +32,7 @@
             this.tbpinstruction = new System.Windows.Forms.TabPage();
             this.dgvVidDocument = new System.Windows.Forms.DataGridView();
             this.tbpIncome = new System.Windows.Forms.TabPage();
-            this.dgvOrder = new System.Windows.Forms.DataGridView();
+            this.dgvPribil_i_rashodi = new System.Windows.Forms.DataGridView();
             this.tbpCheckVidMed = new System.Windows.Forms.TabPage();
             this.dgvCheckVidMed = new System.Windows.Forms.DataGridView();
             this.tbpMedicament = new System.Windows.Forms.TabPage();
@@ -43,7 +43,7 @@
             this.tbpinstruction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVidDocument)).BeginInit();
             this.tbpIncome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPribil_i_rashodi)).BeginInit();
             this.tbpCheckVidMed.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckVidMed)).BeginInit();
             this.tbpMedicament.SuspendLayout();
@@ -64,6 +64,7 @@
             this.tcnTable.SelectedIndex = 0;
             this.tcnTable.Size = new System.Drawing.Size(860, 300);
             this.tcnTable.TabIndex = 2;
+            this.tcnTable.SelectedIndexChanged += new System.EventHandler(this.tcnTable_SelectedIndexChanged);
             // 
             // tbpinstruction
             // 
@@ -84,10 +85,11 @@
             this.dgvVidDocument.Name = "dgvVidDocument";
             this.dgvVidDocument.Size = new System.Drawing.Size(840, 287);
             this.dgvVidDocument.TabIndex = 0;
+            this.dgvVidDocument.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVidDocument_CellClick);
             // 
             // tbpIncome
             // 
-            this.tbpIncome.Controls.Add(this.dgvOrder);
+            this.tbpIncome.Controls.Add(this.dgvPribil_i_rashodi);
             this.tbpIncome.Location = new System.Drawing.Point(4, 22);
             this.tbpIncome.Name = "tbpIncome";
             this.tbpIncome.Padding = new System.Windows.Forms.Padding(3);
@@ -96,14 +98,15 @@
             this.tbpIncome.Text = "Прибыль и расходы";
             this.tbpIncome.UseVisualStyleBackColor = true;
             // 
-            // dgvOrder
+            // dgvPribil_i_rashodi
             // 
-            this.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrder.Location = new System.Drawing.Point(6, 6);
-            this.dgvOrder.Name = "dgvOrder";
-            this.dgvOrder.Size = new System.Drawing.Size(840, 287);
-            this.dgvOrder.TabIndex = 1;
+            this.dgvPribil_i_rashodi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvPribil_i_rashodi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPribil_i_rashodi.Location = new System.Drawing.Point(6, 6);
+            this.dgvPribil_i_rashodi.Name = "dgvPribil_i_rashodi";
+            this.dgvPribil_i_rashodi.Size = new System.Drawing.Size(840, 287);
+            this.dgvPribil_i_rashodi.TabIndex = 1;
+            this.dgvPribil_i_rashodi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPribil_i_rashodi_CellClick);
             // 
             // tbpCheckVidMed
             // 
@@ -123,6 +126,7 @@
             this.dgvCheckVidMed.Name = "dgvCheckVidMed";
             this.dgvCheckVidMed.Size = new System.Drawing.Size(840, 287);
             this.dgvCheckVidMed.TabIndex = 2;
+            this.dgvCheckVidMed.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCheckVidMed_CellClick);
             // 
             // tbpMedicament
             // 
@@ -142,6 +146,7 @@
             this.dgvMed.Name = "dgvMed";
             this.dgvMed.Size = new System.Drawing.Size(840, 287);
             this.dgvMed.TabIndex = 3;
+            this.dgvMed.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMed_CellClick);
             // 
             // tbpProdajaTovara
             // 
@@ -161,6 +166,7 @@
             this.dgvProdajaTov.Name = "dgvProdajaTov";
             this.dgvProdajaTov.Size = new System.Drawing.Size(840, 287);
             this.dgvProdajaTov.TabIndex = 3;
+            this.dgvProdajaTov.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdajaTov_CellClick);
             // 
             // IncomeForm
             // 
@@ -175,7 +181,7 @@
             this.tbpinstruction.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVidDocument)).EndInit();
             this.tbpIncome.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPribil_i_rashodi)).EndInit();
             this.tbpCheckVidMed.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckVidMed)).EndInit();
             this.tbpMedicament.ResumeLayout(false);
@@ -192,7 +198,7 @@
         private System.Windows.Forms.TabPage tbpinstruction;
         private System.Windows.Forms.DataGridView dgvVidDocument;
         private System.Windows.Forms.TabPage tbpIncome;
-        private System.Windows.Forms.DataGridView dgvOrder;
+        private System.Windows.Forms.DataGridView dgvPribil_i_rashodi;
         private System.Windows.Forms.TabPage tbpCheckVidMed;
         private System.Windows.Forms.DataGridView dgvCheckVidMed;
         private System.Windows.Forms.TabPage tbpMedicament;

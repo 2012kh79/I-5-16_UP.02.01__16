@@ -64,6 +64,7 @@
             this.tcnTable.SelectedIndex = 0;
             this.tcnTable.Size = new System.Drawing.Size(860, 300);
             this.tcnTable.TabIndex = 1;
+            this.tcnTable.SelectedIndexChanged += new System.EventHandler(this.tcnTable_SelectedIndexChanged);
             // 
             // tbpTabRabVremeny
             // 
@@ -84,6 +85,7 @@
             this.dgvTabel_rab.Name = "dgvTabel_rab";
             this.dgvTabel_rab.Size = new System.Drawing.Size(840, 272);
             this.dgvTabel_rab.TabIndex = 0;
+            this.dgvTabel_rab.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabel_rab_CellClick);
             // 
             // tbpDoljnost
             // 
@@ -104,6 +106,7 @@
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.Size = new System.Drawing.Size(840, 262);
             this.dgvOrder.TabIndex = 1;
+            this.dgvOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellClick);
             // 
             // tabRole
             // 
@@ -123,6 +126,7 @@
             this.dgvRole.Name = "dgvRole";
             this.dgvRole.Size = new System.Drawing.Size(840, 287);
             this.dgvRole.TabIndex = 2;
+            this.dgvRole.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRole_CellClick);
             // 
             // tabSotr
             // 
@@ -142,6 +146,7 @@
             this.dgvSotr.Name = "dgvSotr";
             this.dgvSotr.Size = new System.Drawing.Size(840, 287);
             this.dgvSotr.TabIndex = 2;
+            this.dgvSotr.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSotr_CellClick);
             // 
             // tbpAccount
             // 
@@ -162,6 +167,7 @@
             this.dgvAccount.Name = "dgvAccount";
             this.dgvAccount.Size = new System.Drawing.Size(840, 287);
             this.dgvAccount.TabIndex = 1;
+            this.dgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellClick);
             // 
             // StaffForm
             // 

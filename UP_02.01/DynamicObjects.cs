@@ -7,71 +7,590 @@ namespace UP_02._01
 {
     class DynamicObjects
     {
-        DBProcedures procedure = new DBProcedures();
-        DataBaseTables tables = new DataBaseTables();
-        Button btnReturn = new Button();
-            Button btnInsert = new Button();
-            Button btnUpdate = new Button();
-            Button btnDelete = new Button();
-            Panel pnlTextBox = new Panel();
-            TextBox tbVidDocument = new TextBox();
-            TextBox tbNomberOrder = new TextBox();
-            TextBox tbDateOrder = new TextBox();
-            TextBox tbSalary = new TextBox();
-            TextBox tbDateSignOrder = new TextBox();
+        public DBProcedures procedure = new DBProcedures();
+        public DataBaseTables tables = new DataBaseTables();
+        public Button btnReturn = new Button();
+        public Button btnInsert = new Button();
+        public Button btnUpdate = new Button();
+        public Button btnDelete = new Button();
+         public Panel pnlTextBox = new Panel();
+        public TextBox tbVidDocument = new TextBox();
+        public TextBox tbNomberOrder = new TextBox();
+        public TextBox tbDateOrder = new TextBox();
+        public TextBox tbSalary = new TextBox();
+        public TextBox tbDateSignOrder = new TextBox();
             public Form aggregateDocumentChangeForm = new Form();
 
-        Label lblHead = new Label();
-        Label lblVidDocument = new Label(); 
-        Label lblNomberOrder = new Label();
-        Label lblDateOrder = new Label();
-        Label lblSalary = new Label();
-        Label lblDateSignOrder = new Label();
-        Label lblIDFirm = new Label();
-        Label lblZarplata = new Label();
-        Label lblIDKadrPere = new Label();
-        Label lblIDSotrydnik = new Label();
-        Label lblIDDoljnosti = new Label();
-        Label lblIDDocument = new Label();
-        Label lblIDSoiskatel = new Label();
-        Label lblDatePodpisiDoc = new Label();
-        Label lblIDSoiskatelKU = new Label();
-        Label lblIDTabelZarplata = new Label();
-        Label lblIDOtchet = new Label();
-        Label lblNazvFirm = new Label(); 
-        Label lblIDProdajaTovara = new Label();
-        Label lblIDKadrUch = new Label();
-        Label lblIDIdent = new Label();
-        Label lblVidDocIdent = new Label();
-        Label lblStatus = new Label(); 
-        Label lblIDPostavka = new Label();
+        public Label lblHead = new Label();
+        public Label lblVidDocument = new Label();
+        public Label lblNomberOrder = new Label();
+        public Label lblDateOrder = new Label();
+        public Label lblSalary = new Label();
+        public Label lblDateSignOrder = new Label();
+        public Label lblIDFirm = new Label();
+        public Label lblZarplata = new Label();
+        public Label lblIDKadrPere = new Label();
+        public Label lblIDSotrydnik = new Label();
+        public Label lblIDDoljnosti = new Label();
+        public Label lblIDDocument = new Label();
+        public Label lblIDSoiskatel = new Label();
+        public Label lblDatePodpisiDoc = new Label();
+        public Label lblIDSoiskatelKU = new Label();
+        public Label lblIDTabelZarplata = new Label();
+        public Label lblIDOtchet = new Label();
+        public Label lblNazvFirm = new Label();
+        public Label lblIDProdajaTovara = new Label();
+        public Label lblIDKadrUch = new Label();
+        public Label lblIDIdent = new Label();
+        public Label lblVidDocIdent = new Label();
+        public Label lblStatus = new Label();
+        public Label lblIDPostavka = new Label();
 
-        TextBox tbVidDocumentDoc = new TextBox();
-        TextBox tbNomberOrderDoc = new TextBox();
-        TextBox tbDateOrdetDoc = new TextBox();
-        TextBox tbSalaryDoc = new TextBox();
-        TextBox tbDateSignOrderDoc = new TextBox();
-        ComboBox cmbIDFirm = new ComboBox();
-        TextBox tbZarplata = new TextBox();
-        ComboBox cmbIDKadrPere = new ComboBox();
-        ComboBox cmbIDSotrydnik = new ComboBox();
-        ComboBox cmbIDDoljnosti = new ComboBox();
-        ComboBox cmbIDDocument = new ComboBox();
-        ComboBox cmbIDSoiskatel = new ComboBox();
-        TextBox tbDatePodpisiDoc = new TextBox();
-        ComboBox cmbIDSoiskatelKU = new ComboBox();
-        ComboBox cmbIDTabelZarplata = new ComboBox();
-        ComboBox cmbIDOtchet = new ComboBox();
-        TextBox tbNazvFirm = new TextBox();
-        ComboBox cmbIDProdajaTovara = new ComboBox();
-        ComboBox cmbIDKadrUch = new ComboBox();
-        ComboBox cmbIDIdent = new ComboBox();
-        TextBox tbVidDocIdent = new TextBox();
-        TextBox tbStatus = new TextBox();
-        ComboBox cmbIDPostavka = new ComboBox();
-        public void DocumentChangeFormFill()
+        public TextBox tbVidDocumentDoc = new TextBox();
+        public TextBox tbNomberOrderDoc = new TextBox();
+        public TextBox tbDateOrdetDoc = new TextBox();
+        public TextBox tbSalaryDoc = new TextBox();
+        public TextBox tbDateSignOrderDoc = new TextBox();
+        public ComboBox cmbIDFirm = new ComboBox();
+        public TextBox tbZarplata = new TextBox();
+        public ComboBox cmbIDKadrPere = new ComboBox();
+        public ComboBox cmbIDSotrydnik = new ComboBox();
+        public ComboBox cmbIDDoljnosti = new ComboBox();
+        public ComboBox cmbIDDocument = new ComboBox();
+        public ComboBox cmbIDSoiskatel = new ComboBox();
+        public TextBox tbDatePodpisiDoc = new TextBox();
+        public ComboBox cmbIDSoiskatelKU = new ComboBox();
+        public ComboBox cmbIDTabelZarplata = new ComboBox();
+        public ComboBox cmbIDOtchet = new ComboBox();
+        public TextBox tbNazvFirm = new TextBox();
+        public ComboBox cmbIDProdajaTovara = new ComboBox();
+        public ComboBox cmbIDKadrUch = new ComboBox();
+        public ComboBox cmbIDIdent = new ComboBox();
+        public TextBox tbVidDocIdent = new TextBox();
+        public TextBox tbStatus = new TextBox();
+        public ComboBox cmbIDPostavka = new ComboBox();
+        public string NewIdVid_doc;
+        public string NewIdDogovor;
+        public string NewIdZar_plata;
+        public string NewIdKadr_perestanovki;
+        public string NewIdKadr_uchet;
+        public string NewIdFirma;
+        public string NewIdIdent_tov_party;
+        public string NewIdVih_doc;
+        public string NewIdTab_rab_vremeni;
+        public string NewIdDolj;
+        public string NewIdRole;
+        public string NewIdSotr;
+        public string NewIdAccount;
+        public string NewIdPostavki;
+        public string NewIdPostavshiki;
+        public string NewIdFirma_postavki;
+        public string NewIdPost_tovar;
+        public string NewIdTovar_na_sklade;
+        public string NewIdProdaja_tovara;
+        public string NewIdMed;
+        public string NewIdCheck_vid_med;
+        public string NewIdPribil_i_rashodi;
+        public string NewIdInstruction;
+
+        public void Document_VidChangeFormFill()
         {
-           
+            lblVidDocument.Size = new Size(150, 20);
+            lblVidDocument.Text = "Вид документа";
+            lblVidDocument.Location = new Point(5, 5);
+            lblVidDocument.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblVidDocument);
+
+            tbVidDocumentDoc.Size = new Size(150, 20);
+            tbVidDocumentDoc.Location = new Point(5, 25);
+            pnlTextBox.Controls.Add(tbVidDocumentDoc);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Изменение Документов";
+            lblHead.Location = new Point(280, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateDocumentChangeForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateDocumentChangeForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(645, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(755, 55);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(645, 105);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void Document_DogovoraChangeFormFill()
+        {
+            lblNomberOrder.Size = new Size(150, 20);
+            lblNomberOrder.Text = "Номер приказа";
+            lblNomberOrder.Location = new Point(5, 55);
+            lblNomberOrder.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblNomberOrder);
+
+            lblDateOrder.Size = new Size(150, 20);
+            lblDateOrder.Text = "Дата сост. приказа";
+            lblDateOrder.Location = new Point(5, 105);
+            lblDateOrder.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblDateOrder);
+
+            lblIDFirm.Size = new Size(150, 20);
+            lblIDFirm.Text = "ID Фирмы";
+            lblIDFirm.Location = new Point(5, 155);
+            lblIDFirm.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDFirm);
+
+            tbNomberOrderDoc.Size = new Size(150, 20);
+            tbNomberOrderDoc.Location = new Point(5, 75);
+            pnlTextBox.Controls.Add(tbNomberOrderDoc);
+
+            tbDateOrdetDoc.Size = new Size(150, 20);
+            tbDateOrdetDoc.Location = new Point(5, 125);
+            pnlTextBox.Controls.Add(tbDateOrdetDoc);
+
+            cmbIDFirm.Size = new Size(150, 20);
+            cmbIDFirm.Location = new Point(5, 175);
+            pnlTextBox.Controls.Add(cmbIDFirm);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Изменение Документов";
+            lblHead.Location = new Point(280, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateDocumentChangeForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateDocumentChangeForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(645, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(755, 55);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(645, 105);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void Document_Zar_plataChangeFormFill()
+        {
+            lblZarplata.Size = new Size(150, 20);
+            lblZarplata.Text = "Зарплата";
+            lblZarplata.Location = new Point(5, 205);
+            lblZarplata.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblZarplata);
+
+            lblIDKadrPere.Size = new Size(150, 20);
+            lblIDKadrPere.Text = "ID Кадр перест.";
+            lblIDKadrPere.Location = new Point(165, 5);
+            lblIDKadrPere.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDKadrPere);
+
+            tbZarplata.Size = new Size(150, 20);
+            tbZarplata.Location = new Point(5, 225);
+            pnlTextBox.Controls.Add(tbZarplata);
+
+            cmbIDKadrPere.Size = new Size(150, 20);
+            cmbIDKadrPere.Location = new Point(165, 25);
+            pnlTextBox.Controls.Add(cmbIDKadrPere);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Изменение Документов";
+            lblHead.Location = new Point(280, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateDocumentChangeForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateDocumentChangeForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(645, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(755, 55);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(645, 105);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void Document_Kadr_perestanovkiChangeFormFill()
+        {
+            lblDatePodpisiDoc.Size = new Size(150, 20);
+            lblDatePodpisiDoc.Text = "Дата подписи док.";
+            lblDatePodpisiDoc.Location = new Point(165, 55);
+            lblDatePodpisiDoc.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblDatePodpisiDoc);
+
+            lblIDSotrydnik.Size = new Size(150, 20);
+            lblIDSotrydnik.Text = "ID Сотрудников";
+            lblIDSotrydnik.Location = new Point(165, 105);
+            lblIDSotrydnik.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDSotrydnik);
+
+            lblIDDoljnosti.Size = new Size(150, 20);
+            lblIDDoljnosti.Text = "ID Должности";
+            lblIDDoljnosti.Location = new Point(165, 155);
+            lblIDDoljnosti.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDDoljnosti);
+
+            lblIDDocument.Size = new Size(150, 20);
+            lblIDDocument.Text = "ID Документа";
+            lblIDDocument.Location = new Point(165, 205);
+            lblIDDocument.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDDocument);
+
+            lblIDSoiskatel.Size = new Size(150, 20);
+            lblIDSoiskatel.Text = "ID Соискателей";
+            lblIDSoiskatel.Location = new Point(325, 5);
+            lblIDSoiskatel.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDSoiskatel);
+
+            lblIDSoiskatelKU.Size = new Size(150, 20);
+            lblIDSoiskatelKU.Text = "ID Соиск. для КУ";
+            lblIDSoiskatelKU.Location = new Point(325, 55);
+            lblIDSoiskatelKU.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDSoiskatelKU);
+
+            tbDatePodpisiDoc.Size = new Size(150, 20);
+            tbDatePodpisiDoc.Location = new Point(165, 75);
+            pnlTextBox.Controls.Add(tbDatePodpisiDoc);
+
+            cmbIDSotrydnik.Size = new Size(150, 20);
+            cmbIDSotrydnik.Location = new Point(165, 125);
+            pnlTextBox.Controls.Add(cmbIDSotrydnik);
+
+            cmbIDDoljnosti.Size = new Size(150, 20);
+            cmbIDDoljnosti.Location = new Point(165, 175);
+            pnlTextBox.Controls.Add(cmbIDDoljnosti);
+
+            cmbIDDocument.Size = new Size(150, 20);
+            cmbIDDocument.Location = new Point(165, 225);
+            pnlTextBox.Controls.Add(cmbIDDocument);
+
+            cmbIDSoiskatel.Size = new Size(150, 20);
+            cmbIDSoiskatel.Location = new Point(325, 25);
+            pnlTextBox.Controls.Add(cmbIDSoiskatel);
+
+            cmbIDSoiskatelKU.Size = new Size(150, 20);
+            cmbIDSoiskatelKU.Location = new Point(325, 75);
+            pnlTextBox.Controls.Add(cmbIDSoiskatelKU);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Изменение Документов";
+            lblHead.Location = new Point(280, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateDocumentChangeForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateDocumentChangeForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(645, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(755, 55);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(645, 105);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void Document_Kadr_uchetChangeFormFill()
+        {
+            lblIDTabelZarplata.Size = new Size(150, 20);
+            lblIDTabelZarplata.Text = "ID Табель зарплаты";
+            lblIDTabelZarplata.Location = new Point(325, 105);
+            lblIDTabelZarplata.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDTabelZarplata);
+
+            cmbIDTabelZarplata.Size = new Size(150, 20);
+            cmbIDTabelZarplata.Location = new Point(325, 125);
+            pnlTextBox.Controls.Add(cmbIDTabelZarplata);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Изменение Документов";
+            lblHead.Location = new Point(280, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateDocumentChangeForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateDocumentChangeForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(645, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(755, 55);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(645, 105);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void Document_FirmaChangeFormFill()
+        {
+            lblNazvFirm.Size = new Size(150, 20);
+            lblNazvFirm.Text = "Название фирмы";
+            lblNazvFirm.Location = new Point(325, 205);
+            lblNazvFirm.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblNazvFirm);
+
+            tbNazvFirm.Size = new Size(150, 20);
+            tbNazvFirm.Location = new Point(325, 225);
+            pnlTextBox.Controls.Add(tbNazvFirm);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Изменение Документов";
+            lblHead.Location = new Point(280, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateDocumentChangeForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateDocumentChangeForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(645, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(755, 55);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(645, 105);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void Document_IdentChangeFormFill()
+        {
+            lblVidDocIdent.Size = new Size(150, 20);
+            lblVidDocIdent.Text = "Вид док. идент.";
+            lblVidDocIdent.Location = new Point(485, 5);
+            lblVidDocIdent.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblVidDocIdent);
+
+            lblStatus.Size = new Size(150, 20);
+            lblStatus.Text = "Статус";
+            lblStatus.Location = new Point(485, 55);
+            lblStatus.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblStatus);
+
+            lblIDPostavka.Size = new Size(150, 20);
+            lblIDPostavka.Text = "ID поставки";
+            lblIDPostavka.Location = new Point(485, 105);
+            lblIDPostavka.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDPostavka);
+
+            tbVidDocIdent.Size = new Size(150, 20);
+            tbVidDocIdent.Location = new Point(485, 25);
+            pnlTextBox.Controls.Add(tbVidDocIdent);
+
+            tbStatus.Size = new Size(150, 20);
+            tbStatus.Location = new Point(485, 75);
+            pnlTextBox.Controls.Add(tbStatus);
+
+            cmbIDPostavka.Size = new Size(150, 20);
+            cmbIDPostavka.Location = new Point(485, 125);
+            pnlTextBox.Controls.Add(cmbIDPostavka);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Изменение Документов";
+            lblHead.Location = new Point(280, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateDocumentChangeForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateDocumentChangeForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(645, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(755, 55);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(645, 105);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void Document_VihChangeFormFill()
+        {
+            lblIDProdajaTovara.Size = new Size(150, 20);
+            lblIDProdajaTovara.Text = "ID Продажи тов.";
+            lblIDProdajaTovara.Location = new Point(485, 155);
+            lblIDProdajaTovara.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDProdajaTovara);
+
+            lblIDKadrUch.Size = new Size(150, 20);
+            lblIDKadrUch.Text = "ID Кадрового учёта";
+            lblIDKadrUch.Location = new Point(485, 205);
+            lblIDKadrUch.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDKadrUch);
+
+            lblIDIdent.Size = new Size(150, 20);
+            lblIDIdent.Text = "ID Идентифик.";
+            lblIDIdent.Location = new Point(645, 5);
+            lblIDIdent.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDIdent);
+
+            cmbIDPostTovara.Size = new Size(150, 20);
+            cmbIDPostTovara.Location = new Point(485, 175);
+            pnlTextBox.Controls.Add(cmbIDPostTovara);
+
+            cmbIDKadrUch.Size = new Size(150, 20);
+            cmbIDKadrUch.Location = new Point(485, 225);
+            pnlTextBox.Controls.Add(cmbIDKadrUch);
+
+            cmbIDIdent.Size = new Size(150, 20);
+            cmbIDIdent.Location = new Point(645, 25);
+            pnlTextBox.Controls.Add(cmbIDIdent);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Изменение Документов";
+            lblHead.Location = new Point(280, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateDocumentChangeForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateDocumentChangeForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(645, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(755, 55);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(645, 105);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);;
+        }
+
+        public void DocumentChangeFormFill()
+        {         
             lblHead.Size = new Size(400, 50);
             lblHead.Text = "Изменение Документов";
             lblHead.Location = new Point(280, 10);
@@ -112,213 +631,23 @@ namespace UP_02._01
             lblVidDocument.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblVidDocument);
 
-            lblNomberOrder.Size = new Size(150, 20);
-            lblNomberOrder.Text = "Номер приказа";
-            lblNomberOrder.Location = new Point(5, 55);
-            lblNomberOrder.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblNomberOrder);
-
-            lblDateOrder.Size = new Size(150, 20);
-            lblDateOrder.Text = "Дата сост. приказа";
-            lblDateOrder.Location = new Point(5, 105);
-            lblDateOrder.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblDateOrder);
-
-            lblIDFirm.Size = new Size(150, 20);
-            lblIDFirm.Text = "ID Фирмы";
-            lblIDFirm.Location = new Point(5, 155);
-            lblIDFirm.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDFirm);
-
-            lblZarplata.Size = new Size(150, 20);
-            lblZarplata.Text = "Зарплата";
-            lblZarplata.Location = new Point(5, 205);
-            lblZarplata.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblZarplata);
-
-            lblIDKadrPere.Size = new Size(150, 20);
-            lblIDKadrPere.Text = "ID Кадр перест.";
-            lblIDKadrPere.Location = new Point(165, 5);
-            lblIDKadrPere.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDKadrPere);
-
-            lblDatePodpisiDoc.Size = new Size(150, 20);
-            lblDatePodpisiDoc.Text = "Дата подписи док.";
-            lblDatePodpisiDoc.Location = new Point(165, 55);
-            lblDatePodpisiDoc.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblDatePodpisiDoc);
-
-            lblIDSotrydnik.Size = new Size(150, 20);
-            lblIDSotrydnik.Text = "ID Сотрудников";
-            lblIDSotrydnik.Location = new Point(165, 105);
-            lblIDSotrydnik.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDSotrydnik);
-
-            lblIDDoljnosti.Size = new Size(150, 20);
-            lblIDDoljnosti.Text = "ID Должности";
-            lblIDDoljnosti.Location = new Point(165, 155);
-            lblIDDoljnosti.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDDoljnosti);
-
-            lblIDDocument.Size = new Size(150, 20);
-            lblIDDocument.Text = "ID Документа";
-            lblIDDocument.Location = new Point(165, 205);
-            lblIDDocument.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDDocument);
-
-            lblIDSoiskatel.Size = new Size(150, 20);
-            lblIDSoiskatel.Text = "ID Соискателей";
-            lblIDSoiskatel.Location = new Point(325, 5);
-            lblIDSoiskatel.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDSoiskatel);
-
-            lblIDSoiskatelKU.Size = new Size(150, 20);
-            lblIDSoiskatelKU.Text = "ID Соиск. для КУ";
-            lblIDSoiskatelKU.Location = new Point(325, 55);
-            lblIDSoiskatelKU.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDSoiskatelKU);
-
-            lblIDTabelZarplata.Size = new Size(150, 20);
-            lblIDTabelZarplata.Text = "ID Табель зарплаты";
-            lblIDTabelZarplata.Location = new Point(325, 105);
-            lblIDTabelZarplata.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDTabelZarplata);
-
-            lblIDOtchet.Size = new Size(150, 20);
-            lblIDOtchet.Text = "ID Отчёта";
-            lblIDOtchet.Location = new Point(325, 155);
-            lblIDOtchet.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDOtchet);
-
-            lblNazvFirm.Size = new Size(150, 20);
-            lblNazvFirm.Text = "Название фирмы";
-            lblNazvFirm.Location = new Point(325, 205);
-            lblNazvFirm.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblNazvFirm);
-
-            lblVidDocIdent.Size = new Size(150, 20);
-            lblVidDocIdent.Text = "Вид док. идент.";
-            lblVidDocIdent.Location = new Point(485, 5);
-            lblVidDocIdent.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblVidDocIdent);
-
-            lblStatus.Size = new Size(150, 20);
-            lblStatus.Text = "Статус";
-            lblStatus.Location = new Point(485, 55);
-            lblStatus.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblStatus);
-
-            lblIDPostavka.Size = new Size(150, 20);
-            lblIDPostavka.Text = "ID поставки";
-            lblIDPostavka.Location = new Point(485, 105);
-            lblIDPostavka.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDPostavka);
-
-            lblIDProdajaTovara.Size = new Size(150, 20);
-            lblIDProdajaTovara.Text = "ID Продажи тов.";
-            lblIDProdajaTovara.Location = new Point(485, 155);
-            lblIDProdajaTovara.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDProdajaTovara);
-
-            lblIDKadrUch.Size = new Size(150, 20);
-            lblIDKadrUch.Text = "ID Кадрового учёта";
-            lblIDKadrUch.Location = new Point(485, 205);
-            lblIDKadrUch.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDKadrUch);
-
-            lblIDIdent.Size = new Size(150, 20);
-            lblIDIdent.Text = "ID Идентифик.";
-            lblIDIdent.Location = new Point(645, 5);
-            lblIDIdent.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDIdent);
-
             tbVidDocumentDoc.Size = new Size(150, 20);
             tbVidDocumentDoc.Location = new Point(5, 25);
             pnlTextBox.Controls.Add(tbVidDocumentDoc);
 
-            tbNomberOrderDoc.Size = new Size(150, 20);
-            tbNomberOrderDoc.Location = new Point(5, 75);
-            pnlTextBox.Controls.Add(tbNomberOrderDoc);
+            //lblIDOtchet.Size = new Size(150, 20);
+            //lblIDOtchet.Text = "ID Отчёта";
+            //lblIDOtchet.Location = new Point(325, 155);
+            //lblIDOtchet.Font = new Font("Times New Roman", 10);
+            //pnlTextBox.Controls.Add(lblIDOtchet);
 
-            tbDateOrdetDoc.Size = new Size(150, 20);
-            tbDateOrdetDoc.Location = new Point(5, 125);
-            pnlTextBox.Controls.Add(tbDateOrdetDoc);
-
-            cmbIDFirm.Size = new Size(150, 20);
-            cmbIDFirm.Location = new Point(5, 175);
-            pnlTextBox.Controls.Add(cmbIDFirm);
-
-            tbZarplata.Size = new Size(150, 20);
-            tbZarplata.Location = new Point(5, 225);
-            pnlTextBox.Controls.Add(tbZarplata);
-
-            cmbIDKadrPere.Size = new Size(150, 20);
-            cmbIDKadrPere.Location = new Point(165, 25);
-            pnlTextBox.Controls.Add(cmbIDKadrPere);
-
-            tbDatePodpisiDoc.Size = new Size(150, 20);
-            tbDatePodpisiDoc.Location = new Point(165, 75);
-            pnlTextBox.Controls.Add(tbDatePodpisiDoc);
-
-            cmbIDSotrydnik.Size = new Size(150, 20);
-            cmbIDSotrydnik.Location = new Point(165, 125);
-            pnlTextBox.Controls.Add(cmbIDSotrydnik);
-
-            cmbIDDoljnosti.Size = new Size(150, 20);
-            cmbIDDoljnosti.Location = new Point(165, 175);
-            pnlTextBox.Controls.Add(cmbIDDoljnosti);
-
-            cmbIDDocument.Size = new Size(150, 20);
-            cmbIDDocument.Location = new Point(165, 225);
-            pnlTextBox.Controls.Add(cmbIDDocument);
-
-            cmbIDSoiskatel.Size = new Size(150, 20);
-            cmbIDSoiskatel.Location = new Point(325, 25);
-            pnlTextBox.Controls.Add(cmbIDSoiskatel);
-
-            cmbIDSoiskatelKU.Size = new Size(150, 20);
-            cmbIDSoiskatelKU.Location = new Point(325, 75);
-            pnlTextBox.Controls.Add(cmbIDSoiskatelKU);
-
-            cmbIDTabelZarplata.Size = new Size(150, 20);
-            cmbIDTabelZarplata.Location = new Point(325, 125);
-            pnlTextBox.Controls.Add(cmbIDTabelZarplata);
-
-            cmbIDOtchet.Size = new Size(150, 20);
-            cmbIDOtchet.Location = new Point(325, 175);
-            pnlTextBox.Controls.Add(cmbIDOtchet);
-
-            tbNazvFirm.Size = new Size(150, 20);
-            tbNazvFirm.Location = new Point(325, 225);
-            pnlTextBox.Controls.Add(tbNazvFirm);
-
-            tbVidDocIdent.Size = new Size(150, 20);
-            tbVidDocIdent.Location = new Point(485, 25);
-            pnlTextBox.Controls.Add(tbVidDocIdent);
-
-            tbStatus.Size = new Size(150, 20);
-            tbStatus.Location = new Point(485, 75);
-            pnlTextBox.Controls.Add(tbStatus);
-
-            cmbIDPostavka.Size = new Size(150, 20);
-            cmbIDPostavka.Location = new Point(485, 125);
-            pnlTextBox.Controls.Add(cmbIDPostavka);
-
-            cmbIDPostTovara.Size = new Size(150, 20);
-            cmbIDPostTovara.Location = new Point(485, 175);
-            pnlTextBox.Controls.Add(cmbIDPostTovara);
-
-            cmbIDKadrUch.Size = new Size(150, 20);
-            cmbIDKadrUch.Location = new Point(485, 225);
-            pnlTextBox.Controls.Add(cmbIDKadrUch);
-
-            cmbIDIdent.Size = new Size(150, 20);
-            cmbIDIdent.Location = new Point(645, 25);
-            pnlTextBox.Controls.Add(cmbIDIdent);
+            //cmbIDOtchet.Size = new Size(150, 20);
+            //cmbIDOtchet.Location = new Point(325, 175);
+            //pnlTextBox.Controls.Add(cmbIDOtchet);
         }
 
 
-        public Label lbNewIdSoiskatel = new Label();
+        public string NewIdSoiskatel;
         Label lblFamSoiskatel = new Label();
         Label lblNameSoiskatel = new Label();
         Label lblOtchSoiskatel = new Label();
@@ -334,10 +663,10 @@ namespace UP_02._01
 
         public void ApplicationFormFill()
         {
-            lbNewIdSoiskatel.Text = "ID";
-            lbNewIdSoiskatel.Location = new Point(20, 20);
-            lbNewIdSoiskatel.Font = new Font("Times New Roman", 25);
-            aggregateApplicationForm.Controls.Add(lbNewIdSoiskatel);
+            //lbNewIdSoiskatel.Text = "ID";
+            //lbNewIdSoiskatel.Location = new Point(20, 20);
+            //lbNewIdSoiskatel.Font = new Font("Times New Roman", 25);
+            //aggregateApplicationForm.Controls.Add(lbNewIdSoiskatel);
 
             lblHead.Size = new Size(400, 50);
             lblHead.Text = "Анкета соискателя";
@@ -510,51 +839,91 @@ namespace UP_02._01
         }
 
         public Form aggregateSupplyForm = new Form();
-        Label lblNazvFirmPost = new Label();
-        Label lblIndex = new Label();
-        Label lblNasPunkt = new Label();
-        Label lblUlitsa = new Label();
-        Label lblDom = new Label();
-        Label lblSrokHran = new Label();
-        Label lblKolTovNaSklade = new Label();
-        Label lblNomSkafa = new Label();
-        Label lblNomPolki = new Label();
-        Label lblNaimPostTovar = new Label();
-        Label lblKolPostTovar = new Label();
-        Label lblTsenaPostTovara = new Label();
-        Label lblNamePost = new Label();
-        Label lblFamPost = new Label();
-        Label lblOtchPost = new Label();
-        Label lblIDFirmPost = new Label();
-        Label lblIDPostavshik = new Label();
-        Label lblIDTovNaSklade = new Label();
-        Label lblIDPostTovara = new Label();
+        public Label lblNazvFirmPost = new Label();
+        public Label lblIndex = new Label();
+        public Label lblNasPunkt = new Label();
+        public Label lblUlitsa = new Label();
+        public Label lblDom = new Label();
+        public Label lblSrokHran = new Label();
+        public Label lblKolTovNaSklade = new Label();
+        public Label lblNomSkafa = new Label();
+        public Label lblNomPolki = new Label();
+        public Label lblNaimPostTovar = new Label();
+        public Label lblKolPostTovar = new Label();
+        public Label lblTsenaPostTovara = new Label();
+        public Label lblNamePost = new Label();
+        public Label lblFamPost = new Label();
+        public Label lblOtchPost = new Label();
+        public Label lblIDFirmPost = new Label();
+        public Label lblIDPostavshik = new Label();
+        public Label lblIDTovNaSklade = new Label();
+        public Label lblIDPostTovara = new Label();
 
-        TextBox txNazvFirmPost = new TextBox();
-        TextBox txIndex = new TextBox();
-        TextBox txNasPunkt = new TextBox();
-        TextBox txUlitsa = new TextBox();
-        TextBox txDom = new TextBox();
+        public TextBox txNazvFirmPost = new TextBox();
+        public TextBox txIndex = new TextBox();
+        public TextBox txNasPunkt = new TextBox();
+        public TextBox txUlitsa = new TextBox();
+        public TextBox txDom = new TextBox();
 
-        TextBox txSrokHran = new TextBox();
-        TextBox txKolTovNaSklade = new TextBox();
-        TextBox txNomSkafa = new TextBox();
-        TextBox txNomPolki = new TextBox();
-        TextBox txNaimPostTovar = new TextBox();
+        public TextBox txSrokHran = new TextBox();
+        public TextBox txKolTovNaSklade = new TextBox();
+        public TextBox txNomSkafa = new TextBox();
+        public TextBox txNomPolki = new TextBox();
+        public TextBox txNaimPostTovar = new TextBox();
 
-        TextBox txKolPostTovar = new TextBox();
-        TextBox txTsenaPostTovara = new TextBox();
-        TextBox txNamePost = new TextBox();
-        TextBox txFamPost = new TextBox();
-        TextBox txOtchPost = new TextBox();
+        public TextBox txKolPostTovar = new TextBox();
+        public TextBox txTsenaPostTovara = new TextBox();
+        public TextBox txNamePost = new TextBox();
+        public TextBox txFamPost = new TextBox();
+        public TextBox txOtchPost = new TextBox();
 
-        ComboBox cmbIDFirmPost = new ComboBox();
-        ComboBox cmbIDPostavshik = new ComboBox();
-        ComboBox cmbIDTovNaSklade = new ComboBox();
-        ComboBox cmbIDPostTovara = new ComboBox();
+        public ComboBox cmbIDFirmPost = new ComboBox();
+        public ComboBox cmbIDPostavshik = new ComboBox();
+        public ComboBox cmbIDTovNaSklade = new ComboBox();
+        public ComboBox cmbIDPostTovara = new ComboBox();
 
-        public void SupplyFormFill()
+        public void SupplyForm_tovar_na_skladeFill()
         {
+            lblSrokHran.Size = new Size(150, 20);
+            lblSrokHran.Text = "Срок хранения";
+            lblSrokHran.Location = new Point(165, 5);
+            lblSrokHran.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblSrokHran);
+
+            lblKolTovNaSklade.Size = new Size(150, 20);
+            lblKolTovNaSklade.Text = "Товара на складе";
+            lblKolTovNaSklade.Location = new Point(165, 55);
+            lblKolTovNaSklade.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblKolTovNaSklade);
+
+            lblNomSkafa.Size = new Size(150, 20);
+            lblNomSkafa.Text = "Номер шкафа";
+            lblNomSkafa.Location = new Point(165, 105);
+            lblNomSkafa.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblNomSkafa);
+
+            lblNomPolki.Size = new Size(150, 20);
+            lblNomPolki.Text = "Номер полки";
+            lblNomPolki.Location = new Point(165, 155);
+            lblNomPolki.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblNomPolki);
+
+            txSrokHran.Size = new Size(150, 20);
+            txSrokHran.Location = new Point(165, 25);
+            pnlTextBox.Controls.Add(txSrokHran);
+
+            txKolTovNaSklade.Size = new Size(150, 20);
+            txKolTovNaSklade.Location = new Point(165, 75);
+            pnlTextBox.Controls.Add(txKolTovNaSklade);
+
+            txNomSkafa.Size = new Size(150, 20);
+            txNomSkafa.Location = new Point(165, 125);
+            pnlTextBox.Controls.Add(txNomSkafa);
+
+            txNomPolki.Size = new Size(150, 20);
+            txNomPolki.Location = new Point(165, 175);
+            pnlTextBox.Controls.Add(txNomPolki);
+
             lblHead.Size = new Size(400, 50);
             lblHead.Text = "Поставки";
             lblHead.Location = new Point(350, 10);
@@ -588,7 +957,77 @@ namespace UP_02._01
             btnDelete.Location = new Point(655, 160);
             btnDelete.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(btnDelete);
+        }
 
+        public void SupplyPostavlenny_tovar_FormFill()
+        {
+            lblNaimPostTovar.Size = new Size(150, 20);
+            lblNaimPostTovar.Text = "Поставляемый товар";
+            lblNaimPostTovar.Location = new Point(165, 205);
+            lblNaimPostTovar.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblNaimPostTovar);
+
+            lblKolPostTovar.Size = new Size(170, 20);
+            lblKolPostTovar.Text = "Количество пост. товара";
+            lblKolPostTovar.Location = new Point(325, 5);
+            lblKolPostTovar.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblKolPostTovar);
+
+            lblTsenaPostTovara.Size = new Size(150, 20);
+            lblTsenaPostTovara.Text = "Цена пост. товара";
+            lblTsenaPostTovara.Location = new Point(325, 55);
+            lblTsenaPostTovara.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblTsenaPostTovara);
+
+            txNaimPostTovar.Size = new Size(150, 20);
+            txNaimPostTovar.Location = new Point(165, 225);
+            pnlTextBox.Controls.Add(txNaimPostTovar);
+
+            txKolPostTovar.Size = new Size(150, 20);
+            txKolPostTovar.Location = new Point(325, 25);
+            pnlTextBox.Controls.Add(txKolPostTovar);
+
+            txTsenaPostTovara.Size = new Size(150, 20);
+            txTsenaPostTovara.Location = new Point(325, 75);
+            pnlTextBox.Controls.Add(txTsenaPostTovara);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Поставки";
+            lblHead.Location = new Point(350, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateSupplyForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateSupplyForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateSupplyForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(655, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(655, 105);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(655, 160);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void Supply_Firma_postavkiFormFill()
+        {
             lblNazvFirmPost.Size = new Size(150, 20);
             lblNazvFirmPost.Text = "Название фирмы";
             lblNazvFirmPost.Location = new Point(5, 5);
@@ -619,48 +1058,63 @@ namespace UP_02._01
             lblDom.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblDom);
 
-            lblSrokHran.Size = new Size(150, 20);
-            lblSrokHran.Text = "Срок хранения";
-            lblSrokHran.Location = new Point(165, 5);
-            lblSrokHran.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblSrokHran);
+            txNazvFirmPost.Size = new Size(150, 20);
+            txNazvFirmPost.Location = new Point(5, 25);
+            pnlTextBox.Controls.Add(txNazvFirmPost);
 
-            lblKolTovNaSklade.Size = new Size(150, 20);
-            lblKolTovNaSklade.Text = "Товара на складе";
-            lblKolTovNaSklade.Location = new Point(165, 55);
-            lblKolTovNaSklade.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblKolTovNaSklade);
+            txIndex.Size = new Size(150, 20);
+            txIndex.Location = new Point(5, 75);
+            pnlTextBox.Controls.Add(txIndex);
 
-            lblNomSkafa.Size = new Size(150, 20);
-            lblNomSkafa.Text = "Номер шкафа";
-            lblNomSkafa.Location = new Point(165, 105);
-            lblNomSkafa.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblNomSkafa);
+            txNasPunkt.Size = new Size(150, 20);
+            txNasPunkt.Location = new Point(5, 125);
+            pnlTextBox.Controls.Add(txNasPunkt);
 
-            lblNomPolki.Size = new Size(150, 20);
-            lblNomPolki.Text = "Номер полки";
-            lblNomPolki.Location = new Point(165, 155);
-            lblNomPolki.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblNomPolki);
+            txUlitsa.Size = new Size(150, 20);
+            txUlitsa.Location = new Point(5, 175);
+            pnlTextBox.Controls.Add(txUlitsa);
 
-            lblNaimPostTovar.Size = new Size(150, 20);
-            lblNaimPostTovar.Text = "Поставляемый товар";
-            lblNaimPostTovar.Location = new Point(165, 205);
-            lblNaimPostTovar.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblNaimPostTovar);
+            txDom.Size = new Size(150, 20);
+            txDom.Location = new Point(5, 225);
+            pnlTextBox.Controls.Add(txDom);
 
-            lblKolPostTovar.Size = new Size(170, 20);
-            lblKolPostTovar.Text = "Количество пост. товара";
-            lblKolPostTovar.Location = new Point(325, 5);
-            lblKolPostTovar.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblKolPostTovar);
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Поставки";
+            lblHead.Location = new Point(350, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateSupplyForm.Controls.Add(lblHead);
 
-            lblTsenaPostTovara.Size = new Size(150, 20);
-            lblTsenaPostTovara.Text = "Цена пост. товара";
-            lblTsenaPostTovara.Location = new Point(325, 55);
-            lblTsenaPostTovara.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblTsenaPostTovara);
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateSupplyForm.Controls.Add(btnReturn);
 
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateSupplyForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(655, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(655, 105);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(655, 160);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void Supply_Postavshik_FormFill()
+        {
             lblNamePost.Size = new Size(150, 20);
             lblNamePost.Text = "Имя поставщика";
             lblNamePost.Location = new Point(325, 105);
@@ -685,6 +1139,59 @@ namespace UP_02._01
             lblIDFirmPost.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblIDFirmPost);
 
+            txNamePost.Size = new Size(150, 20);
+            txNamePost.Location = new Point(325, 125);
+            pnlTextBox.Controls.Add(txNamePost);
+
+            txFamPost.Size = new Size(150, 20);
+            txFamPost.Location = new Point(325, 175);
+            pnlTextBox.Controls.Add(txFamPost);
+
+            txOtchPost.Size = new Size(150, 20);
+            txOtchPost.Location = new Point(325, 225);
+            pnlTextBox.Controls.Add(txOtchPost);
+
+            cmbIDFirmPost.Size = new Size(150, 20);
+            cmbIDFirmPost.Location = new Point(485, 25);
+            pnlTextBox.Controls.Add(cmbIDFirmPost);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Поставки";
+            lblHead.Location = new Point(350, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateSupplyForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateSupplyForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateSupplyForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(655, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(655, 105);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(655, 160);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void Supply_Postavki_FormFill()
+        {
             lblIDPostavshik.Size = new Size(150, 20);
             lblIDPostavshik.Text = "ID поставщика";
             lblIDPostavshik.Location = new Point(485, 55);
@@ -703,27 +1210,77 @@ namespace UP_02._01
             lblIDPostTovara.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblIDPostTovara);
 
+            cmbIDPostavshik.Size = new Size(150, 20);
+            cmbIDPostavshik.Location = new Point(485, 75);
+            pnlTextBox.Controls.Add(cmbIDPostavshik);
 
-            txNazvFirmPost.Size = new Size(150, 20);
-            txNazvFirmPost.Location = new Point(5, 25);
-            pnlTextBox.Controls.Add(txNazvFirmPost);
+            cmbIDTovNaSklade.Size = new Size(150, 20);
+            cmbIDTovNaSklade.Location = new Point(485, 125);
+            pnlTextBox.Controls.Add(cmbIDTovNaSklade);
 
-            txIndex.Size = new Size(150, 20);
-            txIndex.Location = new Point(5, 75);
-            pnlTextBox.Controls.Add(txIndex);
+            cmbIDPostTovara.Size = new Size(150, 20);
+            cmbIDPostTovara.Location = new Point(485, 175);
+            pnlTextBox.Controls.Add(cmbIDPostTovara);
 
-            txNasPunkt.Size = new Size(150, 20);
-            txNasPunkt.Location = new Point(5, 125);
-            pnlTextBox.Controls.Add(txNasPunkt);
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Поставки";
+            lblHead.Location = new Point(350, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateSupplyForm.Controls.Add(lblHead);
 
-            txUlitsa.Size = new Size(150, 20);
-            txUlitsa.Location = new Point(5, 175);
-            pnlTextBox.Controls.Add(txUlitsa);
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateSupplyForm.Controls.Add(btnReturn);
 
-            txDom.Size = new Size(150, 20);
-            txDom.Location = new Point(5, 225);
-            pnlTextBox.Controls.Add(txDom);
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateSupplyForm.Controls.Add(pnlTextBox);
 
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(655, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(655, 105);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(655, 160);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+        public void SupplyFormFill()
+        {
+            lblSrokHran.Size = new Size(150, 20);
+            lblSrokHran.Text = "Срок хранения";
+            lblSrokHran.Location = new Point(165, 5);
+            lblSrokHran.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblSrokHran);
+
+            lblKolTovNaSklade.Size = new Size(150, 20);
+            lblKolTovNaSklade.Text = "Товара на складе";
+            lblKolTovNaSklade.Location = new Point(165, 55);
+            lblKolTovNaSklade.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblKolTovNaSklade);
+
+            lblNomSkafa.Size = new Size(150, 20);
+            lblNomSkafa.Text = "Номер шкафа";
+            lblNomSkafa.Location = new Point(165, 105);
+            lblNomSkafa.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblNomSkafa);
+
+            lblNomPolki.Size = new Size(150, 20);
+            lblNomPolki.Text = "Номер полки";
+            lblNomPolki.Location = new Point(165, 155);
+            lblNomPolki.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblNomPolki);
 
             txSrokHran.Size = new Size(150, 20);
             txSrokHran.Location = new Point(165, 25);
@@ -741,86 +1298,119 @@ namespace UP_02._01
             txNomPolki.Location = new Point(165, 175);
             pnlTextBox.Controls.Add(txNomPolki);
 
-            txNaimPostTovar.Size = new Size(150, 20);
-            txNaimPostTovar.Location = new Point(165, 225);
-            pnlTextBox.Controls.Add(txNaimPostTovar);
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Поставки";
+            lblHead.Location = new Point(350, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateSupplyForm.Controls.Add(lblHead);
 
-            txKolPostTovar.Size = new Size(150, 20);
-            txKolPostTovar.Location = new Point(325, 25);
-            pnlTextBox.Controls.Add(txKolPostTovar);
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateSupplyForm.Controls.Add(btnReturn);
 
-            txTsenaPostTovara.Size = new Size(150, 20);
-            txTsenaPostTovara.Location = new Point(325, 75);
-            pnlTextBox.Controls.Add(txTsenaPostTovara);
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateSupplyForm.Controls.Add(pnlTextBox);
 
-            txNamePost.Size = new Size(150, 20);
-            txNamePost.Location = new Point(325, 125);
-            pnlTextBox.Controls.Add(txNamePost);
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(655, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
 
-            txFamPost.Size = new Size(150, 20);
-            txFamPost.Location = new Point(325, 175);
-            pnlTextBox.Controls.Add(txFamPost);
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(655, 105);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
 
-            txOtchPost.Size = new Size(150, 20);
-            txOtchPost.Location = new Point(325, 225);
-            pnlTextBox.Controls.Add(txOtchPost);
-
-            cmbIDFirmPost.Size = new Size(150, 20);
-            cmbIDFirmPost.Location = new Point(485, 25);
-            pnlTextBox.Controls.Add(cmbIDFirmPost);
-
-            cmbIDPostavshik.Size = new Size(150, 20);
-            cmbIDPostavshik.Location = new Point(485, 75);
-            pnlTextBox.Controls.Add(cmbIDPostavshik);
-
-            cmbIDTovNaSklade.Size = new Size(150, 20);
-            cmbIDTovNaSklade.Location = new Point(485, 125);
-            pnlTextBox.Controls.Add(cmbIDTovNaSklade);
-
-            cmbIDPostTovara.Size = new Size(150, 20);
-            cmbIDPostTovara.Location = new Point(485, 175);
-            pnlTextBox.Controls.Add(cmbIDPostTovara);
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(655, 160);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
         }
 
         public Form aggregateStaffForm = new Form();
 
 
-        Label lblOtrDays = new Label();
-        Label lblVixDays = new Label();
-        Label lblKomandirivki = new Label();
-        Label lblOtpuska = new Label();
-        Label lblDoljnost = new Label();
-        Label lblRole = new Label();
-        Label lblNomberSotr = new Label();
-        Label lblFamSotr = new Label();
-        Label lblNameSotr = new Label();
-        Label lblOtchSotr = new Label();
-        Label lblIDTabVremya = new Label();
-        Label lblIDDogovor = new Label();
-        Label lblLogin = new Label();
-        Label lblParol = new Label();
-        Label lblTypeAccount = new Label();
-        Label lblIDRole = new Label();
+       public  Label lblOtrDays = new Label();
+        public Label lblVixDays = new Label();
+        public Label lblKomandirivki = new Label();
+        public Label lblOtpuska = new Label();
+        public Label lblDoljnost = new Label();
+        public Label lblRole = new Label();
+        public Label lblNomberSotr = new Label();
+        public Label lblFamSotr = new Label();
+        public Label lblNameSotr = new Label();
+        public Label lblOtchSotr = new Label();
+        public Label lblIDTabVremya = new Label();
+        public Label lblIDDogovor = new Label();
+        public Label lblLogin = new Label();
+        public Label lblParol = new Label();
+        public Label lblTypeAccount = new Label();
+        public Label lblIDRole = new Label();
 
-        TextBox tbOtrDays = new TextBox();
-        TextBox tbVixDays = new TextBox();
-        TextBox tbKomandirivki = new TextBox();
-        TextBox tbOtpuska = new TextBox();
-        TextBox tbDoljnost = new TextBox();
-        TextBox tbRole = new TextBox();
-        TextBox tbNomberSotr = new TextBox();
-        TextBox tbFamSotr = new TextBox();
-        TextBox tbNamehSotr = new TextBox();
-        TextBox tbOtchSotr = new TextBox();
-        TextBox tbLogin = new TextBox();
-        TextBox tbParol = new TextBox();
-        TextBox tbTypeAccount = new TextBox();
-        ComboBox cmbIDRole = new ComboBox();
-        ComboBox cmbIDTabVremya = new ComboBox();
-        ComboBox cmbIDDogovor = new ComboBox();
-       
-        public void StaffFormFill()
+        public TextBox tbOtrDays = new TextBox();
+        public TextBox tbVixDays = new TextBox();
+        public TextBox tbKomandirivki = new TextBox();
+        public TextBox tbOtpuska = new TextBox();
+        public TextBox tbDoljnost = new TextBox();
+        public TextBox tbRole = new TextBox();
+        public TextBox tbNomberSotr = new TextBox();
+        public TextBox tbFamSotr = new TextBox();
+        public TextBox tbNamehSotr = new TextBox();
+        public TextBox tbOtchSotr = new TextBox();
+        public TextBox tbLogin = new TextBox();
+        public TextBox tbParol = new TextBox();
+        public TextBox tbTypeAccount = new TextBox();
+        public ComboBox cmbIDRole = new ComboBox();
+        public ComboBox cmbIDTabVremya = new ComboBox();
+        public ComboBox cmbIDDogovor = new ComboBox();
+
+        public void Staff_Tab_rab_vremeniFormFill()
         {
+            lblOtrDays.Size = new Size(150, 20);
+            lblOtrDays.Text = "Отработанные дни";
+            lblOtrDays.Location = new Point(5, 5);
+            lblOtrDays.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblOtrDays);
+
+            lblVixDays.Size = new Size(150, 20);
+            lblVixDays.Text = "Выходные дни";
+            lblVixDays.Location = new Point(5, 55);
+            lblVixDays.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblVixDays);
+
+            lblKomandirivki.Size = new Size(150, 20);
+            lblKomandirivki.Text = "Командировки";
+            lblKomandirivki.Location = new Point(5, 105);
+            lblKomandirivki.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblKomandirivki);
+
+            lblOtpuska.Size = new Size(150, 20);
+            lblOtpuska.Text = "Отпуска";
+            lblOtpuska.Location = new Point(5, 155);
+            lblOtpuska.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblOtpuska);
+
+            tbOtrDays.Size = new Size(150, 20);
+            tbOtrDays.Location = new Point(5, 25);
+            pnlTextBox.Controls.Add(tbOtrDays);
+
+            tbVixDays.Size = new Size(150, 20);
+            tbVixDays.Location = new Point(5, 75);
+            pnlTextBox.Controls.Add(tbVixDays);
+
+            tbKomandirivki.Size = new Size(150, 20);
+            tbKomandirivki.Location = new Point(5, 125);
+            pnlTextBox.Controls.Add(tbKomandirivki);
+
+            tbOtpuska.Size = new Size(150, 20);
+            tbOtpuska.Location = new Point(5, 175);
+            pnlTextBox.Controls.Add(tbOtpuska);
 
             lblHead.Size = new Size(400, 50);
             lblHead.Text = "Персонал";
@@ -855,43 +1445,104 @@ namespace UP_02._01
             btnDelete.Location = new Point(645, 105);
             btnDelete.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(btnDelete);
+        }
 
-            lblOtrDays.Size = new Size(150, 20);
-            lblOtrDays.Text = "Отработанные дни";
-            lblOtrDays.Location = new Point(5, 5);
-            lblOtrDays.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblOtrDays);
-
-            lblVixDays.Size = new Size(150, 20);
-            lblVixDays.Text = "Выходные дни";
-            lblVixDays.Location = new Point(5, 55);
-            lblVixDays.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblVixDays);
-
-            lblKomandirivki.Size = new Size(150, 20);
-            lblKomandirivki.Text = "Командировки";
-            lblKomandirivki.Location = new Point(5, 105);
-            lblKomandirivki.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblKomandirivki);
-
-            lblOtpuska.Size = new Size(150, 20);
-            lblOtpuska.Text = "Отпуска";
-            lblOtpuska.Location = new Point(5, 155);
-            lblOtpuska.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblOtpuska);
-
+        public void StaffDolj_FormFill()
+        {
             lblDoljnost.Size = new Size(150, 20);
             lblDoljnost.Text = "Должность";
             lblDoljnost.Location = new Point(5, 205);
             lblDoljnost.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblDoljnost);
 
+            tbDoljnost.Size = new Size(150, 20);
+            tbDoljnost.Location = new Point(5, 225);
+            pnlTextBox.Controls.Add(tbDoljnost);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Персонал";
+            lblHead.Location = new Point(400, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateStaffForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateStaffForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateStaffForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(645, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(755, 55);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(645, 105);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void Staff_RoleFormFill()
+        {
             lblRole.Size = new Size(150, 20);
             lblRole.Text = "Роль";
             lblRole.Location = new Point(165, 5);
             lblRole.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblRole);
 
+            tbRole.Size = new Size(150, 20);
+            tbRole.Location = new Point(165, 25);
+            pnlTextBox.Controls.Add(tbRole);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Персонал";
+            lblHead.Location = new Point(400, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateStaffForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateStaffForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateStaffForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(645, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(755, 55);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(645, 105);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void Staff_SotrFormFill()
+        {
             lblNomberSotr.Size = new Size(150, 20);
             lblNomberSotr.Text = "Номер сотрудника.";
             lblNomberSotr.Location = new Point(165, 55);
@@ -928,54 +1579,6 @@ namespace UP_02._01
             lblIDDogovor.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblIDDogovor);
 
-            lblLogin.Size = new Size(150, 20);
-            lblLogin.Text = "Логин";
-            lblLogin.Location = new Point(325, 105);
-            lblLogin.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblLogin);
-
-            lblParol.Size = new Size(150, 20);
-            lblParol.Text = "Пароль";
-            lblParol.Location = new Point(325, 155);
-            lblParol.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblParol);
-
-            lblTypeAccount.Size = new Size(150, 20);
-            lblTypeAccount.Text = "Тип аккаунта";
-            lblTypeAccount.Location = new Point(325, 205);
-            lblTypeAccount.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblTypeAccount);
-
-            lblIDRole.Size = new Size(150, 20);
-            lblIDRole.Text = "ID Role";
-            lblIDRole.Location = new Point(485, 5);
-            lblIDRole.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDRole);
-
-            tbOtrDays.Size = new Size(150, 20);
-            tbOtrDays.Location = new Point(5, 25);
-            pnlTextBox.Controls.Add(tbOtrDays);
-
-            tbVixDays.Size = new Size(150, 20);
-            tbVixDays.Location = new Point(5, 75);
-            pnlTextBox.Controls.Add(tbVixDays);
-
-            tbKomandirivki.Size = new Size(150, 20);
-            tbKomandirivki.Location = new Point(5, 125);
-            pnlTextBox.Controls.Add(tbKomandirivki);
-
-            tbOtpuska.Size = new Size(150, 20);
-            tbOtpuska.Location = new Point(5, 175);
-            pnlTextBox.Controls.Add(tbOtpuska);
-
-            tbDoljnost.Size = new Size(150, 20);
-            tbDoljnost.Location = new Point(5, 225);
-            pnlTextBox.Controls.Add(tbDoljnost);
-
-            tbRole.Size = new Size(150, 20);
-            tbRole.Location = new Point(165, 25);
-            pnlTextBox.Controls.Add(tbRole);
-
             tbNomberSotr.Size = new Size(150, 20);
             tbNomberSotr.Location = new Point(165, 75);
             pnlTextBox.Controls.Add(tbNomberSotr);
@@ -1000,6 +1603,71 @@ namespace UP_02._01
             cmbIDDogovor.Location = new Point(325, 75);
             pnlTextBox.Controls.Add(cmbIDDogovor);
 
+            lblTypeAccount.Size = new Size(150, 20);
+            lblTypeAccount.Text = "Тип аккаунта";
+            lblTypeAccount.Location = new Point(325, 205);
+            lblTypeAccount.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblTypeAccount);
+
+            tbTypeAccount.Size = new Size(150, 20);
+            tbTypeAccount.Location = new Point(325, 225);
+            pnlTextBox.Controls.Add(tbTypeAccount);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Персонал";
+            lblHead.Location = new Point(400, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateStaffForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateStaffForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateStaffForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(645, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(755, 55);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(645, 105);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void Staff_AccountFormFill()
+        {
+            lblLogin.Size = new Size(150, 20);
+            lblLogin.Text = "Логин";
+            lblLogin.Location = new Point(325, 105);
+            lblLogin.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblLogin);
+
+            lblParol.Size = new Size(150, 20);
+            lblParol.Text = "Пароль";
+            lblParol.Location = new Point(325, 155);
+            lblParol.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblParol);
+
+            lblIDRole.Size = new Size(150, 20);
+            lblIDRole.Text = "ID Role";
+            lblIDRole.Location = new Point(485, 5);
+            lblIDRole.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDRole);
+
             tbLogin.Size = new Size(150, 20);
             tbLogin.Location = new Point(325, 125);
             pnlTextBox.Controls.Add(tbLogin);
@@ -1008,49 +1676,165 @@ namespace UP_02._01
             tbParol.Location = new Point(325, 175);
             pnlTextBox.Controls.Add(tbParol);
 
-            tbTypeAccount.Size = new Size(150, 20);
-            tbTypeAccount.Location = new Point(325, 225);
-            pnlTextBox.Controls.Add(tbTypeAccount);
-
             cmbIDRole.Size = new Size(150, 20);
             cmbIDRole.Location = new Point(485, 25);
             pnlTextBox.Controls.Add(cmbIDRole);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Персонал";
+            lblHead.Location = new Point(400, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateStaffForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateStaffForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateStaffForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(645, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(755, 55);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(645, 105);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void StaffFormFill()
+        {
+            lblOtrDays.Size = new Size(150, 20);
+            lblOtrDays.Text = "Отработанные дни";
+            lblOtrDays.Location = new Point(5, 5);
+            lblOtrDays.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblOtrDays);
+
+            lblVixDays.Size = new Size(150, 20);
+            lblVixDays.Text = "Выходные дни";
+            lblVixDays.Location = new Point(5, 55);
+            lblVixDays.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblVixDays);
+
+            lblKomandirivki.Size = new Size(150, 20);
+            lblKomandirivki.Text = "Командировки";
+            lblKomandirivki.Location = new Point(5, 105);
+            lblKomandirivki.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblKomandirivki);
+
+            lblOtpuska.Size = new Size(150, 20);
+            lblOtpuska.Text = "Отпуска";
+            lblOtpuska.Location = new Point(5, 155);
+            lblOtpuska.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblOtpuska);
+
+            tbOtrDays.Size = new Size(150, 20);
+            tbOtrDays.Location = new Point(5, 25);
+            pnlTextBox.Controls.Add(tbOtrDays);
+
+            tbVixDays.Size = new Size(150, 20);
+            tbVixDays.Location = new Point(5, 75);
+            pnlTextBox.Controls.Add(tbVixDays);
+
+            tbKomandirivki.Size = new Size(150, 20);
+            tbKomandirivki.Location = new Point(5, 125);
+            pnlTextBox.Controls.Add(tbKomandirivki);
+
+            tbOtpuska.Size = new Size(150, 20);
+            tbOtpuska.Location = new Point(5, 175);
+            pnlTextBox.Controls.Add(tbOtpuska);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Персонал";
+            lblHead.Location = new Point(400, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateStaffForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateStaffForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(860, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateStaffForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(645, 55);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(755, 55);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(645, 105);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
         }
 
         public Form aggregateIncomeForm = new Form();
 
-        Label lblInstrRabKassir = new Label();
-        Label lblPribil = new Label();
-        Label lblRashody = new Label();
-        Label lblNachOtcheta = new Label();
-        Label lblKonOtch = new Label();
+      public Label lblInstrRabKassir = new Label();
+        public Label lblPribil = new Label();
+        public Label lblRashody = new Label();
+        public Label lblNachOtcheta = new Label();
+        public Label lblKonOtch = new Label();
 
-        Label lblNomberCheckVM = new Label();
-        Label lblNazvVidMed = new Label();
-        Label lblIDDoljnost = new Label();
-        Label lblIDSotrydnikC = new Label();
-        Label lblKolVidMed = new Label();
-        Label lblIDVidCheck = new Label();
-        Label lblIDMedicamentov = new Label();
-        Label lblIDInstrRabKass = new Label();
+        public Label lblNomberCheckVM = new Label();
+        public Label lblNazvVidMed = new Label();
+        public Label lblIDDoljnost = new Label();
+        public Label lblIDSotrydnikC = new Label();
+        public Label lblKolVidMed = new Label();
+        public Label lblIDVidCheck = new Label();
+        public Label lblIDMedicamentov = new Label();
+        public Label lblIDInstrRabKass = new Label();
 
-        TextBox tbNomberCheckVM = new TextBox();
-        TextBox tbNazvVidMed = new TextBox();
-        ComboBox cmbIDDoljnost = new ComboBox();
-        ComboBox cmbIDSotrydnikC = new ComboBox();
-        TextBox tbKolVidMed = new TextBox();
-        ComboBox cmbIDVidCheck = new ComboBox();
-        ComboBox cmbIDMedicamentov = new ComboBox();
-        ComboBox cmbIDInstrRabKass = new ComboBox();
+        public TextBox tbNomberCheckVM = new TextBox();
+        public TextBox tbNazvVidMed = new TextBox();
+        public ComboBox cmbIDDoljnost = new ComboBox();
+        public ComboBox cmbIDSotrydnikC = new ComboBox();
+        public TextBox tbKolVidMed = new TextBox();
+        public ComboBox cmbIDVidCheck = new ComboBox();
+        public ComboBox cmbIDMedicamentov = new ComboBox();
+        public ComboBox cmbIDInstrRabKass = new ComboBox();
 
-        TextBox tbInstrRabKassir = new TextBox();
-        TextBox tbPribil = new TextBox();
-        TextBox tbRashody = new TextBox();
-        TextBox tbNachOtcheta = new TextBox();
-        TextBox tbKonOtch = new TextBox();
+        public TextBox tbInstrRabKassir = new TextBox();
+        public TextBox tbPribil = new TextBox();
+        public TextBox tbRashody = new TextBox();
+        public TextBox tbNachOtcheta = new TextBox();
+        public TextBox tbKonOtch = new TextBox();
 
-        public void IncomeFormFill()
+        public void IncomeForm_Instruction_Fill()
         {
+            lblInstrRabKassir.Size = new Size(150, 20);
+            lblInstrRabKassir.Text = "Вид инструкции";
+            lblInstrRabKassir.Location = new Point(5, 5);
+            lblInstrRabKassir.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblInstrRabKassir);
+
+            tbInstrRabKassir.Size = new Size(150, 20);
+            tbInstrRabKassir.Location = new Point(5, 25);
+            pnlTextBox.Controls.Add(tbInstrRabKassir);
 
             lblHead.Size = new Size(400, 50);
             lblHead.Text = "Прибыль и расходы";
@@ -1085,13 +1869,10 @@ namespace UP_02._01
             btnDelete.Location = new Point(485, 125);
             btnDelete.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(btnDelete);
+        }
 
-            lblInstrRabKassir.Size = new Size(150, 20);
-            lblInstrRabKassir.Text = "Вид инструкции";
-            lblInstrRabKassir.Location = new Point(5, 5);
-            lblInstrRabKassir.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblInstrRabKassir);
-
+        public void IncomeForm_Pribil_i_rashodi_Fill()
+        {
             lblPribil.Size = new Size(150, 20);
             lblPribil.Text = "Прибыль";
             lblPribil.Location = new Point(5, 55);
@@ -1116,6 +1897,59 @@ namespace UP_02._01
             lblKonOtch.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblKonOtch);
 
+            tbPribil.Size = new Size(150, 20);
+            tbPribil.Location = new Point(5, 75);
+            pnlTextBox.Controls.Add(tbPribil);
+
+            tbRashody.Size = new Size(150, 20);
+            tbRashody.Location = new Point(5, 125);
+            pnlTextBox.Controls.Add(tbRashody);
+
+            tbNachOtcheta.Size = new Size(150, 20);
+            tbNachOtcheta.Location = new Point(5, 175);
+            pnlTextBox.Controls.Add(tbNachOtcheta);
+
+            tbKonOtch.Size = new Size(150, 20);
+            tbKonOtch.Location = new Point(5, 225);
+            pnlTextBox.Controls.Add(tbKonOtch);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Прибыль и расходы";
+            lblHead.Location = new Point(400, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateIncomeForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateIncomeForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(780, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateIncomeForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(485, 25);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(485, 75);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(485, 125);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void IncomeForm_Check_vid_med_Fill()
+        {
             lblNomberCheckVM.Size = new Size(150, 20);
             lblNomberCheckVM.Text = "Номер чека";
             lblNomberCheckVM.Location = new Point(165, 5);
@@ -1140,50 +1974,6 @@ namespace UP_02._01
             lblIDSotrydnikC.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblIDSotrydnikC);
 
-            lblKolVidMed.Size = new Size(150, 20);
-            lblKolVidMed.Text = "Колличество медикаментов";
-            lblKolVidMed.Location = new Point(165, 205);
-            lblKolVidMed.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblKolVidMed);
-
-            lblIDVidCheck.Size = new Size(150, 20);
-            lblIDVidCheck.Text = "ID чека";
-            lblIDVidCheck.Location = new Point(325, 5);
-            lblIDVidCheck.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDVidCheck);
-
-            lblIDMedicamentov.Size = new Size(150, 20);
-            lblIDMedicamentov.Text = "ID медикаментов";
-            lblIDMedicamentov.Location = new Point(325, 55);
-            lblIDMedicamentov.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDMedicamentov);
-
-            lblIDInstrRabKass.Size = new Size(150, 20);
-            lblIDInstrRabKass.Text = "ID инструкции кассира";
-            lblIDInstrRabKass.Location = new Point(325, 105);
-            lblIDInstrRabKass.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDInstrRabKass);
-
-            tbInstrRabKassir.Size = new Size(150, 20);
-            tbInstrRabKassir.Location = new Point(5, 25);
-            pnlTextBox.Controls.Add(tbInstrRabKassir);
-
-            tbPribil.Size = new Size(150, 20);
-            tbPribil.Location = new Point(5, 75);
-            pnlTextBox.Controls.Add(tbPribil);
-
-            tbRashody.Size = new Size(150, 20);
-            tbRashody.Location = new Point(5, 125);
-            pnlTextBox.Controls.Add(tbRashody);
-
-            tbNachOtcheta.Size = new Size(150, 20);
-            tbNachOtcheta.Location = new Point(5, 175);
-            pnlTextBox.Controls.Add(tbNachOtcheta);
-
-            tbKonOtch.Size = new Size(150, 20);
-            tbKonOtch.Location = new Point(5, 225);
-            pnlTextBox.Controls.Add(tbKonOtch);
-
             tbNomberCheckVM.Size = new Size(150, 20);
             tbNomberCheckVM.Location = new Point(165, 25);
             pnlTextBox.Controls.Add(tbNomberCheckVM);
@@ -1200,6 +1990,55 @@ namespace UP_02._01
             cmbIDSotrydnikC.Location = new Point(165, 175);
             pnlTextBox.Controls.Add(cmbIDSotrydnikC);
 
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Прибыль и расходы";
+            lblHead.Location = new Point(400, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateIncomeForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateIncomeForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(780, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateIncomeForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(485, 25);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(485, 75);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(485, 125);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void IncomeForm_med_Fill()
+        {
+            lblKolVidMed.Size = new Size(150, 20);
+            lblKolVidMed.Text = "Колличество медикаментов";
+            lblKolVidMed.Location = new Point(165, 205);
+            lblKolVidMed.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblKolVidMed);
+
+            lblIDVidCheck.Size = new Size(150, 20);
+            lblIDVidCheck.Text = "ID чека";
+            lblIDVidCheck.Location = new Point(325, 5);
+            lblIDVidCheck.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDVidCheck);
+
             tbKolVidMed.Size = new Size(150, 20);
             tbKolVidMed.Location = new Point(165, 225);
             pnlTextBox.Controls.Add(tbKolVidMed);
@@ -1207,6 +2046,55 @@ namespace UP_02._01
             cmbIDVidCheck.Size = new Size(150, 20);
             cmbIDVidCheck.Location = new Point(325, 25);
             pnlTextBox.Controls.Add(cmbIDVidCheck);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Прибыль и расходы";
+            lblHead.Location = new Point(400, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateIncomeForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateIncomeForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(780, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateIncomeForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(485, 25);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(485, 75);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(485, 125);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void IncomeForm_Prodaja_tovara_Fill()
+        {
+            lblIDMedicamentov.Size = new Size(150, 20);
+            lblIDMedicamentov.Text = "ID медикаментов";
+            lblIDMedicamentov.Location = new Point(325, 55);
+            lblIDMedicamentov.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDMedicamentov);
+
+            lblIDInstrRabKass.Size = new Size(150, 20);
+            lblIDInstrRabKass.Text = "ID инструкции кассира";
+            lblIDInstrRabKass.Location = new Point(325, 105);
+            lblIDInstrRabKass.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDInstrRabKass);
 
             cmbIDMedicamentov.Size = new Size(150, 20);
             cmbIDMedicamentov.Location = new Point(325, 75);
@@ -1216,7 +2104,86 @@ namespace UP_02._01
             cmbIDInstrRabKass.Location = new Point(325, 125);
             pnlTextBox.Controls.Add(cmbIDInstrRabKass);
 
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Прибыль и расходы";
+            lblHead.Location = new Point(400, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateIncomeForm.Controls.Add(lblHead);
 
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateIncomeForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(780, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateIncomeForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(485, 25);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(485, 75);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(485, 125);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
+        }
+
+        public void IncomeForm_Fill()
+        {
+            lblInstrRabKassir.Size = new Size(150, 20);
+            lblInstrRabKassir.Text = "Вид инструкции";
+            lblInstrRabKassir.Location = new Point(5, 5);
+            lblInstrRabKassir.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblInstrRabKassir);
+
+            tbInstrRabKassir.Size = new Size(150, 20);
+            tbInstrRabKassir.Location = new Point(5, 25);
+            pnlTextBox.Controls.Add(tbInstrRabKassir);
+
+            lblHead.Size = new Size(400, 50);
+            lblHead.Text = "Прибыль и расходы";
+            lblHead.Location = new Point(400, 10);
+            lblHead.Font = new Font("Times New Roman", 25);
+            aggregateIncomeForm.Controls.Add(lblHead);
+
+            btnReturn.Size = new Size(100, 30);
+            btnReturn.Text = "Вернуться";
+            btnReturn.Location = new Point(35, 35);
+            btnReturn.Font = new Font("Times New Roman", 10);
+            aggregateIncomeForm.Controls.Add(btnReturn);
+
+            pnlTextBox.Size = new Size(780, 250);
+            pnlTextBox.Location = new Point(10, 405);
+            aggregateIncomeForm.Controls.Add(pnlTextBox);
+
+            btnInsert.Size = new Size(100, 30);
+            btnInsert.Text = "Добавить";
+            btnInsert.Location = new Point(485, 25);
+            btnInsert.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnInsert);
+
+            btnUpdate.Size = new Size(100, 30);
+            btnUpdate.Text = "Изменить";
+            btnUpdate.Location = new Point(485, 75);
+            btnUpdate.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnUpdate);
+
+            btnDelete.Size = new Size(100, 30);
+            btnDelete.Text = "Удалить";
+            btnDelete.Location = new Point(485, 125);
+            btnDelete.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(btnDelete);
         }
 
         public Form aggregateMainForm = new Form();
@@ -1349,19 +2316,14 @@ namespace UP_02._01
             tbNameSoiskatel.Clear();
             tbFamSoiskatel.Clear();
             tbOtchSoiskatel.Clear();
-            
-
-
-            tables.dtSoiskatelFill();
-            frm1.dgvApplicationForm.Update();
-
-
+            Registry_Class.sql.Close();
+            frm1.ApplicationForm_Load(frm1, null);
         }
 
         protected void btnSoiskatelUpdate_Click(object sender, EventArgs e)
         {
             ApplicationForm frm1 = new ApplicationForm();
-           procedure.spSoiskatel_Update(Convert.ToInt32(lbNewIdSoiskatel.Text),
+           procedure.spSoiskatel_Update(Convert.ToInt32(NewIdSoiskatel),
                 tbFamSoiskatel.Text, tbNameSoiskatel.Text, tbOtchSoiskatel.Text, Convert.ToInt32(cmbTabel_rab_vremeni_ID.SelectedValue.ToString()), Convert.ToInt32(cmbDogovor_ID.SelectedValue.ToString()));
         }
 
@@ -1374,7 +2336,7 @@ namespace UP_02._01
             {
                 case DialogResult.Yes:
                      procedure.spSoiskatel_Delete(Convert.ToInt32(
-                         lbNewIdSoiskatel.Text));
+                         NewIdSoiskatel));
                     break;
                 case DialogResult.No:
                     break;
