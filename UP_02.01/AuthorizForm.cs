@@ -41,7 +41,9 @@ namespace UP_02._01
                 switch (Role_ID)
                 {
                     case 6:
-                            
+
+                        DynamicObjects classDynamicObjects = new DynamicObjects();
+                        classDynamicObjects.MainFormFill(false, true, false, false, false, false);
                         break;
                 }
                 MainForm mainFrm = new MainForm();

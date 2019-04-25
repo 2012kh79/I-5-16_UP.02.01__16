@@ -2195,7 +2195,7 @@ namespace UP_02._01
         Button btnKassa = new Button();
         Button btnApplication = new Button();
 
-        public void MainFormFill()
+        public void MainFormFill(bool btDoc, bool btStaff, bool btSupply, bool btIncome, bool btKassa, bool btApp)
         {
 
             lblHead.Size = new Size(400, 50);
@@ -2214,6 +2214,7 @@ namespace UP_02._01
             pnlTextBox.Location = new Point(300, 100);
             aggregateMainForm.Controls.Add(pnlTextBox);
 
+            btnDocument.Visible = btDoc;
             btnDocument.Size = new Size(100, 50);
             btnDocument.Text = "Документы";
             btnDocument.Location = new Point(100, 25);
@@ -2221,6 +2222,7 @@ namespace UP_02._01
             btnDocument.Click += new EventHandler(btnDocument_Click);
             pnlTextBox.Controls.Add(btnDocument);
 
+            btnStaff.Visible = btStaff;
             btnStaff.Size = new Size(100, 50);
             btnStaff.Text = "Персонал";
             btnStaff.Location = new Point(100, 100);
@@ -2228,6 +2230,7 @@ namespace UP_02._01
             btnStaff.Click += new EventHandler(btnStaff_Click);
             pnlTextBox.Controls.Add(btnStaff);
 
+            btnSupply.Visible = btSupply;
             btnSupply.Size = new Size(100, 50);
             btnSupply.Text = "Поставка";
             btnSupply.Location = new Point(100, 175);
@@ -2235,6 +2238,7 @@ namespace UP_02._01
             btnSupply.Click += new EventHandler(btnSupply_Click);
             pnlTextBox.Controls.Add(btnSupply);
 
+            btnIncome.Visible = btIncome;
             btnIncome.Size = new Size(100, 50);
             btnIncome.Text = "Прибыль и расходы";
             btnIncome.Location = new Point(100, 250);
@@ -2242,6 +2246,7 @@ namespace UP_02._01
             btnIncome.Click += new EventHandler(btnIncome_Click);
             pnlTextBox.Controls.Add(btnIncome);
 
+            btnKassa.Visible = btKassa;
             btnKassa.Size = new Size(100, 50);
             btnKassa.Text = "Касса";
             btnKassa.Location = new Point(100, 325);
@@ -2249,6 +2254,7 @@ namespace UP_02._01
             btnKassa.Click += new EventHandler(btnKassa_Click);
             pnlTextBox.Controls.Add(btnKassa);
 
+            btnApplication.Visible = btApp;
             btnApplication.Size = new Size(100, 50);
             btnApplication.Text = "Анкета";
             btnApplication.Location = new Point(100, 400);
