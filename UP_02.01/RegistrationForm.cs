@@ -33,7 +33,7 @@ namespace UP_02._01
                         registry.Registry_Set("31.31.198.31", "u0695785_TatarBase", "u0695785_TatarBase",
                             "TatarBase123IIL");
                         DBProcedures procedure = new DBProcedures();
-                        procedure.spAccount_Insert(tbLogin.Text, Hash(tbPass.Text), 6);
+                        procedure.spAccount_Insert(tbLogin.Text, Hash(tbPass.Text), 1);
                         MainForm mainFrm = new MainForm();
                         mainFrm.Show();
                         this.Hide();

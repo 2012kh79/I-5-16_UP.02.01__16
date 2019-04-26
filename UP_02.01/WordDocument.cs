@@ -13,9 +13,7 @@ namespace UP_02._01
     class WordDocument
     {
         public DataTable table = new DataTable();
-        public string kadr_uchet_name = "";
-        public string check_name = "";
-        public string vidanie_medicamenti_name = "";
+       
 
         public void CheckWord()
         {
@@ -23,8 +21,8 @@ namespace UP_02._01
             word.Application application = new word.Application();
             word.Document document = application.Documents.Add(Visible: true);
             word.Range range = document.Range(0, 0);
-            string file_name = Registry_Class.DirPath + "\\ЧВМ_" + check_name
-                + DateTime.Now.ToString("_hh_mm_ss_dd_MM_yyyy") + ".docx";
+            string file_name = Registry_Class.DirPath + "\\ЧВМ_" + 
+                 DateTime.Now.ToString("_hh_mm_ss_dd_MM_yyyy") + ".docx";
             try
             {
                 document.Sections.PageSetup.LeftMargin
@@ -35,7 +33,6 @@ namespace UP_02._01
                     = application.CentimetersToPoints(Convert.ToSingle(Registry_Class.DocTM));
                 document.Sections.PageSetup.BottomMargin
                     = application.CentimetersToPoints(Convert.ToSingle(Registry_Class.DocBM));
-                range.Text = Registry_Class.OrganizationName;
                 range.ParagraphFormat.Alignment
                     = word.WdParagraphAlignment.wdAlignParagraphCenter;
                 range.ParagraphFormat.SpaceAfter = 1;
@@ -49,7 +46,7 @@ namespace UP_02._01
                 Name_Doc.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphCenter;
                 Name_Doc.Range.Font.Name = "Times New Roman";
                 Name_Doc.Range.Font.Size = 16;
-                Name_Doc.Range.Text = "ЧЕК ВЫДАННЫХ МЕДИКАМЕНТОВ" + check_name;
+                Name_Doc.Range.Text = "ЧЕК ВЫДАННЫХ МЕДИКАМЕНТОВ";
                 document.Paragraphs.Add();
                 document.Paragraphs.Add();
                 document.Paragraphs.Add();
@@ -92,7 +89,7 @@ namespace UP_02._01
             word.Application application = new word.Application();
             word.Document document = application.Documents.Add(Visible: true);
             word.Range range = document.Range(0, 0);
-            string file_name = Registry_Class.DirPath + "\\КУ_" + check_name
+            string file_name = Registry_Class.DirPath + "\\КУ_" 
                 + DateTime.Now.ToString("_hh_mm_ss_dd_MM_yyyy") + ".docx";
             try
             {
@@ -104,7 +101,6 @@ namespace UP_02._01
                     = application.CentimetersToPoints(Convert.ToSingle(Registry_Class.DocTM));
                 document.Sections.PageSetup.BottomMargin
                     = application.CentimetersToPoints(Convert.ToSingle(Registry_Class.DocBM));
-                range.Text = Registry_Class.OrganizationName;
                 range.ParagraphFormat.Alignment
                     = word.WdParagraphAlignment.wdAlignParagraphCenter;
                 range.ParagraphFormat.SpaceAfter = 1;
@@ -118,7 +114,7 @@ namespace UP_02._01
                 Name_Doc.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphCenter;
                 Name_Doc.Range.Font.Name = "Times New Roman";
                 Name_Doc.Range.Font.Size = 16;
-                Name_Doc.Range.Text = "КАДРОВЫЙ УЧЕТ" + check_name;
+                Name_Doc.Range.Text = "КАДРОВЫЙ УЧЕТ" ;
                 document.Paragraphs.Add();
                 document.Paragraphs.Add();
                 document.Paragraphs.Add();
@@ -160,7 +156,7 @@ namespace UP_02._01
             word.Application application = new word.Application();
             word.Document document = application.Documents.Add(Visible: true);
             word.Range range = document.Range(0, 0);
-            string file_name = Registry_Class.DirPath + "\\ВД_" + check_name
+            string file_name = Registry_Class.DirPath + "\\ВД_" 
                 + DateTime.Now.ToString("_hh_mm_ss_dd_MM_yyyy") + ".docx";
             try
             {
@@ -172,7 +168,7 @@ namespace UP_02._01
                     = application.CentimetersToPoints(Convert.ToSingle(Registry_Class.DocTM));
                 document.Sections.PageSetup.BottomMargin
                     = application.CentimetersToPoints(Convert.ToSingle(Registry_Class.DocBM));
-                range.Text = Registry_Class.OrganizationName;
+               
                 range.ParagraphFormat.Alignment
                     = word.WdParagraphAlignment.wdAlignParagraphCenter;
                 range.ParagraphFormat.SpaceAfter = 1;
@@ -186,7 +182,7 @@ namespace UP_02._01
                 Name_Doc.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphCenter;
                 Name_Doc.Range.Font.Name = "Times New Roman";
                 Name_Doc.Range.Font.Size = 16;
-                Name_Doc.Range.Text = "ВЫХОДНЫЕ ДОКУМЕНТЫ" + check_name;
+                Name_Doc.Range.Text = "ВЫХОДНЫЕ ДОКУМЕНТЫ";
                 document.Paragraphs.Add();
                 document.Paragraphs.Add();
                 document.Paragraphs.Add();

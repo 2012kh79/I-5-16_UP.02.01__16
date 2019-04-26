@@ -51,6 +51,7 @@
             this.tbpExcel = new System.Windows.Forms.TabPage();
             this.btKadr_UchetExcel = new System.Windows.Forms.Button();
             this.btVih_DocWord = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tcnTable.SuspendLayout();
             this.tbpDocument.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVidDocument)).BeginInit();
@@ -109,6 +110,7 @@
             this.dgvVidDocument.Name = "dgvVidDocument";
             this.dgvVidDocument.Size = new System.Drawing.Size(840, 287);
             this.dgvVidDocument.TabIndex = 0;
+            this.dgvVidDocument.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVidDocument_CellClick);
             // 
             // tbpOrder
             // 
@@ -129,6 +131,7 @@
             this.dgvDogovor.Name = "dgvDogovor";
             this.dgvDogovor.Size = new System.Drawing.Size(840, 287);
             this.dgvDogovor.TabIndex = 1;
+            this.dgvDogovor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDogovor_CellClick);
             // 
             // tbpSalary
             // 
@@ -149,6 +152,7 @@
             this.dgvTabelSarplaty.Name = "dgvTabelSarplaty";
             this.dgvTabelSarplaty.Size = new System.Drawing.Size(840, 287);
             this.dgvTabelSarplaty.TabIndex = 1;
+            this.dgvTabelSarplaty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabelSarplaty_CellClick);
             // 
             // tbpKadrPerestanovki
             // 
@@ -169,6 +173,7 @@
             this.dgvKadrPerestanovki.Name = "dgvKadrPerestanovki";
             this.dgvKadrPerestanovki.Size = new System.Drawing.Size(840, 287);
             this.dgvKadrPerestanovki.TabIndex = 1;
+            this.dgvKadrPerestanovki.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKadrPerestanovki_CellClick);
             // 
             // tabKadrUchet
             // 
@@ -189,6 +194,7 @@
             this.dgvKadrUchet.Name = "dgvKadrUchet";
             this.dgvKadrUchet.Size = new System.Drawing.Size(840, 287);
             this.dgvKadrUchet.TabIndex = 1;
+            this.dgvKadrUchet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKadrUchet_CellClick);
             // 
             // tbpFirma
             // 
@@ -209,6 +215,7 @@
             this.dgvFirma.Name = "dgvFirma";
             this.dgvFirma.Size = new System.Drawing.Size(840, 287);
             this.dgvFirma.TabIndex = 2;
+            this.dgvFirma.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFirma_CellClick);
             // 
             // tbpIdentTovParty
             // 
@@ -228,6 +235,7 @@
             this.dgvIdentTovParty.Name = "dgvIdentTovParty";
             this.dgvIdentTovParty.Size = new System.Drawing.Size(840, 287);
             this.dgvIdentTovParty.TabIndex = 2;
+            this.dgvIdentTovParty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIdentTovParty_CellClick);
             // 
             // tbpVihDocument
             // 
@@ -247,12 +255,13 @@
             this.dgvVihCocument.Name = "dgvVihCocument";
             this.dgvVihCocument.Size = new System.Drawing.Size(840, 287);
             this.dgvVihCocument.TabIndex = 2;
+            this.dgvVihCocument.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVihCocument_CellClick);
             // 
             // tcnDocument
             // 
             this.tcnDocument.Controls.Add(this.tbpWord);
             this.tcnDocument.Controls.Add(this.tbpExcel);
-            this.tcnDocument.Location = new System.Drawing.Point(714, 440);
+            this.tcnDocument.Location = new System.Drawing.Point(760, 568);
             this.tcnDocument.Name = "tcnDocument";
             this.tcnDocument.SelectedIndex = 0;
             this.tcnDocument.Size = new System.Drawing.Size(97, 62);
@@ -302,24 +311,36 @@
             // 
             // btVih_DocWord
             // 
-            this.btVih_DocWord.Location = new System.Drawing.Point(437, 462);
+            this.btVih_DocWord.Location = new System.Drawing.Point(766, 508);
             this.btVih_DocWord.Name = "btVih_DocWord";
-            this.btVih_DocWord.Size = new System.Drawing.Size(139, 23);
+            this.btVih_DocWord.Size = new System.Drawing.Size(78, 53);
             this.btVih_DocWord.TabIndex = 2;
             this.btVih_DocWord.Text = "Выходные документы";
             this.btVih_DocWord.UseVisualStyleBackColor = true;
             this.btVih_DocWord.Click += new System.EventHandler(this.btVih_DocWord_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(22, 40);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Назад";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DocumentChangeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 661);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btVih_DocWord);
             this.Controls.Add(this.tcnDocument);
             this.Controls.Add(this.tcnTable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DocumentChangeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Изменение документов";
             this.Load += new System.EventHandler(this.DocumentChangeForm_Load);
             this.tcnTable.ResumeLayout(false);
@@ -371,5 +392,6 @@
         private System.Windows.Forms.DataGridView dgvIdentTovParty;
         private System.Windows.Forms.DataGridView dgvVihCocument;
         private System.Windows.Forms.Button btVih_DocWord;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -63,12 +63,16 @@ namespace UP_02._01
         public ComboBox cmbIDTabelZarplata = new ComboBox();
         public ComboBox cmbIDOtchet = new ComboBox();
         public TextBox tbNazvFirm = new TextBox();
-        public ComboBox cmbIDProdajaTovara = new ComboBox();
+        public ComboBox cmbIDProdajaTov = new ComboBox();
         public ComboBox cmbIDKadrUch = new ComboBox();
         public ComboBox cmbIDIdent = new ComboBox();
         public TextBox tbVidDocIdent = new TextBox();
         public TextBox tbStatus = new TextBox();
         public ComboBox cmbIDPostavka = new ComboBox();
+        public ComboBox cmbIDPribil_i_rashodi = new ComboBox();
+        public Label lblIDPribil_i_rashodi = new Label();
+        public ComboBox cmbIDSotrudnik_KU= new ComboBox();
+        public Label lblIDSotrudnik_KU = new Label();
         public string NewIdVid_doc;
         public string NewIdDogovor;
         public string NewIdZar_plata;
@@ -111,12 +115,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateDocumentChangeForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateDocumentChangeForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
@@ -178,12 +177,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateDocumentChangeForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateDocumentChangeForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
@@ -235,12 +229,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateDocumentChangeForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateDocumentChangeForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
@@ -296,11 +285,11 @@ namespace UP_02._01
             lblIDSoiskatel.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblIDSoiskatel);
 
-            lblIDSoiskatelKU.Size = new Size(150, 20);
-            lblIDSoiskatelKU.Text = "ID Соиск. для КУ";
-            lblIDSoiskatelKU.Location = new Point(325, 55);
-            lblIDSoiskatelKU.Font = new Font("Times New Roman", 10);
-            pnlTextBox.Controls.Add(lblIDSoiskatelKU);
+            //lblIDSoiskatelKU.Size = new Size(150, 20);
+            //lblIDSoiskatelKU.Text = "ID Соиск. для КУ";
+            //lblIDSoiskatelKU.Location = new Point(325, 55);
+            //lblIDSoiskatelKU.Font = new Font("Times New Roman", 10);
+            //pnlTextBox.Controls.Add(lblIDSoiskatelKU);
 
             tbDatePodpisiDoc.Size = new Size(150, 20);
             tbDatePodpisiDoc.Location = new Point(165, 75);
@@ -322,9 +311,9 @@ namespace UP_02._01
             cmbIDSoiskatel.Location = new Point(325, 25);
             pnlTextBox.Controls.Add(cmbIDSoiskatel);
 
-            cmbIDSoiskatelKU.Size = new Size(150, 20);
-            cmbIDSoiskatelKU.Location = new Point(325, 75);
-            pnlTextBox.Controls.Add(cmbIDSoiskatelKU);
+            //cmbIDSoiskatelKU.Size = new Size(150, 20);
+            //cmbIDSoiskatelKU.Location = new Point(325, 75);
+            //pnlTextBox.Controls.Add(cmbIDSoiskatelKU);
 
             lblHead.Size = new Size(400, 50);
             lblHead.Text = "Изменение Документов";
@@ -332,12 +321,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateDocumentChangeForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateDocumentChangeForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
@@ -379,15 +363,29 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateDocumentChangeForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateDocumentChangeForm.Controls.Add(btnReturn);
+            lblIDFirm.Size = new Size(150, 20);
+            lblIDFirm.Text = "ID Прибыль и расходов";
+            lblIDFirm.Location = new Point(145, 15);
+            lblIDFirm.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDFirm);
+
+            lblIDSotrudnik_KU.Size = new Size(150, 20);
+            lblIDSotrudnik_KU.Text = "ID Сотрудника";
+            lblIDSotrudnik_KU.Location = new Point(145, 85);
+            lblIDSotrudnik_KU.Font = new Font("Times New Roman", 10);
+            pnlTextBox.Controls.Add(lblIDSotrudnik_KU);
 
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
+
+            cmbIDPribil_i_rashodi.Size = new Size(150, 20);
+            cmbIDPribil_i_rashodi.Location = new Point(145, 45);
+            pnlTextBox.Controls.Add(cmbIDPribil_i_rashodi);
+
+            cmbIDSotrudnik_KU.Size = new Size(150, 20);
+            cmbIDSotrudnik_KU.Location = new Point(145, 105);
+            pnlTextBox.Controls.Add(cmbIDSotrudnik_KU);
 
             btnInsert.Size = new Size(100, 30);
             btnInsert.Text = "Добавить";
@@ -426,12 +424,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateDocumentChangeForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateDocumentChangeForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
@@ -493,12 +486,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateDocumentChangeForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateDocumentChangeForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
@@ -538,20 +526,24 @@ namespace UP_02._01
 
             lblIDIdent.Size = new Size(150, 20);
             lblIDIdent.Text = "ID Идентифик.";
-            lblIDIdent.Location = new Point(645, 5);
+            lblIDIdent.Location = new Point(485, 95);
             lblIDIdent.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblIDIdent);
 
-            cmbIDPostTovara.Size = new Size(150, 20);
-            cmbIDPostTovara.Location = new Point(485, 175);
-            pnlTextBox.Controls.Add(cmbIDPostTovara);
+            cmbIDProdajaTov.Size = new Size(150, 20);
+            cmbIDProdajaTov.Location = new Point(485, 175);
+            pnlTextBox.Controls.Add(cmbIDProdajaTov);
+
+            //cmbIDPostTovara.Size = new Size(150, 20);
+            //cmbIDPostTovara.Location = new Point(485, 175);
+            //pnlTextBox.Controls.Add(cmbIDPostTovara);
 
             cmbIDKadrUch.Size = new Size(150, 20);
             cmbIDKadrUch.Location = new Point(485, 225);
             pnlTextBox.Controls.Add(cmbIDKadrUch);
 
             cmbIDIdent.Size = new Size(150, 20);
-            cmbIDIdent.Location = new Point(645, 25);
+            cmbIDIdent.Location = new Point(485, 125);
             pnlTextBox.Controls.Add(cmbIDIdent);
 
             lblHead.Size = new Size(400, 50);
@@ -560,12 +552,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateDocumentChangeForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateDocumentChangeForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
@@ -596,13 +583,7 @@ namespace UP_02._01
             lblHead.Location = new Point(280, 10);
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateDocumentChangeForm.Controls.Add(lblHead);
-
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateDocumentChangeForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateDocumentChangeForm.Controls.Add(pnlTextBox);
@@ -674,12 +655,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateApplicationForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateApplicationForm.Controls.Add(btnReturn);
-
+            
             btnInsert.Size = new Size(100, 30);
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(620, 20);
@@ -778,12 +754,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateKassaForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateKassaForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(600, 125);
             pnlTextBox.Location = new Point(10, 525);
             aggregateKassaForm.Controls.Add(pnlTextBox);
@@ -930,12 +901,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateSupplyForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateSupplyForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateSupplyForm.Controls.Add(pnlTextBox);
@@ -944,18 +910,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(655, 55);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnTovar_na_skladeInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(655, 105);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnTovar_na_skladeUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(655, 160);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnTovar_na_skladeDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
 
@@ -997,12 +966,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateSupplyForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateSupplyForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateSupplyForm.Controls.Add(pnlTextBox);
@@ -1011,18 +975,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(655, 55);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnPost_tovarInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(655, 105);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnPost_tovarUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(655, 160);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnPost_tovarDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
 
@@ -1084,12 +1051,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateSupplyForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateSupplyForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateSupplyForm.Controls.Add(pnlTextBox);
@@ -1098,18 +1060,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(655, 55);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnFirma_postavkiInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(655, 105);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnFirma_postavkiUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(655, 160);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnFirma_postavkiDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
 
@@ -1161,12 +1126,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateSupplyForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateSupplyForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateSupplyForm.Controls.Add(pnlTextBox);
@@ -1175,18 +1135,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(655, 55);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnPostavshikiInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(655, 105);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnPostavshikiUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(655, 160);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnPostavshikiDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
 
@@ -1228,12 +1191,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateSupplyForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateSupplyForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateSupplyForm.Controls.Add(pnlTextBox);
@@ -1242,18 +1200,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(655, 55);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnPostavkiInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(655, 105);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnPostavkiUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(655, 160);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnPostavkiDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
         public void SupplyFormFill()
@@ -1303,12 +1264,6 @@ namespace UP_02._01
             lblHead.Location = new Point(350, 10);
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateSupplyForm.Controls.Add(lblHead);
-
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateSupplyForm.Controls.Add(btnReturn);
 
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
@@ -1365,7 +1320,7 @@ namespace UP_02._01
         public TextBox tbOtchSotr = new TextBox();
         public TextBox tbLogin = new TextBox();
         public TextBox tbParol = new TextBox();
-        public TextBox tbTypeAccount = new TextBox();
+        public ComboBox cmbTypeAccount = new ComboBox();
         public ComboBox cmbIDRole = new ComboBox();
         public ComboBox cmbIDTabVremya = new ComboBox();
         public ComboBox cmbIDDogovor = new ComboBox();
@@ -1418,12 +1373,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateStaffForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateStaffForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateStaffForm.Controls.Add(pnlTextBox);
@@ -1432,18 +1382,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(645, 55);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnTabel_rab_vremeniInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(755, 55);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnTabel_rab_vremeniUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(645, 105);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnTabel_rab_vremeniiDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
 
@@ -1465,12 +1418,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateStaffForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateStaffForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateStaffForm.Controls.Add(pnlTextBox);
@@ -1479,18 +1427,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(645, 55);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnDoljnostiInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(755, 55);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnDoljnostUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(645, 105);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnDoljnostDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
 
@@ -1512,12 +1463,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateStaffForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateStaffForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateStaffForm.Controls.Add(pnlTextBox);
@@ -1526,18 +1472,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(645, 55);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnRoleInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(755, 55);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnRoleUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(645, 105);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnRoleDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
 
@@ -1609,9 +1558,9 @@ namespace UP_02._01
             lblTypeAccount.Font = new Font("Times New Roman", 10);
             pnlTextBox.Controls.Add(lblTypeAccount);
 
-            tbTypeAccount.Size = new Size(150, 20);
-            tbTypeAccount.Location = new Point(325, 225);
-            pnlTextBox.Controls.Add(tbTypeAccount);
+            cmbTypeAccount.Size = new Size(150, 20);
+            cmbTypeAccount.Location = new Point(325, 225);
+            pnlTextBox.Controls.Add(cmbTypeAccount);
 
             lblHead.Size = new Size(400, 50);
             lblHead.Text = "Персонал";
@@ -1619,12 +1568,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateStaffForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateStaffForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateStaffForm.Controls.Add(pnlTextBox);
@@ -1633,18 +1577,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(645, 55);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnSotrInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(755, 55);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnSotrUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(645, 105);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnSotrDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
 
@@ -1686,12 +1633,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateStaffForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateStaffForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateStaffForm.Controls.Add(pnlTextBox);
@@ -1700,18 +1642,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(645, 55);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnAccountInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(755, 55);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnAccountUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(645, 105);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnAccountDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
 
@@ -1762,12 +1707,6 @@ namespace UP_02._01
             lblHead.Location = new Point(400, 10);
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateStaffForm.Controls.Add(lblHead);
-
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateStaffForm.Controls.Add(btnReturn);
 
             pnlTextBox.Size = new Size(860, 250);
             pnlTextBox.Location = new Point(10, 405);
@@ -1842,12 +1781,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateIncomeForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateIncomeForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(780, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateIncomeForm.Controls.Add(pnlTextBox);
@@ -1856,18 +1790,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(485, 25);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnInstructionsInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(485, 75);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnInstructionsUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(485, 125);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnInstructionsDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
 
@@ -1919,12 +1856,6 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateIncomeForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateIncomeForm.Controls.Add(btnReturn);
-
             pnlTextBox.Size = new Size(780, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateIncomeForm.Controls.Add(pnlTextBox);
@@ -1933,18 +1864,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(485, 25);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnPribil_i_rashodiInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(485, 75);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnPribil_i_rashodiUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(485, 125);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnPribil_i_rashodiDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
 
@@ -1996,12 +1930,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateIncomeForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateIncomeForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(780, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateIncomeForm.Controls.Add(pnlTextBox);
@@ -2010,18 +1939,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(485, 25);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnCheck_vid_medInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(485, 75);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnCheck_vid_medUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(485, 125);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnCheck_vid_medDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
 
@@ -2053,12 +1985,6 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateIncomeForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateIncomeForm.Controls.Add(btnReturn);
-
             pnlTextBox.Size = new Size(780, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateIncomeForm.Controls.Add(pnlTextBox);
@@ -2067,18 +1993,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(485, 25);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnMedInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(485, 75);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnMedUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(485, 125);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnMedDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
 
@@ -2110,12 +2039,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateIncomeForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateIncomeForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(780, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateIncomeForm.Controls.Add(pnlTextBox);
@@ -2124,18 +2048,21 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(485, 25);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnProdajaInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(485, 75);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnUpdate.Click += new EventHandler(btnProdajaUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(485, 125);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnProdajaDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
         }
 
@@ -2157,12 +2084,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateIncomeForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateIncomeForm.Controls.Add(btnReturn);
-
+            
             pnlTextBox.Size = new Size(780, 250);
             pnlTextBox.Location = new Point(10, 405);
             aggregateIncomeForm.Controls.Add(pnlTextBox);
@@ -2204,11 +2126,7 @@ namespace UP_02._01
             lblHead.Font = new Font("Times New Roman", 25);
             aggregateMainForm.Controls.Add(lblHead);
 
-            btnReturn.Size = new Size(100, 30);
-            btnReturn.Text = "Вернуться";
-            btnReturn.Location = new Point(35, 35);
-            btnReturn.Font = new Font("Times New Roman", 10);
-            aggregateMainForm.Controls.Add(btnReturn);
+            
 
             pnlTextBox.Size = new Size(300, 500);
             pnlTextBox.Location = new Point(300, 100);
@@ -2322,8 +2240,6 @@ namespace UP_02._01
             tbNameSoiskatel.Clear();
             tbFamSoiskatel.Clear();
             tbOtchSoiskatel.Clear();
-            Registry_Class.sql.Close();
-            frm1.ApplicationForm_Load(frm1, null);
         }
 
         protected void btnSoiskatelUpdate_Click(object sender, EventArgs e)
@@ -2343,6 +2259,520 @@ namespace UP_02._01
                 case DialogResult.Yes:
                      procedure.spSoiskatel_Delete(Convert.ToInt32(
                          NewIdSoiskatel));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void bbtCancel_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            MainForm MF = new MainForm();
+            DocumentChangeForm DF = new DocumentChangeForm();
+            MF.Show();
+            DF.Hide();
+        }
+
+        protected void bbtCancel_ApplicationFormClick(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            MainForm MF = new MainForm();
+            ApplicationForm AF = new ApplicationForm();
+            MF.Show();
+            AF.Hide();
+        }
+
+        protected void bbtCancel_KassaFormClick(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            MainForm MF = new MainForm();
+            KassaForm KF = new KassaForm();
+            MF.Show();
+            KF.Hide();
+        }
+
+        protected void bbtCancel_StaffFormClick(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            MainForm MF = new MainForm();
+            StaffForm SF = new StaffForm();
+            MF.Show();
+            SF.Hide();
+        }
+
+        protected void bbtCancel_SupplyFormClick(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            MainForm MF = new MainForm();
+            SupplyForm SF = new SupplyForm();
+            SF.Hide();
+            MF.Show();
+        }
+
+        protected void bbtCancel_IncomeFormClick(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            MainForm MF = new MainForm();
+            IncomeForm IF = new IncomeForm();
+            IF.Hide();
+            MF.Show();
+        }
+
+        protected void btnTovar_na_skladeInsert_Click(object sender, EventArgs e)
+        {
+            SupplyForm spl = new SupplyForm();
+            procedure.spTovar_na_sklade_Insert(Convert.ToInt32(txSrokHran.Text),
+                Convert.ToInt32(txKolTovNaSklade.Text), Convert.ToInt32(txNomSkafa.Text), Convert.ToInt32(txNomPolki.Text));
+            spl.dgvTovar_na_sklade.DataSource = tables.dtTovar_na_sklade;
+            txSrokHran.Clear();
+            txKolTovNaSklade.Clear();
+            txNomSkafa.Clear();
+            txNomPolki.Clear();
+        }
+
+        protected void btnTovar_na_skladeUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spTovar_na_sklade_Update(Convert.ToInt32(NewIdTovar_na_sklade),
+                 Convert.ToInt32(txSrokHran.Text.ToString()),
+                Convert.ToInt32(txKolTovNaSklade.Text.ToString()), Convert.ToInt32(txNomSkafa.Text.ToString()), Convert.ToInt32(txNomPolki.Text.ToString()));
+        }
+
+        protected void btnTovar_na_skladeDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление товара на складе " +
+                 "?", "Удалить товар со склада ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spSoiskatel_Delete(Convert.ToInt32(
+                        NewIdTovar_na_sklade));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void btnPost_tovarInsert_Click(object sender, EventArgs e)
+        {
+            SupplyForm spl = new SupplyForm();
+            procedure.spPost_tovar_Insert(txNaimPostTovar.Text, Convert.ToInt32(txKolPostTovar.Text), Convert.ToByte(txTsenaPostTovara.Text));
+            spl.dgvPost_tovar.DataSource = tables.dtPost_tovar;
+            txNaimPostTovar.Clear();
+            txKolPostTovar.Clear();
+            txTsenaPostTovara.Clear();
+        }
+
+        protected void btnPost_tovarUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spPost_tovar_Update(Convert.ToInt32(NewIdPost_tovar),
+                 txNaimPostTovar.Text, Convert.ToInt32(txKolPostTovar.Text), Convert.ToByte(txTsenaPostTovara.Text));
+        }
+
+        protected void btnPost_tovarDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление поставленного товара на складе " +
+                 "?", "Удалить поставленный товар со склада ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spSoiskatel_Delete(Convert.ToInt32(
+                        NewIdPost_tovar));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void btnFirma_postavkiInsert_Click(object sender, EventArgs e)
+        {
+            SupplyForm spl = new SupplyForm();
+            procedure.spFirma_postavki_Insert(txNazvFirmPost.Text, Convert.ToInt32(txIndex.Text), txNasPunkt.Text, txUlitsa.Text, Convert.ToByte(txDom.Text));
+            spl.dgvFirma_postavki.DataSource = tables.dtFirma_postavki;
+            txNazvFirmPost.Clear();
+            txIndex.Clear();
+            txUlitsa.Clear();
+            txDom.Clear();
+        }
+
+        protected void btnFirma_postavkiUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spFirma_postavki_Update(Convert.ToInt32(NewIdFirma_postavki),
+                 txNazvFirmPost.Text, Convert.ToInt32(txIndex.Text), txNasPunkt.Text, txUlitsa.Text, Convert.ToByte(txDom.Text));
+        }
+
+        protected void btnFirma_postavkiDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление информации о фирме поставки " +
+                 "?", "Удалить информацию о фирме ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spSoiskatel_Delete(Convert.ToInt32(
+                        NewIdFirma_postavki));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void btnPostavshikiInsert_Click(object sender, EventArgs e)
+        {
+            SupplyForm spl = new SupplyForm();
+            procedure.spPostavshik_Insert(txFamPost.Text, txNamePost.Text, txOtchPost.Text,  Convert.ToInt32(cmbIDFirmPost.SelectedValue.ToString()));
+            spl.dgvPostavshiki.DataSource = tables.dtFirma_postavki;
+            txFamPost.Clear();
+            txNamePost.Clear();
+            txOtchPost.Clear();
+        }
+
+        protected void btnPostavshikiUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spPostavshik_Update(Convert.ToInt32(NewIdPostavshiki),
+                 txFamPost.Text, txNamePost.Text, txOtchPost.Text, Convert.ToInt32(cmbIDFirmPost.SelectedValue.ToString()));
+        }
+
+        protected void btnPostavshikiDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление информации о поставщике " + txFamPost.Text + " " + txNamePost.Text + " " + txOtchPost.Text +
+                 "?", "Удалить информацию о поставщике ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spPostavshik_Delete(Convert.ToInt32(
+                        NewIdPostavshiki));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void btnPostavkiInsert_Click(object sender, EventArgs e)
+        {
+            SupplyForm spl = new SupplyForm();
+            procedure.spPostavka_Insert(Convert.ToInt32(cmbIDPostavshik.SelectedValue.ToString()), Convert.ToInt32(cmbIDTovNaSklade.SelectedValue.ToString()), Convert.ToInt32(cmbIDPostTovara.SelectedValue.ToString()));
+            spl.dgvPostavki.DataSource = tables.dtPostavka;
+        }
+
+        protected void btnPostavkiUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spPostavka_Update(Convert.ToInt32(NewIdPostavki),
+                 Convert.ToInt32(cmbIDPostavshik.SelectedValue.ToString()), Convert.ToInt32(cmbIDTovNaSklade.SelectedValue.ToString()), Convert.ToInt32(cmbIDPostTovara.SelectedValue.ToString()));
+        }
+
+        protected void btnPostavkiDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление информации о поставке " + txFamPost.Text + " " + txNamePost.Text + " " + txOtchPost.Text +
+                 "?", "Удалить информацию о поставке ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spPostavshik_Delete(Convert.ToInt32(
+                        NewIdPostavki));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void btnTabel_rab_vremeniInsert_Click(object sender, EventArgs e)
+        {
+            StaffForm staff = new StaffForm();
+            procedure.spTabel_rab_vremeni_Insert(Convert.ToInt32(tbOtrDays.Text.ToString()),
+                Convert.ToInt32(tbVixDays.Text.ToString()), Convert.ToInt32(tbKomandirivki.Text.ToString()), Convert.ToInt32(tbOtpuska.Text.ToString()));
+            staff.dgvTabel_rab.DataSource = tables.dtTabel_rab_vremeni;
+            tbOtrDays.Clear();
+            tbVixDays.Clear();
+            tbKomandirivki.Clear();
+            tbOtpuska.Clear();
+        }
+
+        protected void btnTabel_rab_vremeniUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spTabel_rab_vremeni_Update(Convert.ToInt32(NewIdTab_rab_vremeni),
+                 Convert.ToInt32(tbOtrDays.Text.ToString()),
+                Convert.ToInt32(tbVixDays.Text.ToString()), Convert.ToInt32(tbKomandirivki.Text.ToString()), Convert.ToInt32(tbOtpuska.Text.ToString()));
+        }
+
+        protected void btnTabel_rab_vremeniiDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление информации о табеле рабочего времени " + 
+                 "?", "Удалить информацию о табеле ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spPostavshik_Delete(Convert.ToInt32(
+                        NewIdPostavki));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void btnDoljnostiInsert_Click(object sender, EventArgs e)
+        {
+            StaffForm staff = new StaffForm();
+            procedure.spDoljnost_Insert(tbDoljnost.Text);
+            staff.dgvOrder.DataSource = tables.dtDoljnost;
+            tbDoljnost.Clear();
+        }
+
+        protected void btnDoljnostUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spDoljnost_Update(Convert.ToInt32(NewIdDolj),
+                 tbDoljnost.Text);
+        }
+
+        protected void btnDoljnostDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление информации о занимаемой должности " +
+                 "?", "Удалить информацию о должности ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spPostavshik_Delete(Convert.ToInt32(
+                        NewIdDolj));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void btnRoleInsert_Click(object sender, EventArgs e)
+        {
+            StaffForm staff = new StaffForm();
+            procedure.spRole_Insert(tbRole.Text);
+            staff.dgvRole.DataSource = tables.dtRole;
+            tbRole.Clear();
+        }
+
+        protected void btnRoleUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spDoljnost_Update(Convert.ToInt32(NewIdRole),
+                 tbRole.Text);
+        }
+
+        protected void btnRoleDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление информации о роли " +
+                 "?", "Удалить информацию о роли ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spPostavshik_Delete(Convert.ToInt32(
+                        NewIdRole));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void btnSotrInsert_Click(object sender, EventArgs e)
+        {
+            StaffForm staff = new StaffForm();
+            procedure.spSotrudnik_Insert(Convert.ToInt32(tbNomberSotr.Text),tbFamSotr.Text,tbNamehSotr.Text,tbOtchSotr.Text, Convert.ToInt32(cmbIDDogovor.SelectedValue.ToString()), Convert.ToInt32(cmbTypeAccount.SelectedValue.ToString()));
+            staff.dgvSotr.DataSource = tables.dtSotrudnik;
+            tbNomberSotr.Clear();
+            tbFamSotr.Clear();
+            tbNamehSotr.Clear();
+            tbOtchSotr.Clear();
+        }
+
+        protected void btnSotrUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spSotrudnik_Update(Convert.ToInt32(NewIdSotr),
+                 Convert.ToInt32(tbNomberSotr.Text), tbFamSotr.Text, tbNamehSotr.Text, tbOtchSotr.Text, Convert.ToInt32(cmbIDDogovor.SelectedValue.ToString()), Convert.ToInt32(cmbTypeAccount.SelectedValue.ToString()));
+        }
+
+        protected void btnSotrDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление информации о сотрудниках " + tbFamSotr.Text + " " + tbNamehSotr.Text + " " + tbOtchSotr.Text +
+                 "?", "Удалить информацию о сотруднтиках ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spSotrudnik_Delete(Convert.ToInt32(
+                        NewIdSotr));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void btnAccountInsert_Click(object sender, EventArgs e)
+        {
+            StaffForm staff = new StaffForm();
+            procedure.spAccount_Insert(tbLogin.Text, tbParol.Text, Convert.ToInt32(cmbIDRole.SelectedValue.ToString()));
+            staff.dgvAccount.DataSource = tables.dtAccount;
+            tbLogin.Clear();
+            tbParol.Clear();
+        }
+
+        protected void btnAccountUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spAccount_Update(Convert.ToInt32(NewIdAccount),
+                 tbLogin.Text, tbParol.Text, Convert.ToInt32(cmbIDRole.SelectedValue.ToString()));
+        }
+
+        protected void btnAccountDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление информации об аккаунтах " +
+                 "?", "Удалить информацию об аккаунтах ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spAccount_Delete(Convert.ToInt32(
+                        NewIdSotr));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void btnInstructionsInsert_Click(object sender, EventArgs e)
+        {
+            IncomeForm income = new IncomeForm();
+            procedure.spInstr_raboty_kassira_insert(tbInstrRabKassir.Text);
+            income.dgvVidDocument.DataSource = tables.dtInstr_raboty_kassira;
+            tbInstrRabKassir.Clear();
+        }
+
+        protected void btnInstructionsUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spInstr_raboty_kassira_update(Convert.ToInt32(NewIdInstruction),
+                 tbInstrRabKassir.Text);
+        }
+
+        protected void btnInstructionsDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление информации о инструкции " + tbInstrRabKassir.Text +
+                 "?", "Удалить информацию о инструкции ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spInstr_rabory_kassira_delete(Convert.ToInt32(
+                        NewIdInstruction));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void btnPribil_i_rashodiInsert_Click(object sender, EventArgs e)
+        {
+            IncomeForm income = new IncomeForm();
+            procedure.spPribil_i_rashodi_Insert(Convert.ToByte(tbPribil.Text), Convert.ToByte(tbRashody.Text), tbNachOtcheta.Text, tbKonOtch.Text);
+            income.dgvPribil_i_rashodi.DataSource = tables.dtPribil_i_rashodi;
+            tbPribil.Clear();
+            tbRashody.Clear();
+            tbNachOtcheta.Clear();
+            tbKonOtch.Clear();
+        }
+
+        protected void btnPribil_i_rashodiUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spPribil_i_rashodi_Update(Convert.ToInt32(NewIdPribil_i_rashodi),
+                 Convert.ToByte(tbPribil.Text), Convert.ToByte(tbRashody.Text), tbNachOtcheta.Text, tbKonOtch.Text);
+        }
+
+        protected void btnPribil_i_rashodiDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление информации о прибыли и расходах " + 
+                 "?", "Удалить информацию о прибылях и инструкциях ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spPribil_i_rashodi_Delete(Convert.ToInt32(
+                        NewIdPribil_i_rashodi));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void btnCheck_vid_medInsert_Click(object sender, EventArgs e)
+        {
+            IncomeForm income = new IncomeForm();
+            procedure.spCheck_vid_med_Insert(Convert.ToInt32(tbNomberCheck.Text),tbNazvVidMed.Text, Convert.ToInt32(cmbIDDoljnost.SelectedValue.ToString()),
+                Convert.ToInt32(cmbIDSotrydnikC.SelectedValue.ToString()));
+            income.dgvCheckVidMed.DataSource = tables.dtCheck_vid_med;
+            tbNomberCheck.Clear();
+            tbNazvVidMed.Clear();
+        }
+
+        protected void btnCheck_vid_medUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spCheck_vid_med_Update(Convert.ToInt32(NewIdCheck_vid_med),
+                 Convert.ToInt32(tbNomberCheck.Text), tbNazvVidMed.Text, Convert.ToInt32(cmbIDDoljnost.SelectedValue.ToString()),
+                Convert.ToInt32(cmbIDSotrydnikC.SelectedValue.ToString()));
+        }
+
+        protected void btnCheck_vid_medDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление информации о чеке выданных медикаментах " + tbNomberCheck.Text +
+                 "?", "Удалить информацию о чеке выданных медикаментах ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spCheck_vid_med_Delete(Convert.ToInt32(
+                        NewIdCheck_vid_med));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void btnMedInsert_Click(object sender, EventArgs e)
+        {
+            IncomeForm income = new IncomeForm();
+            procedure.spMedicamenti_Insert(Convert.ToInt32(tbKolVidMed.Text), Convert.ToInt32(cmbIDVidCheck.SelectedValue.ToString()));
+            income.dgvMed.DataSource = tables.dtMedicamenti;
+            tbKolVidMed.Clear();
+        }
+
+        protected void btnMedUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spMedicamenti_Update(Convert.ToInt32(NewIdMed),
+                 Convert.ToInt32(tbKolVidMed.Text), Convert.ToInt32(cmbIDVidCheck.SelectedValue.ToString()));
+        }
+
+        protected void btnMedDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление информации о медикаментах " + tbNomberCheck.Text +
+                 "?", "Удалить информацию о медикаментах ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spMedicamenti_Delete(Convert.ToInt32(
+                        NewIdMed));
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+
+        protected void btnProdajaInsert_Click(object sender, EventArgs e)
+        {
+            IncomeForm income = new IncomeForm();
+            procedure.spProdaja_tovara_Insert(Convert.ToInt32(cmbIDMedicamentov.SelectedValue.ToString()), Convert.ToInt32(cmbIDInstrRabKass.SelectedValue.ToString()));
+            income.dgvProdajaTov.DataSource = tables.dtProdaja_tovara;
+        }
+
+        protected void btnProdajaUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spProdaja_tovara_Update(Convert.ToInt32(NewIdProdaja_tovara),
+                 Convert.ToInt32(cmbIDMedicamentov.SelectedValue.ToString()), Convert.ToInt32(cmbIDInstrRabKass.SelectedValue.ToString()));
+        }
+
+        protected void btnProdajaDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление информации о продажах " + tbNomberCheck.Text +
+                 "?", "Удалить информацию о продажах ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spProdaja_tovara_Delete(Convert.ToInt32(
+                        NewIdProdaja_tovara));
                     break;
                 case DialogResult.No:
                     break;

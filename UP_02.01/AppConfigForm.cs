@@ -80,6 +80,7 @@ namespace UP_02._01
         private void btSave_Click(object sender, EventArgs e)
         {
             DocumentSave();
+            Close();
         }
 
         public AppConfigForm()
