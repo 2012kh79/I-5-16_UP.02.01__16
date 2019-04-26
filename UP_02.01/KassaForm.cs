@@ -78,8 +78,8 @@ namespace UP_02._01
         private void btWordCheck_Click(object sender, EventArgs e)
         {
             
-            switch (Registry_Class.DirPath == "Empty"|| Registry_Class.OrganizationName == "Empty"
-                                                      || Registry_Class.DocBM == 0.0 || Registry_Class.DocTM == 0.0 ||
+            switch (Registry_Class.DirPath == "Empty"|| 
+                                                       Registry_Class.DocBM == 0.0 || Registry_Class.DocTM == 0.0 ||
                                                       Registry_Class.DocRM == 0.0 || Registry_Class.DocLM == 0.0)
             {
                 case (true):
@@ -99,6 +99,13 @@ namespace UP_02._01
                     btCheckWord.Enabled = true;
                     break;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainForm mainFrm = new MainForm();
+            this.Hide();
+            mainFrm.Show();
         }
     }
 }

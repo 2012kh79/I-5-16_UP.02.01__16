@@ -34,6 +34,7 @@
             this.pnCart = new System.Windows.Forms.Panel();
             this.dgvCart = new System.Windows.Forms.DataGridView();
             this.btCheckWord = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnSelection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelection)).BeginInit();
             this.pnCart.SuspendLayout();
@@ -62,7 +63,7 @@
             this.checkedListBox1.Items.AddRange(new object[] {
             "Обычный покупатель",
             "Льготник"});
-            this.checkedListBox1.Location = new System.Drawing.Point(733, 579);
+            this.checkedListBox1.Location = new System.Drawing.Point(729, 26);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(136, 34);
             this.checkedListBox1.TabIndex = 1;
@@ -85,7 +86,7 @@
             // 
             // btCheckWord
             // 
-            this.btCheckWord.Location = new System.Drawing.Point(635, 579);
+            this.btCheckWord.Location = new System.Drawing.Point(631, 26);
             this.btCheckWord.Name = "btCheckWord";
             this.btCheckWord.Size = new System.Drawing.Size(75, 23);
             this.btCheckWord.TabIndex = 2;
@@ -93,16 +94,28 @@
             this.btCheckWord.UseVisualStyleBackColor = true;
             this.btCheckWord.Click += new System.EventHandler(this.btWordCheck_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Назад";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // KassaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 661);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btCheckWord);
             this.Controls.Add(this.pnCart);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.pnSelection);
             this.Name = "KassaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Касса";
             this.Load += new System.EventHandler(this.KassaForm_Load);
             this.pnSelection.ResumeLayout(false);
@@ -121,5 +134,6 @@
         private System.Windows.Forms.Panel pnCart;
         private System.Windows.Forms.DataGridView dgvCart;
         private System.Windows.Forms.Button btCheckWord;
+        private System.Windows.Forms.Button button1;
     }
 }

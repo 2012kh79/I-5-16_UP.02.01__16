@@ -39,6 +39,7 @@
             this.dgvSotr = new System.Windows.Forms.DataGridView();
             this.tbpAccount = new System.Windows.Forms.TabPage();
             this.dgvAccount = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.tcnTable.SuspendLayout();
             this.tbpTabRabVremeny.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabel_rab)).BeginInit();
@@ -169,13 +170,25 @@
             this.dgvAccount.TabIndex = 1;
             this.dgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellClick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(16, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Назад";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // StaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 661);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tcnTable);
             this.Name = "StaffForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Персонал";
             this.Load += new System.EventHandler(this.StaffForm_Load);
             this.tcnTable.ResumeLayout(false);
@@ -194,17 +207,17 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tcnTable;
         private System.Windows.Forms.TabPage tbpTabRabVremeny;
-        private System.Windows.Forms.DataGridView dgvTabel_rab;
         private System.Windows.Forms.TabPage tbpDoljnost;
-        private System.Windows.Forms.DataGridView dgvOrder;
         private System.Windows.Forms.TabPage tabRole;
         private System.Windows.Forms.TabPage tabSotr;
         private System.Windows.Forms.TabPage tbpAccount;
-        private System.Windows.Forms.DataGridView dgvAccount;
-        private System.Windows.Forms.DataGridView dgvRole;
-        private System.Windows.Forms.DataGridView dgvSotr;
+        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TabControl tcnTable;
+        public System.Windows.Forms.DataGridView dgvTabel_rab;
+        public System.Windows.Forms.DataGridView dgvOrder;
+        public System.Windows.Forms.DataGridView dgvRole;
+        public System.Windows.Forms.DataGridView dgvSotr;
+        public System.Windows.Forms.DataGridView dgvAccount;
     }
 }

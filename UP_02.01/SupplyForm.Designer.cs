@@ -39,6 +39,7 @@
             this.dgvPostavshiki = new System.Windows.Forms.DataGridView();
             this.tabPostavka = new System.Windows.Forms.TabPage();
             this.dgvPostavki = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.tcnTable.SuspendLayout();
             this.tbpTovarNaSklade.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTovar_na_sklade)).BeginInit();
@@ -59,7 +60,7 @@
             this.tcnTable.Controls.Add(this.tbpFirmPostavki);
             this.tcnTable.Controls.Add(this.tbpPostavshik);
             this.tcnTable.Controls.Add(this.tabPostavka);
-            this.tcnTable.Location = new System.Drawing.Point(12, 12);
+            this.tcnTable.Location = new System.Drawing.Point(12, 41);
             this.tcnTable.Name = "tcnTable";
             this.tcnTable.SelectedIndex = 0;
             this.tcnTable.Size = new System.Drawing.Size(860, 325);
@@ -171,13 +172,25 @@
             this.dgvPostavki.TabIndex = 1;
             this.dgvPostavki.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPostavki_CellClick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Назад";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SupplyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 661);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tcnTable);
             this.Name = "SupplyForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Поставка";
             this.Load += new System.EventHandler(this.SupplyForm_Load);
             this.tcnTable.ResumeLayout(false);
@@ -199,14 +212,15 @@
 
         private System.Windows.Forms.TabControl tcnTable;
         private System.Windows.Forms.TabPage tbpTovarNaSklade;
-        private System.Windows.Forms.DataGridView dgvTovar_na_sklade;
         public System.Windows.Forms.TabPage tbpPostTovar;
-        private System.Windows.Forms.DataGridView dgvPost_tovar;
         private System.Windows.Forms.TabPage tbpFirmPostavki;
-        private System.Windows.Forms.DataGridView dgvFirma_postavki;
         private System.Windows.Forms.TabPage tbpPostavshik;
-        private System.Windows.Forms.DataGridView dgvPostavshiki;
         private System.Windows.Forms.TabPage tabPostavka;
-        private System.Windows.Forms.DataGridView dgvPostavki;
+        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.DataGridView dgvTovar_na_sklade;
+        public System.Windows.Forms.DataGridView dgvPost_tovar;
+        public System.Windows.Forms.DataGridView dgvFirma_postavki;
+        public System.Windows.Forms.DataGridView dgvPostavshiki;
+        public System.Windows.Forms.DataGridView dgvPostavki;
     }
 }

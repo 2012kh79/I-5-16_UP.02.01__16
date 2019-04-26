@@ -39,6 +39,7 @@
             this.dgvMed = new System.Windows.Forms.DataGridView();
             this.tbpProdajaTovara = new System.Windows.Forms.TabPage();
             this.dgvProdajaTov = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.tcnTable.SuspendLayout();
             this.tbpinstruction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVidDocument)).BeginInit();
@@ -168,13 +169,25 @@
             this.dgvProdajaTov.TabIndex = 3;
             this.dgvProdajaTov.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdajaTov_CellClick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Назад";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // IncomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 661);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tcnTable);
             this.Name = "IncomeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Доходы и расходы";
             this.Load += new System.EventHandler(this.IncomeForm_Load);
             this.tcnTable.ResumeLayout(false);
@@ -193,17 +206,17 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tcnTable;
         private System.Windows.Forms.TabPage tbpinstruction;
-        private System.Windows.Forms.DataGridView dgvVidDocument;
         private System.Windows.Forms.TabPage tbpIncome;
-        private System.Windows.Forms.DataGridView dgvPribil_i_rashodi;
         private System.Windows.Forms.TabPage tbpCheckVidMed;
-        private System.Windows.Forms.DataGridView dgvCheckVidMed;
         private System.Windows.Forms.TabPage tbpMedicament;
-        private System.Windows.Forms.DataGridView dgvMed;
         private System.Windows.Forms.TabPage tbpProdajaTovara;
-        private System.Windows.Forms.DataGridView dgvProdajaTov;
+        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TabControl tcnTable;
+        public System.Windows.Forms.DataGridView dgvVidDocument;
+        public System.Windows.Forms.DataGridView dgvPribil_i_rashodi;
+        public System.Windows.Forms.DataGridView dgvCheckVidMed;
+        public System.Windows.Forms.DataGridView dgvMed;
+        public System.Windows.Forms.DataGridView dgvProdajaTov;
     }
 }

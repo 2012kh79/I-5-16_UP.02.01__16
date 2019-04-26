@@ -26,7 +26,6 @@ namespace UP_02._01
             switch (AuthorizForm.Role_ID)
             {
                 case 1:
-
                     classDynamicObjects.MainFormFill(false, false, false, false, true, false);
                     break;
                 case 2:

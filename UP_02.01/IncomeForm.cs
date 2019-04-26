@@ -119,8 +119,8 @@ namespace UP_02._01
                     dgvMed.Columns[0].Visible = false;
                     dgvMed.Columns[1].HeaderText = "Количество выданных медикаментов";
                     dgvMed.Columns[2].HeaderText = "Чек выданных медикаментов";
-                    dgvMed.Columns[4].HeaderText = "Номер чека";
-                    dgvMed.Columns[5].HeaderText = "Название медикамента";
+                    dgvMed.Columns[4].Visible = false;
+                    dgvMed.Columns[5].Visible = false;
                     dgvMed.Columns[3].Visible = false;
                 }
                 catch
@@ -143,8 +143,8 @@ namespace UP_02._01
                     dgvProdajaTov.Columns[0].Visible = false;
                     dgvProdajaTov.Columns[1].HeaderText = "Номер медикамента";
                     dgvProdajaTov.Columns[2].HeaderText = "Номер инструкции";
-                    dgvProdajaTov.Columns[4].HeaderText = "Количество выданных медикаментов";
-                    dgvProdajaTov.Columns[6].HeaderText = "Инструкция";
+                    dgvProdajaTov.Columns[4].Visible = false;
+                    dgvProdajaTov.Columns[6].Visible = false;
                     dgvProdajaTov.Columns[3].Visible = false;
                     dgvProdajaTov.Columns[5].Visible = false;
                 }
@@ -193,6 +193,7 @@ namespace UP_02._01
                         Control Ctrl1 = classIncomeForm.pnlTextBox.Controls[i];
                         classIncomeForm.pnlTextBox.Controls.RemoveAt(i);
                         classIncomeForm.IncomeForm_med_Fill();
+                        cmbComboBox_CheckFill();
                     }
                     break;
                 case 4:
@@ -201,6 +202,8 @@ namespace UP_02._01
                         Control Ctrl1 = classIncomeForm.pnlTextBox.Controls[i];
                         classIncomeForm.pnlTextBox.Controls.RemoveAt(i);
                         classIncomeForm.IncomeForm_Prodaja_tovara_Fill();
+                        cmbComboBox_MedFill();
+                        cmbInstrFill();
                     }
                     break;
             }
@@ -227,7 +230,7 @@ namespace UP_02._01
             classIncomeForm.tbNomberCheckVM.Text = dgvCheckVidMed.CurrentRow.Cells[1].Value.ToString();
             classIncomeForm.tbNazvVidMed.Text = dgvCheckVidMed.CurrentRow.Cells[2].Value.ToString();
             classIncomeForm.cmbIDDoljnost.SelectedValue = Convert.ToInt32(dgvCheckVidMed.CurrentRow.Cells[3].Value);
-            classIncomeForm.cmbIDSotrydnik.SelectedValue = Convert.ToInt32(dgvCheckVidMed.CurrentRow.Cells[4].Value);
+            classIncomeForm.cmbIDSotrydnikC.SelectedValue = Convert.ToInt32(dgvCheckVidMed.CurrentRow.Cells[4].Value);
         }
 
         private void dgvMed_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -240,8 +243,8 @@ namespace UP_02._01
         private void dgvProdajaTov_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             classIncomeForm.NewIdProdaja_tovara = (dgvProdajaTov.CurrentRow.Index + 1).ToString();
-            classIncomeForm.cmbIDMedicamentov.SelectedValue = Convert.ToInt32(dgvMed.CurrentRow.Cells[1].Value);
-            classIncomeForm.cmbIDInstrRabKass.SelectedValue = Convert.ToInt32(dgvMed.CurrentRow.Cells[2].Value);
+            classIncomeForm.cmbIDMedicamentov.SelectedValue = Convert.ToInt32(dgvProdajaTov.CurrentRow.Cells[1].Value);
+            classIncomeForm.cmbIDInstrRabKass.SelectedValue = Convert.ToInt32(dgvProdajaTov.CurrentRow.Cells[2].Value);
         }
 
         public void cmbComboBox_DoljFill()
@@ -251,29 +254,10 @@ namespace UP_02._01
                 try
                 {
                     DataBaseTables tables_dolj = new DataBaseTables();
-                    //tables.dtMedicamentiFill();
-                    //tables.dtInstr_raboty_kassiraFill();
-                    //tables.dtCheck_vid_medFill();
-                    //tables_check.dtSotrudnikFill();
                     tables_dolj.dtDoljnostFill();
-                    //tables_check.dtSotrudnikFill();
-                    //classIncomeForm.cmbIDSotrydnik.DataSource = tables.dtSotrudnik;
                     classIncomeForm.cmbIDDoljnost.DataSource = tables_dolj.dtDoljnost;
-
-                    //classIncomeForm.cmbIDMedicamentov.DataSource = tables.dtMedicamenti;
-                    //classIncomeForm.cmbIDInstrRabKass.DataSource = tables.dtInstr_raboty_kassira;
-                    //classIncomeForm.cmbIDVidCheck.DataSource = tables.dtCheck_vid_med;
-
-                    //classIncomeForm.cmbIDMedicamentov.DisplayMember = "Mediacament";
-                    //classIncomeForm.cmbIDMedicamentov.ValueMember = "ID_medicament";
-                    //classIncomeForm.cmbIDInstrRabKass.DisplayMember = "Instr_raboty_kassira";
-                    //classIncomeForm.cmbIDInstrRabKass.ValueMember = "ID_Instr_raboty_kassira";
-                    //classIncomeForm.cmbIDVidCheck.DisplayMember = "Check_vid_med";
-                    //classIncomeForm.cmbIDVidCheck.ValueMember = "ID_Check_vid_med";
                     classIncomeForm.cmbIDDoljnost.DisplayMember = "doljnost";
                     classIncomeForm.cmbIDDoljnost.ValueMember = "id_doljnost";
-                    //classIncomeForm.cmbIDSotrydnik.DisplayMember = "sotrudnik";
-                    //classIncomeForm.cmbIDSotrydnik.ValueMember = "id_sotrudnik";
                 }
                 catch
                 {
@@ -290,29 +274,10 @@ namespace UP_02._01
                 try
                 {
                     DataBaseTables tables_sotr = new DataBaseTables();
-                    //tables.dtMedicamentiFill();
-                    //tables.dtInstr_raboty_kassiraFill();
-                    //tables.dtCheck_vid_medFill();
                     tables_sotr.dtSotrudnikFill();
-                    //tables_sotr.dtDoljnostFill();
-                    //tables_check.dtSotrudnikFill();
-                    classIncomeForm.cmbIDSotrydnik.DataSource = tables_sotr.dtSotrudnik;
-                    //classIncomeForm.cmbIDDoljnost.DataSource = tables_sotr.dtDoljnost;
-
-                    //classIncomeForm.cmbIDMedicamentov.DataSource = tables.dtMedicamenti;
-                    //classIncomeForm.cmbIDInstrRabKass.DataSource = tables.dtInstr_raboty_kassira;
-                    //classIncomeForm.cmbIDVidCheck.DataSource = tables.dtCheck_vid_med;
-
-                    //classIncomeForm.cmbIDMedicamentov.DisplayMember = "Mediacament";
-                    //classIncomeForm.cmbIDMedicamentov.ValueMember = "ID_medicament";
-                    //classIncomeForm.cmbIDInstrRabKass.DisplayMember = "Instr_raboty_kassira";
-                    //classIncomeForm.cmbIDInstrRabKass.ValueMember = "ID_Instr_raboty_kassira";
-                    //classIncomeForm.cmbIDVidCheck.DisplayMember = "Check_vid_med";
-                    //classIncomeForm.cmbIDVidCheck.ValueMember = "ID_Check_vid_med";
-                    //classIncomeForm.cmbIDDoljnost.DisplayMember = "doljnost";
-                    //classIncomeForm.cmbIDDoljnost.ValueMember = "id_doljnost";
-                    classIncomeForm.cmbIDSotrydnik.DisplayMember = "sotrudnik";
-                    classIncomeForm.cmbIDSotrydnik.ValueMember = "id_sotrudnik";
+                    classIncomeForm.cmbIDSotrydnikC.DataSource = tables_sotr.dtSotrudnik;
+                    classIncomeForm.cmbIDSotrydnikC.DisplayMember = "sotrudnik";
+                    classIncomeForm.cmbIDSotrydnikC.ValueMember = "id_sotrudnik";
                 }
                 catch
                 {
@@ -320,6 +285,76 @@ namespace UP_02._01
                 }
             };
             Invoke(action);
+        }
+
+        public void cmbComboBox_CheckFill()
+        {
+            Action action = () =>
+            {
+                try
+                {
+                    DataBaseTables tables_check = new DataBaseTables();
+                    tables_check.dtCheck_vid_medFill();
+                    classIncomeForm.cmbIDVidCheck.DataSource = tables_check.dtCheck_vid_med;
+                    classIncomeForm.cmbIDVidCheck.DisplayMember = "check_vid_med";
+                    classIncomeForm.cmbIDVidCheck.ValueMember = "id_check_vid_med";
+
+                }
+                catch
+                {
+
+                }
+            };
+            Invoke(action);
+        }
+
+        public void cmbComboBox_MedFill()
+        {
+            Action action = () =>
+            {
+                try
+                {
+                    DataBaseTables tables_med = new DataBaseTables();
+                    tables_med.dtMedicamentiFill();
+                    classIncomeForm.cmbIDMedicamentov.DataSource = tables_med.dtMedicamenti;
+                    classIncomeForm.cmbIDMedicamentov.DisplayMember = "medicamenti";
+                    classIncomeForm.cmbIDMedicamentov.ValueMember = "id_medicamenti";
+
+                }
+                catch
+                {
+
+                }
+            };
+            Invoke(action);
+        }
+
+        public void cmbInstrFill()
+        {
+            Action action = () =>
+            {
+                try
+                {
+                    DataBaseTables tables_instr = new DataBaseTables();
+                    tables_instr.dtInstr_raboty_kassiraFill();
+                    classIncomeForm.cmbIDInstrRabKass.DataSource = tables_instr.dtInstr_raboty_kassira;
+                    classIncomeForm.cmbIDInstrRabKass.DisplayMember = "instr_raboty_kassira";
+                    classIncomeForm.cmbIDInstrRabKass.ValueMember = "id_instr_raboty_kassira";
+
+                }
+                catch
+                {
+
+                }
+            };
+            Invoke(action);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainForm mainFrm = new MainForm();
+            this.Hide();
+            mainFrm.Show();
         }
     }
 }

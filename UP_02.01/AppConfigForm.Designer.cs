@@ -173,6 +173,7 @@
             this.Controls.Add(this.nudLeftMerg);
             this.Controls.Add(this.nudTopMerg);
             this.Name = "AppConfigForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AppConfig";
             this.Load += new System.EventHandler(this.AppConfig_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudTopMerg)).EndInit();

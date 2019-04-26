@@ -47,8 +47,8 @@ namespace UP_02._01
                         break;
                 }
                 MainForm mainFrm = new MainForm();
-                mainFrm.Show();
                 this.Hide();
+                mainFrm.Show();
             }
         }
 

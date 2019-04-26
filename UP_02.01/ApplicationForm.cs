@@ -114,5 +114,12 @@ namespace UP_02._01
         {
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainForm mainFrm = new MainForm();
+            this.Hide();
+            mainFrm.Show();
+        }
     }
 }

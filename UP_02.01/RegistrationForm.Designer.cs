@@ -147,6 +147,7 @@
             this.Controls.Add(this.lbLogin);
             this.Controls.Add(this.lbAuth);
             this.Name = "RegistrationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
             this.ResumeLayout(false);
             this.PerformLayout();
