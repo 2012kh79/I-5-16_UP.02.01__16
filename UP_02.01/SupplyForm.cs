@@ -216,45 +216,169 @@ namespace UP_02._01
         private void dgvTovar_na_sklade_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             classDynamicObjects.NewIdTovar_na_sklade = (dgvTovar_na_sklade.CurrentRow.Index + 1).ToString();//Данные передаются ID при нажатии на строку
-            classDynamicObjects.txSrokHran.Text = dgvTovar_na_sklade.CurrentRow.Cells[1].Value.ToString();//Данные передаются TextBox при нажатии на строку
-            classDynamicObjects.txKolTovNaSklade.Text = dgvTovar_na_sklade.CurrentRow.Cells[2].Value.ToString();
-            classDynamicObjects.txNomSkafa.Text = dgvTovar_na_sklade.CurrentRow.Cells[3].Value.ToString();
-            classDynamicObjects.txNomPolki.Text = dgvTovar_na_sklade.CurrentRow.Cells[4].Value.ToString();
+
+            DataGridViewRow currentRow = new DataGridViewRow();
+            if (currentRow.Cells.Count > 0)
+            {
+                bool rowIsEmpty = true;
+
+                foreach (DataGridViewCell cell in currentRow.Cells)
+                {
+                    if (cell.Value != null)
+                    {
+                        rowIsEmpty = false;
+                        break;
+                    }
+                }
+
+                if (rowIsEmpty)
+                {
+                    MessageBox.Show("Select a non null row");
+                }
+                else
+                {
+                    classDynamicObjects.txSrokHran.Text = dgvTovar_na_sklade.CurrentRow.Cells[1].Value.ToString();//Данные передаются TextBox при нажатии на строку
+                    classDynamicObjects.txKolTovNaSklade.Text = dgvTovar_na_sklade.CurrentRow.Cells[2].Value.ToString();
+                    classDynamicObjects.txNomSkafa.Text = dgvTovar_na_sklade.CurrentRow.Cells[3].Value.ToString();
+                    classDynamicObjects.txNomPolki.Text = dgvTovar_na_sklade.CurrentRow.Cells[4].Value.ToString();
+                }
+            }
+
+            
         }
 
         private void dgvPost_tovar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             classDynamicObjects.NewIdPost_tovar = (dgvPost_tovar.CurrentRow.Index + 1).ToString();
-            classDynamicObjects.txNaimPostTovar.Text = dgvPost_tovar.CurrentRow.Cells[1].Value.ToString();
-            classDynamicObjects.txKolPostTovar.Text = dgvPost_tovar.CurrentRow.Cells[2].Value.ToString();
-            classDynamicObjects.txTsenaPostTovara.Text = dgvPost_tovar.CurrentRow.Cells[3].Value.ToString();
+
+            DataGridViewRow currentRow = new DataGridViewRow();
+            if (currentRow.Cells.Count > 0)
+            {
+                bool rowIsEmpty = true;
+
+                foreach (DataGridViewCell cell in currentRow.Cells)
+                {
+                    if (cell.Value != null)
+                    {
+                        rowIsEmpty = false;
+                        break;
+                    }
+                }
+
+                if (rowIsEmpty)
+                {
+                    MessageBox.Show("Select a non null row");
+                }
+                else
+                {
+
+                    classDynamicObjects.txNaimPostTovar.Text = dgvPost_tovar.CurrentRow.Cells[1].Value.ToString();
+                    classDynamicObjects.txKolPostTovar.Text = dgvPost_tovar.CurrentRow.Cells[2].Value.ToString();
+                    classDynamicObjects.txTsenaPostTovara.Text = dgvPost_tovar.CurrentRow.Cells[3].Value.ToString();
+                }
+            }
+
         }
 
         private void dgvFirma_postavki_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             classDynamicObjects.NewIdFirma_postavki = (dgvFirma_postavki.CurrentRow.Index + 1).ToString();
-            classDynamicObjects.txNazvFirmPost.Text = dgvFirma_postavki.CurrentRow.Cells[1].Value.ToString();
-            classDynamicObjects.txIndex.Text = dgvFirma_postavki.CurrentRow.Cells[2].Value.ToString();
-            classDynamicObjects.txNasPunkt.Text = dgvFirma_postavki.CurrentRow.Cells[3].Value.ToString();
-            classDynamicObjects.txUlitsa.Text = dgvFirma_postavki.CurrentRow.Cells[4].Value.ToString();
-            classDynamicObjects.txDom.Text = dgvFirma_postavki.CurrentRow.Cells[5].Value.ToString();
+            DataGridViewRow currentRow = new DataGridViewRow();
+            if (currentRow.Cells.Count > 0)
+            {
+                bool rowIsEmpty = true;
+
+                foreach (DataGridViewCell cell in currentRow.Cells)
+                {
+                    if (cell.Value != null)
+                    {
+                        rowIsEmpty = false;
+                        break;
+                    }
+                }
+
+                if (rowIsEmpty)
+                {
+                    MessageBox.Show("Select a non null row");
+                }
+                else
+                {
+
+                    classDynamicObjects.txNazvFirmPost.Text = dgvFirma_postavki.CurrentRow.Cells[1].Value.ToString();
+                    classDynamicObjects.txIndex.Text = dgvFirma_postavki.CurrentRow.Cells[2].Value.ToString();
+                    classDynamicObjects.txNasPunkt.Text = dgvFirma_postavki.CurrentRow.Cells[3].Value.ToString();
+                    classDynamicObjects.txUlitsa.Text = dgvFirma_postavki.CurrentRow.Cells[4].Value.ToString();
+                    classDynamicObjects.txDom.Text = dgvFirma_postavki.CurrentRow.Cells[5].Value.ToString();
+                }
+            }
+
         }
 
         private void dgvPostavshiki_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             classDynamicObjects.NewIdPostavshiki = (dgvPostavshiki.CurrentRow.Index + 1).ToString();
-            classDynamicObjects.txFamPost.Text = dgvPostavshiki.CurrentRow.Cells[1].Value.ToString();
-            classDynamicObjects.txNamePost.Text = dgvPostavshiki.CurrentRow.Cells[2].Value.ToString();
-            classDynamicObjects.txOtchPost.Text = dgvPostavshiki.CurrentRow.Cells[3].Value.ToString();
-            classDynamicObjects.cmbIDFirmPost.SelectedValue = Convert.ToInt32(dgvPostavshiki.CurrentRow.Cells[4].Value);//Данные передаются ComboBox при нажатии на строку
+            DataGridViewRow currentRow = new DataGridViewRow();
+            if (currentRow.Cells.Count > 0)
+            {
+                bool rowIsEmpty = true;
+
+                foreach (DataGridViewCell cell in currentRow.Cells)
+                {
+                    if (cell.Value != null)
+                    {
+                        rowIsEmpty = false;
+                        break;
+                    }
+                }
+
+                if (rowIsEmpty)
+                {
+                    MessageBox.Show("Select a non null row");
+                }
+                else
+                {
+                    classDynamicObjects.txFamPost.Text = dgvPostavshiki.CurrentRow.Cells[1].Value.ToString();
+                    classDynamicObjects.txNamePost.Text = dgvPostavshiki.CurrentRow.Cells[2].Value.ToString();
+                    classDynamicObjects.txOtchPost.Text = dgvPostavshiki.CurrentRow.Cells[3].Value.ToString();
+                    classDynamicObjects.cmbIDFirmPost.SelectedValue = Convert.ToInt32(dgvPostavshiki.CurrentRow.Cells[4].Value);//Данные передаются ComboBox при нажатии на строку
+                }
+            }
+            
+
+          
         }
 
         private void dgvPostavki_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             classDynamicObjects.NewIdPostavki = (dgvPostavki.CurrentRow.Index + 1).ToString();
-            classDynamicObjects.cmbIDPostavshik.SelectedValue = Convert.ToInt32(dgvPostavki.CurrentRow.Cells[1].Value);
-            classDynamicObjects.cmbIDTovNaSklade.SelectedValue = Convert.ToInt32(dgvPostavki.CurrentRow.Cells[2].Value);
-            classDynamicObjects.cmbIDPostTovara.SelectedValue = Convert.ToInt32(dgvPostavki.CurrentRow.Cells[3].Value);
+            DataGridViewRow currentRow = new DataGridViewRow();
+
+            if (currentRow.Cells.Count > 0)
+            {
+                bool rowIsEmpty = true;
+
+                foreach (DataGridViewCell cell in currentRow.Cells)
+                {
+                    if (cell.Value != null)
+                    {
+                        rowIsEmpty = false;
+                        break;
+                    }
+                }
+
+                if (rowIsEmpty)
+                {
+                    MessageBox.Show("Select a non null row");
+                }
+                else
+                {
+                    classDynamicObjects.cmbIDPostavshik.SelectedValue = Convert.ToInt32(dgvPostavki.CurrentRow.Cells[1].Value);
+                    classDynamicObjects.cmbIDTovNaSklade.SelectedValue = Convert.ToInt32(dgvPostavki.CurrentRow.Cells[2].Value);
+                    classDynamicObjects.cmbIDPostTovara.SelectedValue = Convert.ToInt32(dgvPostavki.CurrentRow.Cells[3].Value);
+                }
+            }
+           
         }
 
         public void cmbFirmaPostavkiFill()//Метод отвечает за заполнение ComboBox данными
