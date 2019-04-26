@@ -261,7 +261,7 @@
             // 
             this.tcnDocument.Controls.Add(this.tbpWord);
             this.tcnDocument.Controls.Add(this.tbpExcel);
-            this.tcnDocument.Location = new System.Drawing.Point(760, 568);
+            this.tcnDocument.Location = new System.Drawing.Point(775, 12);
             this.tcnDocument.Name = "tcnDocument";
             this.tcnDocument.SelectedIndex = 0;
             this.tcnDocument.Size = new System.Drawing.Size(97, 62);
@@ -280,7 +280,7 @@
             // 
             // btKadr_UchetWord
             // 
-            this.btKadr_UchetWord.Location = new System.Drawing.Point(8, 7);
+            this.btKadr_UchetWord.Location = new System.Drawing.Point(6, 7);
             this.btKadr_UchetWord.Name = "btKadr_UchetWord";
             this.btKadr_UchetWord.Size = new System.Drawing.Size(75, 23);
             this.btKadr_UchetWord.TabIndex = 0;
@@ -311,7 +311,7 @@
             // 
             // btVih_DocWord
             // 
-            this.btVih_DocWord.Location = new System.Drawing.Point(766, 508);
+            this.btVih_DocWord.Location = new System.Drawing.Point(671, 17);
             this.btVih_DocWord.Name = "btVih_DocWord";
             this.btVih_DocWord.Size = new System.Drawing.Size(78, 53);
             this.btVih_DocWord.TabIndex = 2;
@@ -372,7 +372,6 @@
         private System.Windows.Forms.TabControl tcnTable;
         private System.Windows.Forms.TabPage tbpDocument;
         private System.Windows.Forms.TabPage tbpOrder;
-        private System.Windows.Forms.DataGridView dgvVidDocument;
         private System.Windows.Forms.DataGridView dgvDogovor;
         private System.Windows.Forms.TabControl tcnDocument;
         private System.Windows.Forms.TabPage tbpWord;
@@ -393,5 +392,6 @@
         private System.Windows.Forms.DataGridView dgvVihCocument;
         private System.Windows.Forms.Button btVih_DocWord;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.DataGridView dgvVidDocument;
     }
 }

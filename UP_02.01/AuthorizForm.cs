@@ -27,14 +27,14 @@ namespace UP_02._01
         private void btReg_Click(object sender, EventArgs e)
         {
             RegistrationForm regForm = new RegistrationForm();
-            regForm.Show();
-            this.Hide();
+            regForm.ShowDialog();
+           
         }
 
         private void btVhod_Click(object sender, EventArgs e)
         {
             Registry_Class registry = new Registry_Class();
-            registry.Registry_Set("31.31.198.31", "u0695785_TatarBase", "u0695785_TatarBase", "TatarBase123IIL");
+            //registry.Registry_Set("31.31.198.31", "u0695785_TatarBase", "u0695785_TatarBase", "TatarBase123IIL");
             Authoriz(tbLogin.Text, tbPass.Text);
             if (Role_ID != 0)
             {
@@ -79,6 +79,13 @@ namespace UP_02._01
             if ((char)e.KeyChar == (Char)Keys.Back) return;
             if (char.IsDigit(e.KeyChar) || char.IsLetter(e.KeyChar)) return;
             e.Handled = true;
+        }
+
+        private void AuthorizForm_Load(object sender, EventArgs e)
+        {
+            Registry_Class regCl = new Registry_Class();
+            regCl.Registry_Get();
+            
         }
     }
 }

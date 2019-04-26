@@ -23,10 +23,9 @@ namespace UP_02._01
             }
             catch
             {
-                key.SetValue("DS", "Empty");
-                key.SetValue("IC", "Empty");
-                key.SetValue("UI", "Empty");
-                key.SetValue("PW", "Empty");
+                ConnectionForm conFrm = new ConnectionForm();
+                conFrm.ShowDialog();
+                
             }
             finally
             {

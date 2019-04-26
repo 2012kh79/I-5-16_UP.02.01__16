@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -66,6 +67,7 @@ namespace UP_02._01
                 try
                 {
                     tables.dtDoljnostFill();
+                    tables.dependency.OnChange += onChangeOrder;
                     dgvOrder.DataSource = tables.dtDoljnost;
                     dgvOrder.Columns[0].Visible = false;
                     dgvOrder.Columns[1].HeaderText = "Занимаемая должность";
@@ -134,13 +136,24 @@ namespace UP_02._01
             Invoke(action);
         }
 
+
+        
+
+        public void onChangeOrder(object sender, SqlNotificationEventArgs e)
+        {
+            if (e.Info != SqlNotificationInfo.Invalid)
+                dgvOrderFill();
+        }
+
         public void dgvAccountFill()
         {
             Action action = () =>
             {
                 try
                 {
+
                     tables.dtAccountFill();
+                   
                     dgvAccount.DataSource = tables.dtAccount;
                     dgvAccount.Columns[0].Visible = false;
                     dgvAccount.Columns[1].HeaderText = "Логин";
@@ -209,43 +222,58 @@ namespace UP_02._01
 
         private void dgvTabel_rab_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            classStaffForm.NewIdTab_rab_vremeni = (dgvTabel_rab.CurrentRow.Index + 1).ToString();//Передаем данные столбца ID ключу
-            classStaffForm.tbOtrDays.Text = dgvTabel_rab.CurrentRow.Cells[1].Value.ToString();//Передаем данные столбца TextBox
-            classStaffForm.tbVixDays.Text = dgvTabel_rab.CurrentRow.Cells[2].Value.ToString();
-            classStaffForm.tbKomandirivki.Text = dgvTabel_rab.CurrentRow.Cells[3].Value.ToString();
-            classStaffForm.tbOtpuska.Text = dgvTabel_rab.CurrentRow.Cells[4].Value.ToString();
+          
+           
+                    classStaffForm.tbOtrDays.Text = dgvTabel_rab.CurrentRow.Cells[1].Value.ToString();//Передаем данные столбца TextBox
+                    classStaffForm.tbVixDays.Text = dgvTabel_rab.CurrentRow.Cells[2].Value.ToString();
+                    classStaffForm.tbKomandirivki.Text = dgvTabel_rab.CurrentRow.Cells[3].Value.ToString();
+                    classStaffForm.tbOtpuska.Text = dgvTabel_rab.CurrentRow.Cells[4].Value.ToString();
+               
+            
         }
 
         private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            classStaffForm.NewIdDolj = (dgvOrder.CurrentRow.Index + 1).ToString();
-            classStaffForm.tbDoljnost.Text = dgvOrder.CurrentRow.Cells[1].Value.ToString();
+                    classStaffForm.NewIdDolj = (dgvOrder.CurrentRow.Index + 1).ToString();
+                    classStaffForm.tbDoljnost.Text = dgvOrder.CurrentRow.Cells[1].Value.ToString();
+              
+           
         }
 
         private void dgvRole_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            classStaffForm.NewIdRole = (dgvRole.CurrentRow.Index + 1).ToString();
-            classStaffForm.tbRole.Text = dgvRole.CurrentRow.Cells[1].Value.ToString();
+            
+                    classStaffForm.NewIdRole = (dgvRole.CurrentRow.Index + 1).ToString();
+                    classStaffForm.tbRole.Text = dgvRole.CurrentRow.Cells[1].Value.ToString();
+              
+            
         }
 
         private void dgvSotr_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            classStaffForm.NewIdSotr = (dgvSotr.CurrentRow.Index + 1).ToString();
-            classStaffForm.tbNomberSotr.Text = dgvSotr.CurrentRow.Cells[1].Value.ToString();
-            classStaffForm.cmbIDDogovor.SelectedValue = Convert.ToInt32(dgvSotr.CurrentRow.Cells[6].Value);//Передаем данные столбца ComboBox
-            classStaffForm.cmbTypeAccount.SelectedValue = Convert.ToInt32(dgvSotr.CurrentRow.Cells[7].Value);
-            classStaffForm.cmbIDTabVremya.SelectedValue = Convert.ToInt32(dgvSotr.CurrentRow.Cells[5].Value);
-            classStaffForm.tbFamSotr.Text = dgvSotr.CurrentRow.Cells[2].Value.ToString();
-            classStaffForm.tbNamehSotr.Text = dgvSotr.CurrentRow.Cells[3].Value.ToString();
-            classStaffForm.tbOtchSotr.Text = dgvSotr.CurrentRow.Cells[4].Value.ToString();
+           
+                    classStaffForm.NewIdSotr = (dgvSotr.CurrentRow.Index + 1).ToString();
+                    classStaffForm.tbNomberSotr.Text = dgvSotr.CurrentRow.Cells[1].Value.ToString();
+                    classStaffForm.cmbIDDogovor.SelectedValue = Convert.ToInt32(dgvSotr.CurrentRow.Cells[6].Value);//Передаем данные столбца ComboBox
+                    classStaffForm.cmbTypeAccount.SelectedValue = Convert.ToInt32(dgvSotr.CurrentRow.Cells[7].Value);
+                    classStaffForm.cmbIDTabVremya.SelectedValue = Convert.ToInt32(dgvSotr.CurrentRow.Cells[5].Value);
+                    classStaffForm.tbFamSotr.Text = dgvSotr.CurrentRow.Cells[2].Value.ToString();
+                    classStaffForm.tbNamehSotr.Text = dgvSotr.CurrentRow.Cells[3].Value.ToString();
+                    classStaffForm.tbOtchSotr.Text = dgvSotr.CurrentRow.Cells[4].Value.ToString();
+              
+
+          
         }
 
         private void dgvAccount_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            classStaffForm.NewIdAccount = (dgvAccount.CurrentRow.Index + 1).ToString();
-            classStaffForm.tbLogin.Text = dgvAccount.CurrentRow.Cells[1].Value.ToString();
-            classStaffForm.tbParol.Text = dgvAccount.CurrentRow.Cells[2].Value.ToString();
-            classStaffForm.cmbIDRole.SelectedValue = Convert.ToInt32(dgvAccount.CurrentRow.Cells[3].Value);
+            
+                    classStaffForm.NewIdAccount = (dgvAccount.CurrentRow.Index + 1).ToString();
+                    classStaffForm.tbLogin.Text = dgvAccount.CurrentRow.Cells[1].Value.ToString();
+                    classStaffForm.tbParol.Text = dgvAccount.CurrentRow.Cells[2].Value.ToString();
+                    classStaffForm.cmbIDRole.SelectedValue = Convert.ToInt32(dgvAccount.CurrentRow.Cells[3].Value);
+                
+           
         }
 
         public void cmbDogovorFill()//Заполнение ComboBox

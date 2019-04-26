@@ -211,40 +211,56 @@ namespace UP_02._01
 
         private void dgvVidDocument_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            classIncomeForm.NewIdInstruction = (dgvVidDocument.CurrentRow.Index + 1).ToString();
-            classIncomeForm.tbInstrRabKassir.Text = dgvVidDocument.CurrentRow.Cells[1].Value.ToString();
+            
+          
+          
+                    classIncomeForm.NewIdInstruction = (dgvVidDocument.CurrentRow.Index + 1).ToString();
+                    classIncomeForm.tbInstrRabKassir.Text = dgvVidDocument.CurrentRow.Cells[1].Value.ToString();
+             
+            
         }
 
         private void dgvPribil_i_rashodi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            classIncomeForm.NewIdPribil_i_rashodi = (dgvPribil_i_rashodi.CurrentRow.Index + 1).ToString();
-            classIncomeForm.tbPribil.Text = dgvPribil_i_rashodi.CurrentRow.Cells[1].Value.ToString();
-            classIncomeForm.tbRashody.Text = dgvPribil_i_rashodi.CurrentRow.Cells[2].Value.ToString();
-            classIncomeForm.tbNachOtcheta.Text = dgvPribil_i_rashodi.CurrentRow.Cells[3].Value.ToString();
-            classIncomeForm.tbKonOtch.Text = dgvPribil_i_rashodi.CurrentRow.Cells[4].Value.ToString();
+           
+                    classIncomeForm.NewIdPribil_i_rashodi = (dgvPribil_i_rashodi.CurrentRow.Index + 1).ToString();
+                    classIncomeForm.tbPribil.Text = dgvPribil_i_rashodi.CurrentRow.Cells[1].Value.ToString();
+                    classIncomeForm.tbRashody.Text = dgvPribil_i_rashodi.CurrentRow.Cells[2].Value.ToString();
+                    classIncomeForm.tbNachOtcheta.Text = dgvPribil_i_rashodi.CurrentRow.Cells[3].Value.ToString();
+                    classIncomeForm.tbKonOtch.Text = dgvPribil_i_rashodi.CurrentRow.Cells[4].Value.ToString();
+           
+           
         }
 
         private void dgvCheckVidMed_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            classIncomeForm.NewIdCheck_vid_med = (dgvCheckVidMed.CurrentRow.Index + 1).ToString();
-            classIncomeForm.tbNomberCheckVM.Text = dgvCheckVidMed.CurrentRow.Cells[1].Value.ToString();
-            classIncomeForm.tbNazvVidMed.Text = dgvCheckVidMed.CurrentRow.Cells[2].Value.ToString();
-            classIncomeForm.cmbIDDoljnost.SelectedValue = Convert.ToInt32(dgvCheckVidMed.CurrentRow.Cells[3].Value);
-            classIncomeForm.cmbIDSotrydnikC.SelectedValue = Convert.ToInt32(dgvCheckVidMed.CurrentRow.Cells[4].Value);
+            
+                    classIncomeForm.NewIdCheck_vid_med = (dgvCheckVidMed.CurrentRow.Index + 1).ToString();
+                    classIncomeForm.tbNomberCheckVM.Text = dgvCheckVidMed.CurrentRow.Cells[1].Value.ToString();
+                    classIncomeForm.tbNazvVidMed.Text = dgvCheckVidMed.CurrentRow.Cells[2].Value.ToString();
+                    classIncomeForm.cmbIDDoljnost.SelectedValue = Convert.ToInt32(dgvCheckVidMed.CurrentRow.Cells[3].Value);
+                    classIncomeForm.cmbIDSotrydnikC.SelectedValue = Convert.ToInt32(dgvCheckVidMed.CurrentRow.Cells[4].Value);
+                
+            
         }
 
         private void dgvMed_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            classIncomeForm.NewIdMed = (dgvMed.CurrentRow.Index + 1).ToString();
-            classIncomeForm.tbKolVidMed.Text = dgvMed.CurrentRow.Cells[1].Value.ToString();
-            classIncomeForm.cmbIDVidCheck.SelectedValue = Convert.ToInt32(dgvMed.CurrentRow.Cells[2].Value);
+            
+                    classIncomeForm.NewIdMed = (dgvMed.CurrentRow.Index + 1).ToString();
+                    classIncomeForm.tbKolVidMed.Text = dgvMed.CurrentRow.Cells[1].Value.ToString();
+               
+           
         }
 
         private void dgvProdajaTov_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            classIncomeForm.NewIdProdaja_tovara = (dgvProdajaTov.CurrentRow.Index + 1).ToString();
-            classIncomeForm.cmbIDMedicamentov.SelectedValue = Convert.ToInt32(dgvProdajaTov.CurrentRow.Cells[1].Value);
-            classIncomeForm.cmbIDInstrRabKass.SelectedValue = Convert.ToInt32(dgvProdajaTov.CurrentRow.Cells[2].Value);
+            
+                    classIncomeForm.NewIdProdaja_tovara = (dgvProdajaTov.CurrentRow.Index + 1).ToString();
+                    classIncomeForm.cmbIDMedicamentov.SelectedValue = Convert.ToInt32(dgvProdajaTov.CurrentRow.Cells[1].Value);
+                    classIncomeForm.cmbIDInstrRabKass.SelectedValue = Convert.ToInt32(dgvProdajaTov.CurrentRow.Cells[2].Value);
+                
+            
         }
 
         public void cmbComboBox_DoljFill()

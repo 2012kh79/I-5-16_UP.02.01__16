@@ -41,8 +41,7 @@ namespace UP_02._01
 
         private void btKadr_UchetWord_Click(object sender, EventArgs e)
         {
-            switch (Registry_Class.DirPath == "Empty" || Registry_Class.DocBM == 0.0 || Registry_Class.DocTM == 0.0 ||
-                    Registry_Class.DocRM == 0.0 || Registry_Class.DocLM == 0.0)
+            switch (Registry_Class.DirPath == "Empty")
             {
                 case (true):
                     AppConfigForm configForm = new AppConfigForm();
@@ -65,8 +64,7 @@ namespace UP_02._01
 
         private void btVih_DocWord_Click(object sender, EventArgs e)
         {
-            switch (Registry_Class.DirPath == "Empty"|| Registry_Class.DocBM == 0.0 || Registry_Class.DocTM == 0.0 ||
-                Registry_Class.DocRM == 0.0 || Registry_Class.DocLM == 0.0)
+            switch (Registry_Class.DirPath == "Empty")
             {
                 case (true):
                     AppConfigForm configForm = new AppConfigForm();
@@ -410,40 +408,57 @@ namespace UP_02._01
         private void dgvDogovor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             classDynamicObjects.NewIdDogovor = (dgvDogovor.CurrentRow.Index + 1).ToString();
-            classDynamicObjects.tbNomberOrderDoc.Text = dgvDogovor.CurrentRow.Cells[1].Value.ToString();
-            classDynamicObjects.tbDateOrdetDoc.Text = dgvDogovor.CurrentRow.Cells[2].Value.ToString();
-            classDynamicObjects.cmbIDFirm.SelectedValue = Convert.ToInt32(dgvDogovor.CurrentRow.Cells[3].Value);
+
+                    classDynamicObjects.tbNomberOrderDoc.Text = dgvDogovor.CurrentRow.Cells[1].Value.ToString();
+                    classDynamicObjects.tbDateOrdetDoc.Text = dgvDogovor.CurrentRow.Cells[2].Value.ToString();
+                    classDynamicObjects.cmbIDFirm.SelectedValue = Convert.ToInt32(dgvDogovor.CurrentRow.Cells[3].Value);
+              
         }
 
         private void dgvTabelSarplaty_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            classDynamicObjects.NewIdZar_plata = (dgvTabelSarplaty.CurrentRow.Index + 1).ToString();
-            classDynamicObjects.tbZarplata.Text = dgvTabelSarplaty.CurrentRow.Cells[1].Value.ToString();
-            classDynamicObjects.cmbIDKadrPere.SelectedValue = Convert.ToInt32(dgvTabelSarplaty.CurrentRow.Cells[2].Value);
+
+           
+                    classDynamicObjects.NewIdZar_plata = (dgvTabelSarplaty.CurrentRow.Index + 1).ToString();
+                    classDynamicObjects.tbZarplata.Text = dgvTabelSarplaty.CurrentRow.Cells[1].Value.ToString();
+                    classDynamicObjects.cmbIDKadrPere.SelectedValue = Convert.ToInt32(dgvTabelSarplaty.CurrentRow.Cells[2].Value);
+             
+
+           
         }
 
         private void dgvKadrPerestanovki_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             classDynamicObjects.NewIdKadr_perestanovki = (dgvKadrPerestanovki.CurrentRow.Index + 1).ToString();
-            classDynamicObjects.tbDatePodpisiDoc.Text = dgvKadrPerestanovki.CurrentRow.Cells[1].Value.ToString();
-            classDynamicObjects.cmbIDSotrydnik.SelectedValue = Convert.ToInt32(dgvKadrPerestanovki.CurrentRow.Cells[2].Value);
-            classDynamicObjects.cmbIDDoljnosti.SelectedValue = Convert.ToInt32(dgvKadrPerestanovki.CurrentRow.Cells[3].Value);
-            classDynamicObjects.cmbIDDocument.SelectedValue = Convert.ToInt32(dgvKadrPerestanovki.CurrentRow.Cells[4].Value);
-            classDynamicObjects.cmbIDSoiskatel.SelectedValue = Convert.ToInt32(dgvKadrPerestanovki.CurrentRow.Cells[5].Value);
+
+                    classDynamicObjects.tbDatePodpisiDoc.Text = dgvKadrPerestanovki.CurrentRow.Cells[1].Value.ToString();
+                    classDynamicObjects.cmbIDSotrydnik.SelectedValue = Convert.ToInt32(dgvKadrPerestanovki.CurrentRow.Cells[2].Value);
+                    classDynamicObjects.cmbIDDoljnosti.SelectedValue = Convert.ToInt32(dgvKadrPerestanovki.CurrentRow.Cells[3].Value);
+                    classDynamicObjects.cmbIDDocument.SelectedValue = Convert.ToInt32(dgvKadrPerestanovki.CurrentRow.Cells[4].Value);
+                    classDynamicObjects.cmbIDSoiskatel.SelectedValue = Convert.ToInt32(dgvKadrPerestanovki.CurrentRow.Cells[5].Value);
+
+           
         }
 
         private void dgvKadrUchet_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
+
             classDynamicObjects.NewIdKadr_uchet = (dgvKadrUchet.CurrentRow.Index + 1).ToString();
-            classDynamicObjects.cmbIDSotrudnik_KU.SelectedValue = Convert.ToInt32(dgvKadrUchet.CurrentRow.Cells[1].Value);
-            classDynamicObjects.cmbIDTabelZarplata.SelectedValue = Convert.ToInt32(dgvKadrUchet.CurrentRow.Cells[2].Value);
-            classDynamicObjects.cmbIDPribil_i_rashodi.SelectedValue = Convert.ToInt32(dgvKadrUchet.CurrentRow.Cells[3].Value);
+
+           
+                    classDynamicObjects.cmbIDSotrudnik_KU.SelectedValue = Convert.ToInt32(dgvKadrUchet.CurrentRow.Cells[1].Value);
+                    classDynamicObjects.cmbIDTabelZarplata.SelectedValue = Convert.ToInt32(dgvKadrUchet.CurrentRow.Cells[2].Value);
+                    classDynamicObjects.cmbIDPribil_i_rashodi.SelectedValue = Convert.ToInt32(dgvKadrUchet.CurrentRow.Cells[3].Value);
+           
         }
 
         private void dgvFirma_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             classDynamicObjects.NewIdFirma = (dgvFirma.CurrentRow.Index + 1).ToString();
-            classDynamicObjects.tbNazvFirm.Text = dgvFirma.CurrentRow.Cells[1].Value.ToString();
+
+                    classDynamicObjects.tbNazvFirm.Text = dgvFirma.CurrentRow.Cells[1].Value.ToString();
+           
         }
 
         private void dgvIdentTovParty_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -452,15 +467,17 @@ namespace UP_02._01
             classDynamicObjects.tbVidDocIdent.Text = dgvIdentTovParty.CurrentRow.Cells[1].Value.ToString();
             classDynamicObjects.tbStatus.Text = dgvIdentTovParty.CurrentRow.Cells[2].Value.ToString();
             classDynamicObjects.cmbIDPostavka.SelectedValue = Convert.ToInt32(dgvIdentTovParty.CurrentRow.Cells[3].Value);
+            
         }
 
         private void dgvVihCocument_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            classDynamicObjects.NewIdVih_doc = (dgvVihCocument.CurrentRow.Index + 1).ToString();
-            classDynamicObjects.cmbIDProdajaTov.SelectedValue = Convert.ToInt32(dgvVihCocument.CurrentRow.Cells[1].Value);
-            classDynamicObjects.cmbIDKadrUch.SelectedValue = Convert.ToInt32(dgvVihCocument.CurrentRow.Cells[2].Value);
-            classDynamicObjects.cmbIDIdent.SelectedValue = Convert.ToInt32(dgvVihCocument.CurrentRow.Cells[3].Value);
+            
+                    classDynamicObjects.cmbIDProdajaTov.SelectedValue = Convert.ToInt32(dgvVihCocument.CurrentRow.Cells[1].Value);
+                    classDynamicObjects.cmbIDKadrUch.SelectedValue = Convert.ToInt32(dgvVihCocument.CurrentRow.Cells[2].Value);
+                    classDynamicObjects.cmbIDIdent.SelectedValue = Convert.ToInt32(dgvVihCocument.CurrentRow.Cells[3].Value);
         }
+            
 
         public void cmbFirmaFill()
         {

@@ -29,8 +29,6 @@ namespace UP_02._01
             thread.Start();
             Thread thread1 = new Thread(cmbComboBoxFill);
             thread1.Start();
-            //Thread thread2 = new Thread(tables.dependency.OnChange onchangeApplication);
-            //thread1.Start();
         }
 
         public void dgvApplicationFormFill()
@@ -39,8 +37,6 @@ namespace UP_02._01
             {
                 try
                 {
-
-                    //filterDepartment = data.qrDepartment;
                     tables.dtSoiskatelFill();
                     tables.dependency.OnChange += onchangeApplication;
                     dgvApplicationForm.DataSource = tables.dtSoiskatel;
@@ -99,21 +95,15 @@ namespace UP_02._01
 
         private void dgvApplicationForm_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
             classApplicationForm.NewIdSoiskatel = (dgvApplicationForm.CurrentRow.Index + 1).ToString();
             classApplicationForm.tbFamSoiskatel.Text = dgvApplicationForm.CurrentRow.Cells[1].Value.ToString();
             classApplicationForm.tbNameSoiskatel.Text = dgvApplicationForm.CurrentRow.Cells[2].Value.ToString();
             classApplicationForm.tbOtchSoiskatel.Text = dgvApplicationForm.CurrentRow.Cells[3].Value.ToString();
             classApplicationForm.cmbTabel_rab_vremeni_ID.SelectedValue = Convert.ToInt32(dgvApplicationForm.CurrentRow.Cells[4].Value);
-            classApplicationForm.cmbDogovor_ID.SelectedValue = Convert.ToInt32(dgvApplicationForm.CurrentRow.Cells[5].Value);
-
-            //  classApplicationForm.cmbDogovor_ID.SelectedValue = 
+            classApplicationForm.cmbDogovor_ID.SelectedValue = Convert.ToInt32(dgvApplicationForm.CurrentRow.Cells[5].Value); 
         }
 
-        private void dgvApplicationForm_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {

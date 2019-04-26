@@ -156,7 +156,7 @@ namespace UP_02._01
             }
             catch (SqlException ex)
             {
-                //Form1.error_message += "\n" + DateTime.Now.ToLongDateString() + " " + ex.Message;
+               
             }
             finally
             {

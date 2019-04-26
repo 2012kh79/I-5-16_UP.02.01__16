@@ -97,6 +97,38 @@ namespace UP_02._01
         public string NewIdPribil_i_rashodi;
         public string NewIdInstruction;
 
+     
+        public void btnVidDocInsert_Click(object sender, EventArgs e)
+        {
+            DocumentChangeForm spl = new DocumentChangeForm();
+            procedure.spDocument_Insert(tbVidDocument.Text);
+            spl.dgvVidDocument.DataSource = tables.dtDocument;
+            tbVidDocument.Clear();
+            
+        }
+
+        public void btnVidDocUpdate_Click(object sender, EventArgs e)
+        {
+            procedure.spDocument_Update(Convert.ToInt32(NewIdVid_doc), tbVidDocument.Text);
+
+        }
+
+        public void btnVidDocDelete_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Удаление поставленного товара на складе " +
+                                    "?", "Удалить поставленный товар со склада ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    procedure.spSoiskatel_Delete(Convert.ToInt32(
+                        NewIdVid_doc));
+                    break;
+                case DialogResult.No:
+                    break;
+
+            }
+        }
+
         public void Document_VidChangeFormFill()
         {
             lblVidDocument.Size = new Size(150, 20);
@@ -124,19 +156,25 @@ namespace UP_02._01
             btnInsert.Text = "Добавить";
             btnInsert.Location = new Point(645, 55);
             btnInsert.Font = new Font("Times New Roman", 10);
+            btnInsert.Click += new EventHandler(btnVidDocInsert_Click);
             pnlTextBox.Controls.Add(btnInsert);
+          
 
             btnUpdate.Size = new Size(100, 30);
             btnUpdate.Text = "Изменить";
             btnUpdate.Location = new Point(755, 55);
             btnUpdate.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnVidDocUpdate_Click);
             pnlTextBox.Controls.Add(btnUpdate);
+            
 
             btnDelete.Size = new Size(100, 30);
             btnDelete.Text = "Удалить";
             btnDelete.Location = new Point(645, 105);
             btnDelete.Font = new Font("Times New Roman", 10);
+            btnDelete.Click += new EventHandler(btnVidDocDelete_Click);
             pnlTextBox.Controls.Add(btnDelete);
+           
         }
 
         public void Document_DogovoraChangeFormFill()
@@ -2661,7 +2699,7 @@ namespace UP_02._01
         protected void btnPribil_i_rashodiInsert_Click(object sender, EventArgs e)
         {
             IncomeForm income = new IncomeForm();
-            procedure.spPribil_i_rashodi_Insert(Convert.ToByte(tbPribil.Text), Convert.ToByte(tbRashody.Text), tbNachOtcheta.Text, tbKonOtch.Text);
+            procedure.spPribil_i_rashodi_Insert(Convert.ToSingle(tbPribil.Text), Convert.ToSingle(tbRashody.Text), tbNachOtcheta.Text, tbKonOtch.Text);
             income.dgvPribil_i_rashodi.DataSource = tables.dtPribil_i_rashodi;
             tbPribil.Clear();
             tbRashody.Clear();

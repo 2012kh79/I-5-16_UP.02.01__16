@@ -75,6 +75,7 @@
             this.системаToolStripMenuItem1.Name = "системаToolStripMenuItem1";
             this.системаToolStripMenuItem1.Size = new System.Drawing.Size(234, 22);
             this.системаToolStripMenuItem1.Text = "Система";
+            this.системаToolStripMenuItem1.Click += new System.EventHandler(this.системаToolStripMenuItem1_Click);
             // 
             // MainForm
             // 

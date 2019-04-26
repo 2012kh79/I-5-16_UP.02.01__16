@@ -59,5 +59,11 @@ namespace UP_02._01
             conFrm.ShowDialog();
 
         }
+
+        private void системаToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+           AppConfigForm wordFrm = new AppConfigForm();
+            wordFrm.ShowDialog();
+        }
     }
 }
