@@ -17,7 +17,7 @@ namespace UP_02._01
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        public void MainForm_Load(object sender, EventArgs e)
         {
 
 
@@ -52,6 +52,12 @@ namespace UP_02._01
             }
             
         }
-        
+
+        private void конфигурацияПодключенияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConnectionForm conFrm = new ConnectionForm();
+            conFrm.ShowDialog();
+
+        }
     }
 }

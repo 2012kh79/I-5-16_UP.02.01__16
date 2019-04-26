@@ -67,6 +67,7 @@
             this.tbPass.PasswordChar = '*';
             this.tbPass.Size = new System.Drawing.Size(280, 20);
             this.tbPass.TabIndex = 11;
+            this.tbPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLogin_KeyPress);
             // 
             // tbLogin
             // 
@@ -75,6 +76,7 @@
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(280, 20);
             this.tbLogin.TabIndex = 10;
+            this.tbLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLogin_KeyPress);
             // 
             // lbPass
             // 
@@ -117,6 +119,7 @@
             this.tbRepeatPass.PasswordChar = '*';
             this.tbRepeatPass.Size = new System.Drawing.Size(280, 20);
             this.tbRepeatPass.TabIndex = 15;
+            this.tbRepeatPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLogin_KeyPress);
             // 
             // label1
             // 

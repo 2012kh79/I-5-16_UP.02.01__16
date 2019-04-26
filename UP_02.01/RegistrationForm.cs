@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -73,5 +74,11 @@ namespace UP_02._01
             this.Hide();
         }
 
+        private void tbLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((char)e.KeyChar == (Char)Keys.Back) return;
+            if (char.IsDigit(e.KeyChar) || char.IsLetter(e.KeyChar)) return;
+            e.Handled = true;
+        }
     }
 }

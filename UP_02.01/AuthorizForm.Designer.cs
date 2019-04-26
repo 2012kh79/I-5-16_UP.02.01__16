@@ -77,6 +77,7 @@
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(214, 20);
             this.tbLogin.TabIndex = 3;
+            this.tbLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLogin_KeyPress);
             // 
             // tbPass
             // 
@@ -86,6 +87,7 @@
             this.tbPass.PasswordChar = '*';
             this.tbPass.Size = new System.Drawing.Size(214, 20);
             this.tbPass.TabIndex = 4;
+            this.tbPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLogin_KeyPress);
             // 
             // btVhod
             // 
