@@ -41,7 +41,7 @@
             // 
             // btReg
             // 
-            this.btReg.Location = new System.Drawing.Point(233, 275);
+            this.btReg.Location = new System.Drawing.Point(233, 257);
             this.btReg.Name = "btReg";
             this.btReg.Size = new System.Drawing.Size(85, 23);
             this.btReg.TabIndex = 13;
@@ -51,7 +51,7 @@
             // 
             // btBackAuthoriz
             // 
-            this.btBackAuthoriz.Location = new System.Drawing.Point(324, 275);
+            this.btBackAuthoriz.Location = new System.Drawing.Point(324, 257);
             this.btBackAuthoriz.Name = "btBackAuthoriz";
             this.btBackAuthoriz.Size = new System.Drawing.Size(135, 23);
             this.btBackAuthoriz.TabIndex = 12;
@@ -61,7 +61,7 @@
             // 
             // tbPass
             // 
-            this.tbPass.Location = new System.Drawing.Point(179, 190);
+            this.tbPass.Location = new System.Drawing.Point(179, 172);
             this.tbPass.MaxLength = 16;
             this.tbPass.Name = "tbPass";
             this.tbPass.PasswordChar = '*';
@@ -71,7 +71,7 @@
             // 
             // tbLogin
             // 
-            this.tbLogin.Location = new System.Drawing.Point(179, 150);
+            this.tbLogin.Location = new System.Drawing.Point(179, 132);
             this.tbLogin.MaxLength = 16;
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(280, 20);
@@ -83,7 +83,7 @@
             this.lbPass.AutoSize = true;
             this.lbPass.BackColor = System.Drawing.Color.Transparent;
             this.lbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbPass.Location = new System.Drawing.Point(95, 190);
+            this.lbPass.Location = new System.Drawing.Point(95, 172);
             this.lbPass.Name = "lbPass";
             this.lbPass.Size = new System.Drawing.Size(67, 20);
             this.lbPass.TabIndex = 9;
@@ -94,7 +94,7 @@
             this.lbLogin.AutoSize = true;
             this.lbLogin.BackColor = System.Drawing.Color.Transparent;
             this.lbLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbLogin.Location = new System.Drawing.Point(95, 150);
+            this.lbLogin.Location = new System.Drawing.Point(95, 132);
             this.lbLogin.Name = "lbLogin";
             this.lbLogin.Size = new System.Drawing.Size(55, 20);
             this.lbLogin.TabIndex = 8;
@@ -105,7 +105,7 @@
             this.lbAuth.AutoSize = true;
             this.lbAuth.BackColor = System.Drawing.Color.Transparent;
             this.lbAuth.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbAuth.Location = new System.Drawing.Point(90, 68);
+            this.lbAuth.Location = new System.Drawing.Point(90, 50);
             this.lbAuth.Name = "lbAuth";
             this.lbAuth.Size = new System.Drawing.Size(277, 51);
             this.lbAuth.TabIndex = 7;
@@ -113,7 +113,7 @@
             // 
             // tbRepeatPass
             // 
-            this.tbRepeatPass.Location = new System.Drawing.Point(179, 228);
+            this.tbRepeatPass.Location = new System.Drawing.Point(179, 210);
             this.tbRepeatPass.MaxLength = 16;
             this.tbRepeatPass.Name = "tbRepeatPass";
             this.tbRepeatPass.PasswordChar = '*';
@@ -126,7 +126,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(37, 228);
+            this.label1.Location = new System.Drawing.Point(37, 210);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 20);
             this.label1.TabIndex = 14;
@@ -136,7 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 339);
+            this.ClientSize = new System.Drawing.Size(501, 330);
             this.Controls.Add(this.tbRepeatPass);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btReg);
